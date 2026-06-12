@@ -1,0 +1,43 @@
+name: jesse-cn
+
+services:
+  jesse:
+    image: aplu001/jesse-cn:latest
+    working_dir: /home
+    command: sh -c "jesse run"
+    env_file:
+      - ../.env
+    ports:
+      - "${APP_PORT:-9000}:${APP_PORT:-9000}"
+    volumes:
+      - ../:/home
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_NAME:-jesse_db}
+      POSTGRES_USER: ${POSTGRES_USERNAME:-jesse_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:6-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  postgres-data:

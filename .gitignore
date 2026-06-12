@@ -146,6 +146,7 @@ cython_debug/
 testing-*.py
 /storage/full-reports/*.html
 /storage/logs/*
+!/storage/logs/.gitkeep
 
 # lsp
 jesse/lsp/

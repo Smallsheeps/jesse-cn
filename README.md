@@ -30,99 +30,34 @@ Jesse CN 是基于 [jesse-ai/jesse](https://github.com/jesse-ai/jesse) 的中文
 
 ## 方式一: Docker Compose 部署
 
+本仓库已经提供 Docker 部署需要的模板文件:
+
+- `.env.example`: 环境变量模板，复制后改成 `.env`
+- `docker/docker-compose.yml`: Docker Compose 部署文件
+- `strategies/`: 策略目录
+- `storage/`: 数据、日志和缓存目录
+
+部署步骤:
+
+```bash
+git clone https://github.com/Smallsheeps/jesse-cn.git
+cd jesse-cn
+cp .env.example .env
+```
+
+编辑 `.env`，至少修改 `PASSWORD`。然后启动:
+
+```bash
+cd docker
+docker compose --env-file ../.env pull
+docker compose --env-file ../.env up -d
+docker compose --env-file ../.env logs -f jesse
+```
+
 默认使用最新镜像:
 
 ```bash
 aplu001/jesse-cn:latest
-```
-
-先拉取镜像并验证命令可用:
-
-```bash
-docker pull aplu001/jesse-cn:latest
-docker run --rm aplu001/jesse-cn:latest jesse --help
-```
-
-Jesse 运行时需要 PostgreSQL 和 Redis。建议单独创建一个策略项目目录，不要直接在框架源码目录里运行。
-
-```bash
-mkdir my-jesse-project
-cd my-jesse-project
-mkdir strategies storage
-```
-
-创建 `.env`:
-
-```env
-PASSWORD=change-me
-APP_PORT=9000
-
-POSTGRES_HOST=postgres
-POSTGRES_PORT=5432
-POSTGRES_NAME=jesse_db
-POSTGRES_USERNAME=jesse_user
-POSTGRES_PASSWORD=password
-
-REDIS_HOST=redis
-REDIS_PORT=6379
-REDIS_DB=0
-REDIS_PASSWORD=
-```
-
-创建 `docker-compose.yml`:
-
-```yaml
-services:
-  jesse:
-    image: aplu001/jesse-cn:latest
-    container_name: jesse-cn
-    working_dir: /home
-    command: sh -c "jesse run"
-    env_file:
-      - .env
-    ports:
-      - "${APP_PORT:-9000}:${APP_PORT:-9000}"
-    volumes:
-      - ./:/home
-    depends_on:
-      postgres:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-
-  postgres:
-    image: postgres:14-alpine
-    container_name: jesse-postgres
-    environment:
-      POSTGRES_DB: ${POSTGRES_NAME}
-      POSTGRES_USER: ${POSTGRES_USERNAME}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
-      interval: 5s
-      timeout: 5s
-      retries: 20
-
-  redis:
-    image: redis:6-alpine
-    container_name: jesse-redis
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 20
-
-volumes:
-  postgres-data:
-```
-
-启动:
-
-```bash
-docker compose up -d
-docker compose logs -f jesse
 ```
 
 访问:
@@ -138,28 +73,32 @@ http://localhost:9000
 查看容器状态:
 
 ```bash
-docker compose ps
+cd docker
+docker compose --env-file ../.env ps
 ```
 
 查看日志:
 
 ```bash
-docker compose logs -f jesse
+cd docker
+docker compose --env-file ../.env logs -f jesse
 ```
 
 停止服务:
 
 ```bash
-docker compose stop
+cd docker
+docker compose --env-file ../.env stop
 ```
 
 停止并删除容器:
 
 ```bash
-docker compose down
+cd docker
+docker compose --env-file ../.env down
 ```
 
-注意: 不要随意执行 `docker compose down -v`，它会删除数据库卷，历史数据也会被删除。
+注意: 不要随意执行 `docker compose --env-file ../.env down -v`，它会删除数据库卷，历史数据也会被删除。
 
 ## 方式二: 从源码安装
 
@@ -197,31 +136,13 @@ jesse --help
 
 Python 包名和命令仍然是 `jesse`，不是 `jesse-cn`。
 
-源码方式运行时，也需要在策略项目目录中准备:
+源码方式运行时，也需要在策略项目目录中准备 `.env`、`strategies/` 和 `storage/`。可以从本仓库的 `.env.example` 复制:
 
-```text
-.env
-strategies/
-storage/
+```bash
+cp .env.example .env
 ```
 
-本机运行时 `.env` 示例:
-
-```env
-PASSWORD=change-me
-APP_PORT=9000
-
-POSTGRES_HOST=127.0.0.1
-POSTGRES_PORT=5432
-POSTGRES_NAME=jesse_db
-POSTGRES_USERNAME=jesse_user
-POSTGRES_PASSWORD=password
-
-REDIS_HOST=127.0.0.1
-REDIS_PORT=6379
-REDIS_DB=0
-REDIS_PASSWORD=
-```
+本机直接运行时，把 `.env` 里的 `POSTGRES_HOST` 和 `REDIS_HOST` 改为本机地址，例如 `127.0.0.1`。
 
 进入策略项目目录后启动:
 
