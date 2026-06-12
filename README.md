@@ -31,17 +31,17 @@ Jesse CN 是基于 [jesse-ai/jesse](https://github.com/jesse-ai/jesse) 的中文
 
 ## 使用 Docker 安装
 
-当前推荐镜像版本:
+默认使用最新镜像:
 
 ```bash
-aplu001/jesse-cn:2.3.4-cn.3
+aplu001/jesse-cn:latest
 ```
 
 先拉取镜像并验证命令可用:
 
 ```bash
-docker pull aplu001/jesse-cn:2.3.4-cn.3
-docker run --rm aplu001/jesse-cn:2.3.4-cn.3 jesse --help
+docker pull aplu001/jesse-cn:latest
+docker run --rm aplu001/jesse-cn:latest jesse --help
 ```
 
 ## Docker Compose 部署
@@ -77,7 +77,7 @@ REDIS_PASSWORD=
 ```yaml
 services:
   jesse:
-    image: aplu001/jesse-cn:2.3.4-cn.3
+    image: aplu001/jesse-cn:latest
     container_name: jesse-cn
     working_dir: /home
     command: sh -c "jesse run"
