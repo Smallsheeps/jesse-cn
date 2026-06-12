@@ -1,154 +1,183 @@
-<div align="center">
-<br>
-<p align="center">
-<img src="assets/jesse-logo.png" alt="Jesse" height="72" />
-</p>
+# Jesse CN
 
-<p align="center">
-Algo-trading was 😵‍💫, we made it 🤩
-</p>
-</div>
+Jesse CN 是基于 [jesse-ai/jesse](https://github.com/jesse-ai/jesse) 的中文改版。
 
-# Jesse
-[![PyPI](https://img.shields.io/pypi/v/jesse)](https://pypi.org/project/jesse)
-[![Downloads](https://pepy.tech/badge/jesse)](https://pepy.tech/project/jesse)
-[![Docker Pulls](https://img.shields.io/docker/pulls/salehmir/jesse)](https://hub.docker.com/r/salehmir/jesse)
-[![GitHub](https://img.shields.io/github/license/jesse-ai/jesse)](https://github.com/jesse-ai/jesse)
-[![coverage](https://codecov.io/gh/jesse-ai/jesse/graph/badge.svg)](https://codecov.io/gh/jesse-ai/jesse)
+本仓库保留 Jesse 原有的核心框架能力，包括策略回测、参数优化、行情数据导入、Web Dashboard API、技术指标库、Monte Carlo 分析、机器学习辅助流程等。在此基础上，本项目对内置前端静态页面做了中文本地化，方便中文用户直接使用。
 
----
+## 与原项目的关系
 
-Jesse is an advanced crypto trading framework that aims to **simplify** **researching** and defining **YOUR OWN trading strategies** for backtesting, optimizing, and live trading.
+- 原项目仓库: [https://github.com/jesse-ai/jesse](https://github.com/jesse-ai/jesse)
+- 原项目官网: [https://jesse.trade](https://jesse.trade)
+- 原项目文档: [https://docs.jesse.trade](https://docs.jesse.trade)
+- 本项目是中文改版，不是 Jesse 官方仓库。
+- 原项目版权和许可证归原作者及贡献者所有，本项目继续遵循原项目的 MIT License。
 
-## What is Jesse?
-Watch this video to get a quick overview of Jesse:
+## 功能概览
 
-[![Jesse Overview](https://img.youtube.com/vi/0EqN3OOqeJM/0.jpg)](https://www.youtube.com/watch?v=0EqN3OOqeJM)
+- Python 策略开发框架
+- 加密货币策略回测
+- 参数优化和批量测试
+- 多交易所历史 K 线导入
+- 内置技术指标库
+- Web Dashboard 后端和静态前端
+- PostgreSQL 数据存储
+- Redis 实时消息和任务状态
+- Docker 镜像构建支持
 
-## Why Jesse?
-In short, Jesse is more **accurate** than other solutions, and way more **simple**. 
-In fact, it is so simple that in case you already know Python, you can get started today, in **matter of minutes**, instead of **weeks and months**. 
+## 环境要求
 
-## Key Features
+源码安装推荐环境:
 
-- 📝 **Simple Syntax**: Define both simple and advanced trading strategies with the simplest syntax in the fastest time.
-- 📊 **Comprehensive Indicator Library**: Access a complete library of technical indicators with easy-to-use syntax.
-- 📈 **Smart Ordering**: Supports market, limit, and stop orders, automatically choosing the best one for you.
-- ⏰ **Multiple Timeframes and Symbols**: Backtest and livetrade multiple timeframes and symbols simultaneously without look-ahead bias.
-- 🔒 **Self-Hosted and Privacy-First**: Designed with your privacy in mind, fully self-hosted to ensure your trading strategies and data remain secure.
-- 🛡️ **Risk Management**: Built-in helper functions for robust risk management.
-- 📋 **Metrics System**: A comprehensive metrics system to evaluate your trading strategy's performance.
-- 🔍 **Debug Mode**: Observe your strategy in action with a detailed debug mode.
-- 🔧 **Optimize Mode**: Fine-tune your strategies using AI, without needing a technical background.
-- 📈 **Leveraged and Short-Selling**: First-class support for leveraged trading and short-selling.
-- 🔀 **Partial Fills**: Supports entering and exiting positions in multiple orders, allowing for greater flexibility.
-- 🔔 **Advanced Alerts**: Create real-time alerts within your strategies for effective monitoring.
-- 🤖 **JesseGPT**: Jesse has its own GPT, JesseGPT, that can help you write strategies, optimize them, debug them, and much more.
-- 🔧 **Built-in Code Editor**: Write, edit, and debug your strategies with a built-in code editor.
-- 🎲 **Monte Carlo Analysis**: Stress-test your strategies with trade-order shuffling and candles-based simulations to distinguish skill from luck and guard against overfitting.
-- 🧠 **Machine Learning**: A built-in ML pipeline — gather labelled training data from backtests, train scikit-learn models (binary, multiclass, or regression), and deploy predictions directly inside your strategies.
-- 📺 **Youtube Channel**: Jesse has a Youtube channel with screencast tutorials that go through example strategies step by step.
+- Python 3.10 或更高版本，推荐 Python 3.11
+- Git
+- C/C++ 编译环境
+- PostgreSQL
+- Redis
 
-## Dive Deeper into Jesse's Capabilities
+Docker 使用推荐环境:
 
-### Stupid Simple
-Craft complex trading strategies with remarkably simple Python. Access 300+ indicators, multi-symbol/timeframe support, spot/futures trading, partial fills, and risk management tools. Focus on logic, not boilerplate.
+- Docker
+- Docker Compose
 
-```python
-class GoldenCross(Strategy):
-    def should_long(self):
-        # go long when the EMA 8 is above the EMA 21
-        short_ema = ta.ema(self.candles, 8)
-        long_ema = ta.ema(self.candles, 21)
-        return short_ema > long_ema
+## 从源码安装
 
-    def go_long(self):
-        entry_price = self.price - 10        # limit buy order at $10 below the current price
-        qty = utils.size_to_qty(self.balance*0.05, entry_price) # spend only 5% of my total capital
-        self.buy = qty, entry_price                 # submit entry order
-        self.take_profit = qty, entry_price*1.2  # take profit at 20% above the entry price
-        self.stop_loss = qty, entry_price*0.9   # stop loss at 10% below the entry price
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/Smallsheeps/jesse-cn.git
+cd jesse-cn
+
+py -3.11 -m venv .venv
+.\.venv\Scripts\activate
+
+python -m pip install --upgrade pip
+pip install -e .
+
+jesse --help
 ```
 
-### Backtest
-Execute highly accurate and fast backtests without look-ahead bias. Utilize debugging logs, interactive charts with indicator support, and detailed performance metrics to validate your strategies thoroughly.
+Linux:
 
-![Backtest](https://raw.githubusercontent.com/jesse-ai/storage/refs/heads/master/backtest.gif)
+```bash
+git clone https://github.com/Smallsheeps/jesse-cn.git
+cd jesse-cn
 
-### Live/Paper Trading
-Deploy strategies live with robust monitoring tools. Supports paper trading, multiple accounts, real-time logs & notifications (Telegram, Slack, Discord), interactive charts, spot/futures, DEX, and a built-in code editor.
+python3.11 -m venv .venv
+source .venv/bin/activate
 
-![Live/Paper Trading](https://raw.githubusercontent.com/jesse-ai/storage/refs/heads/master/live.gif)
+python -m pip install --upgrade pip
+pip install -e .
 
-### Benchmark
-Accelerate research using the benchmark feature. Run batch backtests, compare across timeframes, symbols, and strategies. Filter and sort results by key performance metrics for efficient analysis.
-
-![Benchmark](https://raw.githubusercontent.com/jesse-ai/storage/refs/heads/master/benchmark.gif)
-
-### AI
-Leverage our AI assistant even with limited Python knowledge. Get help writing and improving strategies, implementing ideas, debugging, optimizing, and understanding code. Your personal AI quant.
-
-![AI](https://raw.githubusercontent.com/jesse-ai/storage/refs/heads/master/gpt.gif)
-
-### Monte Carlo Analysis
-Stress-test your strategies beyond a single historical path. Jesse's Monte Carlo mode runs hundreds of simulations using **trade-order shuffling** (tests whether trade timing drove your results) and **candles-based** (tests robustness under slightly different market conditions) methods. Use it to distinguish skill from luck, understand the range of outcomes you can realistically expect, and catch overfitting early.
-
-### Machine Learning
-Jesse includes a complete, end-to-end ML pipeline built for trading strategies:
-
-1. **Gather data** — run a backtest in gather mode; call `record_features({...})` at each signal bar and `record_label(name, value)` when the outcome is known. Data is auto-saved to CSV.
-2. **Train a model** — call `train_model()` with any scikit-learn–compatible estimator and choose a task type: `"binary"` classification, `"multiclass"` classification, or `"regression"`. Get a full report with feature importance, calibration, and metrics.
-3. **Deploy** — switch to deploy mode and call `ml_predict()` or `ml_predict_proba()` inside your strategy. Model loading, scaling, and feature ordering are handled automatically.
-
-```python
-# Gather phase — inside your strategy
-def before(self):
-    self.record_features({
-        'rsi': ta.rsi(self.candles),
-        'adx': ta.adx(self.candles),
-    })
-
-# Deploy phase — gate entries with model confidence
-def should_long(self):
-    proba = self.ml_predict_proba()
-    return proba['long'] > 0.65
+jesse --help
 ```
 
-### Optimize Your Strategies
-Unsure about optimal parameters? Let the optimization mode decide using simple syntax. Fine-tune any strategy parameter with the Optuna library and easy cross-validation.
+注意: Python 包名仍然是 `jesse`，所以安装后命令仍然是 `jesse`，不是 `jesse-cn`。
 
-```python
-@property
-def slow_sma(self):
-    return ta.sma(self.candles, self.hp['slow_sma_period'])
+## 使用 Docker 镜像
 
-@property
-def fast_sma(self):
-    return ta.sma(self.candles, self.hp['fast_sma_period'])
+如果已经发布到 Docker Hub，可以直接拉取:
 
-def hyperparameters(self):
-    return [
-        {'name': 'slow_sma_period', 'type': int, 'min': 150, 'max': 210, 'default': 200},
-        {'name': 'fast_sma_period', 'type': int, 'min': 20, 'max': 100, 'default': 50},
-    ]
+```bash
+docker pull aplu001/jesse-cn:latest
+docker run --rm aplu001/jesse-cn:latest jesse --help
 ```
 
-## Getting Started
-Head over to the "getting started" section of the [documentation](https://docs.jesse.trade/docs/getting-started). The 
-documentation is **short yet very informative**. 
+指定版本示例:
 
-## Resources
+```bash
+docker pull aplu001/jesse-cn:2.3.4-cn.1
+docker run --rm aplu001/jesse-cn:2.3.4-cn.1 jesse --help
+```
 
-- [⚡️ Website](https://jesse.trade)
-- [🎓 Documentation](https://docs.jesse.trade)
-- [🎥 Youtube channel (screencast tutorials)](https://jesse.trade/youtube)
-- [🛟 Help center](https://jesse.trade/help)
-- [💬 Discord community](https://jesse.trade/discord)
-- [🤖 JesseGPT](https://jesse.trade/gpt) (Requires a free account)
+## 本地构建 Docker 镜像
 
-## What's next?
+Windows PowerShell:
 
-You can see the project's **[roadmap here](https://docs.jesse.trade/docs/roadmap.html)**. **Subscribe** to our mailing list at [jesse.trade](https://jesse.trade) to get the good stuff as soon they're released. Don't worry, We won't send you spam—Pinky promise.
+```powershell
+$IMAGE = "aplu001/jesse-cn"
+$VERSION = "2.3.4-cn.1"
 
-## Disclaimer
-This software is for educational purposes only. USE THE SOFTWARE AT **YOUR OWN RISK**. THE AUTHORS AND ALL AFFILIATES ASSUME **NO RESPONSIBILITY FOR YOUR TRADING RESULTS**. **Do not risk money that you are afraid to lose**. There might be **bugs** in the code - this software DOES NOT come with **ANY warranty**.
+docker build -t "${IMAGE}:${VERSION}" -t "${IMAGE}:latest" .
+```
+
+Linux/macOS:
+
+```bash
+IMAGE=aplu001/jesse-cn
+VERSION=2.3.4-cn.1
+
+docker build -t "${IMAGE}:${VERSION}" -t "${IMAGE}:latest" .
+```
+
+构建完成后验证:
+
+```bash
+docker run --rm aplu001/jesse-cn:latest jesse --help
+```
+
+## 推送 Docker Hub
+
+先登录 Docker Hub:
+
+```bash
+docker login -u aplu001
+```
+
+再推送镜像:
+
+```bash
+docker push aplu001/jesse-cn:2.3.4-cn.1
+docker push aplu001/jesse-cn:latest
+```
+
+如果网络环境需要代理，请先在 Docker Desktop 或服务器 Docker daemon 中配置代理，否则拉取基础镜像或推送镜像时可能超时。
+
+## 部署说明
+
+本仓库是 Jesse 框架源码仓库，不是策略项目模板仓库。直接克隆本仓库不会自动生成 `.env`、`docker-compose.yml`、`strategies/`、`storage/` 等部署项目文件。
+
+实际部署时通常需要一个单独的 Jesse 项目目录，里面包含:
+
+```text
+.env
+docker-compose.yml
+strategies/
+storage/
+```
+
+其中 `docker-compose.yml` 引用本项目发布的镜像，例如:
+
+```yaml
+services:
+  jesse:
+    image: aplu001/jesse-cn:latest
+```
+
+Jesse 运行时还需要 PostgreSQL 和 Redis。`.env` 中的数据库、Redis 用户名和密码必须与 `docker-compose.yml` 中配置一致，否则会出现数据库认证失败或 Redis 认证失败。
+
+启动命令通常是:
+
+```bash
+docker compose up -d
+docker compose logs -f
+```
+
+默认 Web 服务端口通常是 `9000`，也可以通过 `.env` 中的 `APP_PORT` 修改。
+
+## 开发说明
+
+安装开发环境后，可以在源码目录运行:
+
+```bash
+pytest
+```
+
+如果只是修改中文前端静态文件，建议至少检查 JavaScript 语法和页面能否正常打开。
+
+## 免责声明
+
+本软件仅用于学习、研究和技术交流，不构成任何投资建议。量化交易和加密货币交易存在高风险，使用本软件产生的任何交易结果由使用者自行承担。
+
+## License
+
+本项目沿用原项目的 MIT License。详见 [LICENSE](LICENSE)。
