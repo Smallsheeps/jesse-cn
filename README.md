@@ -22,157 +22,147 @@ Jesse CN 是基于 [jesse-ai/jesse](https://github.com/jesse-ai/jesse) 的中文
 - Web Dashboard 后端和静态前端
 - PostgreSQL 数据存储
 - Redis 实时消息和任务状态
-- Docker 镜像构建支持
+- Docker 部署支持
 
 ## 环境要求
-
-源码安装推荐环境:
-
-- Python 3.10 或更高版本，推荐 Python 3.11
-- Git
-- C/C++ 编译环境
-- PostgreSQL
-- Redis
-
-Docker 使用推荐环境:
 
 - Docker
 - Docker Compose
 
-## 从源码安装
+## 使用 Docker 安装
 
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/Smallsheeps/jesse-cn.git
-cd jesse-cn
-
-py -3.11 -m venv .venv
-.\.venv\Scripts\activate
-
-python -m pip install --upgrade pip
-pip install -e .
-
-jesse --help
-```
-
-Linux:
+当前推荐镜像版本:
 
 ```bash
-git clone https://github.com/Smallsheeps/jesse-cn.git
-cd jesse-cn
-
-python3.11 -m venv .venv
-source .venv/bin/activate
-
-python -m pip install --upgrade pip
-pip install -e .
-
-jesse --help
+aplu001/jesse-cn:2.3.4-cn.3
 ```
 
-注意: Python 包名仍然是 `jesse`，所以安装后命令仍然是 `jesse`，不是 `jesse-cn`。
-
-## 使用 Docker 镜像
-
-如果已经发布到 Docker Hub，可以直接拉取:
+先拉取镜像并验证命令可用:
 
 ```bash
-docker pull aplu001/jesse-cn:latest
-docker run --rm aplu001/jesse-cn:latest jesse --help
+docker pull aplu001/jesse-cn:2.3.4-cn.3
+docker run --rm aplu001/jesse-cn:2.3.4-cn.3 jesse --help
 ```
 
-指定版本示例:
+## Docker Compose 部署
+
+Jesse 运行时需要 PostgreSQL 和 Redis。建议单独创建一个策略项目目录，不要直接在框架源码目录里运行。
 
 ```bash
-docker pull aplu001/jesse-cn:2.3.4-cn.1
-docker run --rm aplu001/jesse-cn:2.3.4-cn.1 jesse --help
+mkdir my-jesse-project
+cd my-jesse-project
+mkdir strategies storage
 ```
 
-## 本地构建 Docker 镜像
+创建 `.env`:
 
-Windows PowerShell:
+```env
+PASSWORD=change-me
+APP_PORT=9000
 
-```powershell
-$IMAGE = "aplu001/jesse-cn"
-$VERSION = "2.3.4-cn.1"
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_NAME=jesse_db
+POSTGRES_USERNAME=jesse_user
+POSTGRES_PASSWORD=password
 
-docker build -t "${IMAGE}:${VERSION}" -t "${IMAGE}:latest" .
+REDIS_HOST=redis
+REDIS_PORT=6379
+REDIS_DB=0
+REDIS_PASSWORD=
 ```
 
-Linux/macOS:
-
-```bash
-IMAGE=aplu001/jesse-cn
-VERSION=2.3.4-cn.1
-
-docker build -t "${IMAGE}:${VERSION}" -t "${IMAGE}:latest" .
-```
-
-构建完成后验证:
-
-```bash
-docker run --rm aplu001/jesse-cn:latest jesse --help
-```
-
-## 推送 Docker Hub
-
-先登录 Docker Hub:
-
-```bash
-docker login -u aplu001
-```
-
-再推送镜像:
-
-```bash
-docker push aplu001/jesse-cn:2.3.4-cn.1
-docker push aplu001/jesse-cn:latest
-```
-
-如果网络环境需要代理，请先在 Docker Desktop 或服务器 Docker daemon 中配置代理，否则拉取基础镜像或推送镜像时可能超时。
-
-## 部署说明
-
-本仓库是 Jesse 框架源码仓库，不是策略项目模板仓库。直接克隆本仓库不会自动生成 `.env`、`docker-compose.yml`、`strategies/`、`storage/` 等部署项目文件。
-
-实际部署时通常需要一个单独的 Jesse 项目目录，里面包含:
-
-```text
-.env
-docker-compose.yml
-strategies/
-storage/
-```
-
-其中 `docker-compose.yml` 引用本项目发布的镜像，例如:
+创建 `docker-compose.yml`:
 
 ```yaml
 services:
   jesse:
-    image: aplu001/jesse-cn:latest
+    image: aplu001/jesse-cn:2.3.4-cn.3
+    container_name: jesse-cn
+    working_dir: /home
+    command: sh -c "jesse run"
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT:-9000}:${APP_PORT:-9000}"
+    volumes:
+      - ./:/home
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:14-alpine
+    container_name: jesse-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_NAME}
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:6-alpine
+    container_name: jesse-redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  postgres-data:
 ```
 
-Jesse 运行时还需要 PostgreSQL 和 Redis。`.env` 中的数据库、Redis 用户名和密码必须与 `docker-compose.yml` 中配置一致，否则会出现数据库认证失败或 Redis 认证失败。
-
-启动命令通常是:
+启动:
 
 ```bash
 docker compose up -d
-docker compose logs -f
+docker compose logs -f jesse
 ```
 
-默认 Web 服务端口通常是 `9000`，也可以通过 `.env` 中的 `APP_PORT` 修改。
-
-## 开发说明
-
-安装开发环境后，可以在源码目录运行:
+访问:
 
 ```bash
-pytest
+http://localhost:9000
 ```
 
-如果只是修改中文前端静态文件，建议至少检查 JavaScript 语法和页面能否正常打开。
+如果部署在服务器上，把 `localhost` 替换成服务器 IP 或域名。
+
+## 常用命令
+
+查看容器状态:
+
+```bash
+docker compose ps
+```
+
+查看日志:
+
+```bash
+docker compose logs -f jesse
+```
+
+停止服务:
+
+```bash
+docker compose stop
+```
+
+停止并删除容器:
+
+```bash
+docker compose down
+```
+
+注意: 不要随意执行 `docker compose down -v`，它会删除数据库卷，历史数据也会被删除。
 
 ## 免责声明
 
