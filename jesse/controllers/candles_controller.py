@@ -1,0 +1,166 @@
+from typing import Optional
+from fastapi import APIRouter, Header
+from starlette.responses import JSONResponse
+from jesse.repositories import candle_repository
+from jesse.services import auth as authenticator
+from jesse.services.multiprocessing import process_manager
+from jesse.services.web import ImportCandlesRequestJson, CancelRequestJson, GetCandlesRequestJson, DeleteCandlesRequestJson, PurgeCandlesRequestJson
+from jesse.services.redis import is_process_active
+import jesse.helpers as jh
+
+router = APIRouter(prefix="/candles", tags=["Candles"])
+
+
+@router.post("/import")
+def import_candles(request_json: ImportCandlesRequestJson, authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Import candles for a specific exchange and symbol
+    """
+    jh.validate_cwd()
+
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    from jesse.modes import import_candles_mode
+
+    process_manager.add_task(
+        import_candles_mode.run, 
+        request_json.id, 
+        request_json.exchange, 
+        request_json.symbol,
+        request_json.start_date
+    )
+
+    return JSONResponse({'message': 'Started importing candles...'}, status_code=202)
+
+
+@router.post("/cancel-import")
+def cancel_import_candles(request_json: CancelRequestJson, authorization: Optional[str] = Header(None)):
+    """
+    Cancel an import candles process
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    process_manager.cancel_process(request_json.id)
+
+    return JSONResponse({'message': f'Candles process with ID of {request_json.id} was requested for termination'},
+                        status_code=202)
+
+
+@router.post("/clear-cache")
+def clear_candles_database_cache(authorization: Optional[str] = Header(None)):
+    """
+    Clear the candles database cache
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    from jesse.services.cache import cache
+    cache.flush()
+
+    return JSONResponse({
+        'status': 'success',
+        'message': 'Candles database cache cleared successfully',
+    }, status_code=200)
+
+
+@router.post("/get")
+def get_candles(json_request: GetCandlesRequestJson, authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Get candles for a specific exchange, symbol, and timeframe
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    jh.validate_cwd()
+
+    from jesse.modes.data_provider import get_candles as gc
+
+    arr = gc(json_request.exchange, json_request.symbol, json_request.timeframe)
+
+    return JSONResponse({
+        'id': json_request.id,
+        'data': arr
+    }, status_code=200)
+
+
+@router.post("/import-status")
+def get_candle_import_status(request_json: CancelRequestJson, authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Check whether a candle import process is still running. Used in MCP to check whether a previous import process is still running.
+
+    Uses a single Redis SISMEMBER call — no database queries.
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    running = bool(is_process_active(request_json.id))
+    response = {
+        'import_id': request_json.id,
+        'status': 'running' if running else 'finished',
+    }
+
+    # Attach live progress (percent complete, ETA, date reached so far) when the import
+    # is still running so callers can see real movement instead of a blind "running".
+    # When finished, clean up any lingering progress key.
+    import json
+    from jesse.services.redis import sync_redis
+    from jesse.modes.import_candles_mode import candle_import_progress_key
+    progress_key = candle_import_progress_key(request_json.id)
+    try:
+        if running:
+            raw = sync_redis.get(progress_key)
+            if raw:
+                response['progress'] = json.loads(raw)
+        else:
+            sync_redis.delete(progress_key)
+    except Exception:
+        pass
+
+    return JSONResponse(response, status_code=200)
+
+
+@router.post("/existing")
+def get_existing_candles(authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Get all existing candles in the database
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+    
+    try:
+        data = candle_repository.get_existing_candles()
+        return JSONResponse({'data': data}, status_code=200)
+    except Exception as e:
+        return JSONResponse({'error': str(e)}, status_code=500)
+
+
+@router.post("/delete")
+def delete_candles(json_request: DeleteCandlesRequestJson, authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Delete candles for a specific exchange and symbol
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    try:
+        candle_repository.delete_candles_from_db(json_request.exchange, json_request.symbol)
+        return JSONResponse({'message': 'Candles deleted successfully'}, status_code=200)
+    except Exception as e:
+        return JSONResponse({'error': str(e)}, status_code=500)
+
+
+@router.post("/purge")
+def purge_candles(json_request: PurgeCandlesRequestJson, authorization: Optional[str] = Header(None)) -> JSONResponse:
+    """
+    Delete all candles for the given list of exchanges
+    """
+    if not authenticator.is_valid_token(authorization):
+        return authenticator.unauthorized_response()
+
+    try:
+        deleted_count = candle_repository.purge_candles_by_exchanges(json_request.exchanges)
+        return JSONResponse({'message': f'Purged candles for {len(json_request.exchanges)} exchange(s)', 'deleted_count': deleted_count}, status_code=200)
+    except Exception as e:
+        return JSONResponse({'error': str(e)}, status_code=500)
