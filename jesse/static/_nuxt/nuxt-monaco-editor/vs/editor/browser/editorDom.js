@@ -203,7 +203,7 @@ export class DynamicCssRules {
         const rule = this.getOrCreateRule(options);
         rule.increaseRefCount();
         return {
-            class名称： rule.className,
+            class名称: rule.className,
             dispose: () => {
                 rule.decreaseRefCount();
                 this._garbageCollectionScheduler.schedule();

@@ -1802,7 +1802,7 @@ function createScanner(input, initialOffset = 0, initialState = ScannerState.Wit
         }
         stream.advance(1);
         return finishToken(offset, TokenType.Unknown, t("Unexpected character in tag."));
-      case ScannerState.AfterAttribute名称：
+      case ScannerState.AfterAttribute名称:
         if (stream.skipWhitespace()) {
           hasSpaceAfterTag = true;
           return finishToken(offset, TokenType.Whitespace);
@@ -9584,7 +9584,7 @@ var HTMLFolding = class {
           const m = text.match(/^\s*#(region\b)|(endregion\b)/);
           if (m) {
             if (m[1]) {
-              stack.push({ startLine, tag名称： "" });
+              stack.push({ startLine, tag名称: "" });
             } else {
               let i = stack.length - 1;
               while (i >= 0 && stack[i].tagName.length) {
@@ -9714,7 +9714,7 @@ var HTMLSelectionRange = class {
     let attrStart = -1;
     while (token !== TokenType.EOS) {
       switch (token) {
-        case TokenType.Attribute名称： {
+        case TokenType.Attribute名称: {
           if (relativeOffset < scanner.getTokenOffset()) {
             isInsideAttribute = false;
             break;

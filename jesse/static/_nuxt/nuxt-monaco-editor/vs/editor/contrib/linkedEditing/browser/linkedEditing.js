@@ -279,7 +279,7 @@ LinkedEditingContribution.ID = 'editor.contrib.linkedEditing';
 LinkedEditingContribution.DECORATION = ModelDecorationOptions.register({
     description: 'linked-editing',
     stickiness: 0 /* TrackedRangeStickiness.AlwaysGrowsWhenTypingAtEdges */,
-    class名称： DECORATION_CLASS_NAME
+    class名称: DECORATION_CLASS_NAME
 });
 LinkedEditingContribution = LinkedEditingContribution_1 = __decorate([
     __param(1, IContextKeyService),

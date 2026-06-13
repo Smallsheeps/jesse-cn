@@ -92,7 +92,7 @@ class Arrow {
                 range: Range.fromPositions(where),
                 options: {
                     description: 'zone-widget-arrow',
-                    class名称： this._ruleName,
+                    class名称: this._ruleName,
                     stickiness: 1 /* TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges */
                 }
             }]);

@@ -325,7 +325,7 @@ BracketMatchingController.ID = 'editor.contrib.bracketMatchingController';
 BracketMatchingController._DECORATION_OPTIONS_WITH_OVERVIEW_RULER = ModelDecorationOptions.register({
     description: 'bracket-match-overview',
     stickiness: 1 /* TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges */,
-    class名称： 'bracket-match',
+    class名称: 'bracket-match',
     overviewRuler: {
         color: themeColorFromId(overviewRulerBracketMatchForeground),
         position: OverviewRulerLane.Center
@@ -334,7 +334,7 @@ BracketMatchingController._DECORATION_OPTIONS_WITH_OVERVIEW_RULER = ModelDecorat
 BracketMatchingController._DECORATION_OPTIONS_WITHOUT_OVERVIEW_RULER = ModelDecorationOptions.register({
     description: 'bracket-match-no-overview',
     stickiness: 1 /* TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges */,
-    class名称： 'bracket-match'
+    class名称: 'bracket-match'
 });
 registerEditorContribution(BracketMatchingController.ID, BracketMatchingController, 1 /* EditorContributionInstantiation.AfterFirstRender */);
 registerEditorAction(SelectToBracketAction);

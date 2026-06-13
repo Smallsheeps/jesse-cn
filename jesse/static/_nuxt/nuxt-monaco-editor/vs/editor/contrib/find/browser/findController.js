@@ -705,7 +705,7 @@ export class MoveToMatchFindAction extends EditorAction {
                     range,
                     options: {
                         description: 'find-match-quick-access-range-highlight',
-                        class名称： 'rangeHighlight',
+                        class名称: 'rangeHighlight',
                         isWholeLine: true
                     }
                 },

@@ -1288,12 +1288,12 @@ class EditorInlayHints extends BaseEditorOption {
             'editor.inlayHints.fontSize': {
                 type: 'number',
                 default: defaults.fontSize,
-                markdown描述： nls.localize('inlayHints.fontSize', "Controls font size of inlay hints in the editor. As default the {0} is used when the configured value is less than {1} or greater than the editor font size.", '`#editor.fontSize#`', '`5`')
+                markdown描述: nls.localize('inlayHints.fontSize', "Controls font size of inlay hints in the editor. As default the {0} is used when the configured value is less than {1} or greater than the editor font size.", '`#editor.fontSize#`', '`5`')
             },
             'editor.inlayHints.fontFamily': {
                 type: 'string',
                 default: defaults.fontFamily,
-                markdown描述： nls.localize('inlayHints.fontFamily', "Controls font family of inlay hints in the editor. When set to empty, the {0} is used.", '`#editor.fontFamily#`')
+                markdown描述: nls.localize('inlayHints.fontFamily', "Controls font family of inlay hints in the editor. When set to empty, the {0} is used.", '`#editor.fontFamily#`')
             },
             'editor.inlayHints.padding': {
                 type: 'boolean',
@@ -1347,7 +1347,7 @@ class EditorLineDecorationsWidth extends BaseEditorOption {
 //#region lineHeight
 class EditorLineHeight extends EditorFloatOption {
     constructor() {
-        super(67 /* EditorOption.lineHeight */, 'lineHeight', EDITOR_FONT_DEFAULTS.lineHeight, x => EditorFloatOption.clamp(x, 0, 150), { markdown描述： nls.localize('lineHeight', "Controls the line height. \n - Use 0 to automatically compute the line height from the font size.\n - Values between 0 and 8 will be used as a multiplier with the font size.\n - Values greater than or equal to 8 will be used as effective values.") });
+        super(67 /* EditorOption.lineHeight */, 'lineHeight', EDITOR_FONT_DEFAULTS.lineHeight, x => EditorFloatOption.clamp(x, 0, 150), { markdown描述: nls.localize('lineHeight', "Controls the line height. \n - Use 0 to automatically compute the line height from the font size.\n - Values between 0 and 8 will be used as a multiplier with the font size.\n - Values greater than or equal to 8 will be used as effective values.") });
     }
     compute(env, options, value) {
         // The lineHeight is computed from the fontSize if it is 0.
@@ -1582,7 +1582,7 @@ class EditorQuickSuggestions extends BaseEditorOption {
                 },
             },
             default: defaults,
-            markdown描述： nls.localize('quickSuggestions', "Controls whether suggestions should automatically show up while typing. This can be controlled for typing in comments, strings, and other code. Quick suggestion can be configured to show as ghost text or with the suggest widget. Also be aware of the '{0}'-setting which controls if suggestions are triggered by special characters.", `#editor.suggestOnTriggerCharacters#`)
+            markdown描述: nls.localize('quickSuggestions', "Controls whether suggestions should automatically show up while typing. This can be controlled for typing in comments, strings, and other code. Quick suggestion can be configured to show as ghost text or with the suggest widget. Also be aware of the '{0}'-setting which controls if suggestions are triggered by special characters.", `#editor.suggestOnTriggerCharacters#`)
         });
         this.defaultValue = defaults;
     }
@@ -2100,7 +2100,7 @@ class BracketPairColorization extends BaseEditorOption {
             'editor.bracketPairColorization.enabled': {
                 type: 'boolean',
                 default: defaults.enabled,
-                markdown描述： nls.localize('bracketPairColorization.enabled', "Controls whether bracket pair colorization is enabled or not. Use {0} to override the bracket highlight colors.", '`#workbench.colorCustomizations#`')
+                markdown描述: nls.localize('bracketPairColorization.enabled', "Controls whether bracket pair colorization is enabled or not. Use {0} to override the bracket highlight colors.", '`#workbench.colorCustomizations#`')
             },
             'editor.bracketPairColorization.independentColorPoolPerBracketType': {
                 type: 'boolean',
@@ -2267,7 +2267,7 @@ class EditorSuggest extends BaseEditorOption {
             'editor.suggest.shareSuggestSelections': {
                 type: 'boolean',
                 default: defaults.shareSuggestSelections,
-                markdown描述： nls.localize('suggest.shareSuggestSelections', "Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).")
+                markdown描述: nls.localize('suggest.shareSuggestSelections', "Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).")
             },
             'editor.suggest.selectionMode': {
                 type: 'string',
@@ -2279,7 +2279,7 @@ class EditorSuggest extends BaseEditorOption {
                     nls.localize('suggest.insertMode.whenQuickSuggestion', "Select a suggestion only when triggering IntelliSense as you type."),
                 ],
                 default: defaults.selectionMode,
-                markdown描述： nls.localize('suggest.selectionMode', "Controls whether a suggestion is selected when the widget shows. Note that this only applies to automatically triggered suggestions (`#editor.quickSuggestions#` and `#editor.suggestOnTriggerCharacters#`) and that a suggestion is always selected when explicitly invoked, e.g via `Ctrl+Space`.")
+                markdown描述: nls.localize('suggest.selectionMode', "Controls whether a suggestion is selected when the widget shows. Note that this only applies to automatically triggered suggestions (`#editor.quickSuggestions#` and `#editor.suggestOnTriggerCharacters#`) and that a suggestion is always selected when explicitly invoked, e.g via `Ctrl+Space`.")
             },
             'editor.suggest.snippetsPreventQuickSuggestions': {
                 type: 'boolean',
@@ -2317,152 +2317,152 @@ class EditorSuggest extends BaseEditorOption {
             'editor.suggest.showMethods': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showMethods', "When enabled IntelliSense shows `method`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showMethods', "When enabled IntelliSense shows `method`-suggestions.")
             },
             'editor.suggest.showFunctions': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showFunctions', "When enabled IntelliSense shows `function`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showFunctions', "When enabled IntelliSense shows `function`-suggestions.")
             },
             'editor.suggest.showConstructors': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showConstructors', "When enabled IntelliSense shows `constructor`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showConstructors', "When enabled IntelliSense shows `constructor`-suggestions.")
             },
             'editor.suggest.showDeprecated': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showDeprecated', "When enabled IntelliSense shows `deprecated`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showDeprecated', "When enabled IntelliSense shows `deprecated`-suggestions.")
             },
             'editor.suggest.matchOnWordStartOnly': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.matchOnWordStartOnly', "When enabled IntelliSense filtering requires that the first character matches on a word start. For example, `c` on `Console` or `WebContext` but _not_ on `description`. When disabled IntelliSense will show more results but still sorts them by match quality.")
+                markdown描述: nls.localize('editor.suggest.matchOnWordStartOnly', "When enabled IntelliSense filtering requires that the first character matches on a word start. For example, `c` on `Console` or `WebContext` but _not_ on `description`. When disabled IntelliSense will show more results but still sorts them by match quality.")
             },
             'editor.suggest.showFields': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showFields', "When enabled IntelliSense shows `field`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showFields', "When enabled IntelliSense shows `field`-suggestions.")
             },
             'editor.suggest.showVariables': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showVariables', "When enabled IntelliSense shows `variable`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showVariables', "When enabled IntelliSense shows `variable`-suggestions.")
             },
             'editor.suggest.showClasses': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showClasss', "When enabled IntelliSense shows `class`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showClasss', "When enabled IntelliSense shows `class`-suggestions.")
             },
             'editor.suggest.showStructs': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showStructs', "When enabled IntelliSense shows `struct`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showStructs', "When enabled IntelliSense shows `struct`-suggestions.")
             },
             'editor.suggest.showInterfaces': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showInterfaces', "When enabled IntelliSense shows `interface`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showInterfaces', "When enabled IntelliSense shows `interface`-suggestions.")
             },
             'editor.suggest.showModules': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showModules', "When enabled IntelliSense shows `module`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showModules', "When enabled IntelliSense shows `module`-suggestions.")
             },
             'editor.suggest.showProperties': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showPropertys', "When enabled IntelliSense shows `property`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showPropertys', "When enabled IntelliSense shows `property`-suggestions.")
             },
             'editor.suggest.showEvents': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showEvents', "When enabled IntelliSense shows `event`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showEvents', "When enabled IntelliSense shows `event`-suggestions.")
             },
             'editor.suggest.showOperators': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showOperators', "When enabled IntelliSense shows `operator`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showOperators', "When enabled IntelliSense shows `operator`-suggestions.")
             },
             'editor.suggest.showUnits': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showUnits', "When enabled IntelliSense shows `unit`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showUnits', "When enabled IntelliSense shows `unit`-suggestions.")
             },
             'editor.suggest.showValues': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showValues', "When enabled IntelliSense shows `value`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showValues', "When enabled IntelliSense shows `value`-suggestions.")
             },
             'editor.suggest.showConstants': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showConstants', "When enabled IntelliSense shows `constant`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showConstants', "When enabled IntelliSense shows `constant`-suggestions.")
             },
             'editor.suggest.showEnums': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showEnums', "When enabled IntelliSense shows `enum`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showEnums', "When enabled IntelliSense shows `enum`-suggestions.")
             },
             'editor.suggest.showEnumMembers': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showEnumMembers', "When enabled IntelliSense shows `enumMember`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showEnumMembers', "When enabled IntelliSense shows `enumMember`-suggestions.")
             },
             'editor.suggest.showKeywords': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showKeywords', "When enabled IntelliSense shows `keyword`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showKeywords', "When enabled IntelliSense shows `keyword`-suggestions.")
             },
             'editor.suggest.showWords': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showTexts', "When enabled IntelliSense shows `text`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showTexts', "When enabled IntelliSense shows `text`-suggestions.")
             },
             'editor.suggest.showColors': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showColors', "When enabled IntelliSense shows `color`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showColors', "When enabled IntelliSense shows `color`-suggestions.")
             },
             'editor.suggest.showFiles': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showFiles', "When enabled IntelliSense shows `file`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showFiles', "When enabled IntelliSense shows `file`-suggestions.")
             },
             'editor.suggest.showReferences': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showReferences', "When enabled IntelliSense shows `reference`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showReferences', "When enabled IntelliSense shows `reference`-suggestions.")
             },
             'editor.suggest.showCustomcolors': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showCustomcolors', "When enabled IntelliSense shows `customcolor`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showCustomcolors', "When enabled IntelliSense shows `customcolor`-suggestions.")
             },
             'editor.suggest.showFolders': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showFolders', "When enabled IntelliSense shows `folder`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showFolders', "When enabled IntelliSense shows `folder`-suggestions.")
             },
             'editor.suggest.showTypeParameters': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showTypeParameters', "When enabled IntelliSense shows `typeParameter`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showTypeParameters', "When enabled IntelliSense shows `typeParameter`-suggestions.")
             },
             'editor.suggest.showSnippets': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showSnippets', "When enabled IntelliSense shows `snippet`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showSnippets', "When enabled IntelliSense shows `snippet`-suggestions.")
             },
             'editor.suggest.showUsers': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showUsers', "When enabled IntelliSense shows `user`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showUsers', "When enabled IntelliSense shows `user`-suggestions.")
             },
             'editor.suggest.showIssues': {
                 type: 'boolean',
                 default: true,
-                markdown描述： nls.localize('editor.suggest.showIssues', "When enabled IntelliSense shows `issues`-suggestions.")
+                markdown描述: nls.localize('editor.suggest.showIssues', "When enabled IntelliSense shows `issues`-suggestions.")
             }
         });
     }
@@ -2648,11 +2648,11 @@ class EditorDropIntoEditor extends BaseEditorOption {
             'editor.dropIntoEditor.enabled': {
                 type: 'boolean',
                 default: defaults.enabled,
-                markdown描述： nls.localize('dropIntoEditor.enabled', "Controls whether you can drag and drop a file into a text editor by holding down the `Shift` key (instead of opening the file in an editor)."),
+                markdown描述: nls.localize('dropIntoEditor.enabled', "Controls whether you can drag and drop a file into a text editor by holding down the `Shift` key (instead of opening the file in an editor)."),
             },
             'editor.dropIntoEditor.showDropSelector': {
                 type: 'string',
-                markdown描述： nls.localize('dropIntoEditor.showDropSelector', "Controls if a widget is shown when dropping files into the editor. This widget lets you control how the file is dropped."),
+                markdown描述: nls.localize('dropIntoEditor.showDropSelector', "Controls if a widget is shown when dropping files into the editor. This widget lets you control how the file is dropped."),
                 enum: [
                     'afterDrop',
                     'never'
@@ -2683,11 +2683,11 @@ class EditorPasteAs extends BaseEditorOption {
             'editor.pasteAs.enabled': {
                 type: 'boolean',
                 default: defaults.enabled,
-                markdown描述： nls.localize('pasteAs.enabled', "Controls whether you can paste content in different ways."),
+                markdown描述: nls.localize('pasteAs.enabled', "Controls whether you can paste content in different ways."),
             },
             'editor.pasteAs.showPasteSelector': {
                 type: 'string',
-                markdown描述： nls.localize('pasteAs.showPasteSelector', "Controls if a widget is shown when pasting content in to the editor. This widget lets you control how the file is pasted."),
+                markdown描述: nls.localize('pasteAs.showPasteSelector', "Controls if a widget is shown when pasting content in to the editor. This widget lets you control how the file is pasted."),
                 enum: [
                     'afterPaste',
                     'never'
@@ -2734,14 +2734,14 @@ function register(option) {
     return option;
 }
 export const EditorOptions = {
-    acceptSuggestionOnCommitCharacter: register(new EditorBooleanOption(0 /* EditorOption.acceptSuggestionOnCommitCharacter */, 'acceptSuggestionOnCommitCharacter', true, { markdown描述： nls.localize('acceptSuggestionOnCommitCharacter', "Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.") })),
+    acceptSuggestionOnCommitCharacter: register(new EditorBooleanOption(0 /* EditorOption.acceptSuggestionOnCommitCharacter */, 'acceptSuggestionOnCommitCharacter', true, { markdown描述: nls.localize('acceptSuggestionOnCommitCharacter', "Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.") })),
     acceptSuggestionOnEnter: register(new EditorStringEnumOption(1 /* EditorOption.acceptSuggestionOnEnter */, 'acceptSuggestionOnEnter', 'on', ['on', 'smart', 'off'], {
         markdownEnumDescriptions: [
             '',
             nls.localize('acceptSuggestionOnEnterSmart', "Only accept a suggestion with `Enter` when it makes a textual change."),
             ''
         ],
-        markdown描述： nls.localize('acceptSuggestionOnEnter', "Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.")
+        markdown描述: nls.localize('acceptSuggestionOnEnter', "Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.")
     })),
     accessibilitySupport: register(new EditorAccessibilitySupport()),
     accessibilityPageSize: register(new EditorIntOption(3 /* EditorOption.accessibilityPageSize */, 'accessibilityPageSize', 10, 1, 1073741824 /* Constants.MAX_SAFE_SMALL_INTEGER */, {
@@ -2827,7 +2827,7 @@ export const EditorOptions = {
         default: 0,
         minimum: 0,
         maximum: 100,
-        markdown描述： nls.localize('codeLensFontSize', "Controls the font size in pixels for CodeLens. When set to 0, 90% of `#editor.fontSize#` is used.")
+        markdown描述: nls.localize('codeLensFontSize', "Controls the font size in pixels for CodeLens. When set to 0, 90% of `#editor.fontSize#` is used.")
     })),
     colorDecorators: register(new EditorBooleanOption(20 /* EditorOption.colorDecorators */, 'colorDecorators', true, { description: nls.localize('colorDecorators', "Controls whether the editor should render the inline color decorators and color picker.") })),
     colorDecoratorActivatedOn: register(new EditorStringEnumOption(148 /* EditorOption.colorDecoratorsActivatedOn */, 'colorDecoratorsActivatedOn', 'clickAndHover', ['clickAndHover', 'hover', 'click'], {
@@ -2839,7 +2839,7 @@ export const EditorOptions = {
         description: nls.localize('colorDecoratorActivatedOn', "Controls the condition to make a color picker appear from a color decorator")
     })),
     colorDecoratorsLimit: register(new EditorIntOption(21 /* EditorOption.colorDecoratorsLimit */, 'colorDecoratorsLimit', 500, 1, 1000000, {
-        markdown描述： nls.localize('colorDecoratorsLimit', "Controls the max number of color decorators that can be rendered in an editor at once.")
+        markdown描述: nls.localize('colorDecoratorsLimit', "Controls the max number of color decorators that can be rendered in an editor at once.")
     })),
     columnSelection: register(new EditorBooleanOption(22 /* EditorOption.columnSelection */, 'columnSelection', false, { description: nls.localize('columnSelection', "Enable that the selection with the mouse and keys is doing column selection.") })),
     comments: register(new EditorComments()),
@@ -2861,9 +2861,9 @@ export const EditorOptions = {
             nls.localize('cursorSurroundingLinesStyle.default', "`cursorSurroundingLines` is enforced only when triggered via the keyboard or API."),
             nls.localize('cursorSurroundingLinesStyle.all', "`cursorSurroundingLines` is enforced always.")
         ],
-        markdown描述： nls.localize('cursorSurroundingLinesStyle', "Controls when `#editor.cursorSurroundingLines#` should be enforced.")
+        markdown描述: nls.localize('cursorSurroundingLinesStyle', "Controls when `#editor.cursorSurroundingLines#` should be enforced.")
     })),
-    cursorWidth: register(new EditorIntOption(31 /* EditorOption.cursorWidth */, 'cursorWidth', 0, 0, 1073741824 /* Constants.MAX_SAFE_SMALL_INTEGER */, { markdown描述： nls.localize('cursorWidth', "Controls the width of the cursor when `#editor.cursorStyle#` is set to `line`.") })),
+    cursorWidth: register(new EditorIntOption(31 /* EditorOption.cursorWidth */, 'cursorWidth', 0, 0, 1073741824 /* Constants.MAX_SAFE_SMALL_INTEGER */, { markdown描述: nls.localize('cursorWidth', "Controls the width of the cursor when `#editor.cursorStyle#` is set to `line`.") })),
     disableLayerHinting: register(new EditorBooleanOption(32 /* EditorOption.disableLayerHinting */, 'disableLayerHinting', false)),
     disableMonospaceOptimizations: register(new EditorBooleanOption(33 /* EditorOption.disableMonospaceOptimizations */, 'disableMonospaceOptimizations', false)),
     domReadOnly: register(new EditorBooleanOption(34 /* EditorOption.domReadOnly */, 'domReadOnly', false)),
@@ -2879,8 +2879,8 @@ export const EditorOptions = {
         ],
         description: nls.localize('experimentalWhitespaceRendering', "Controls whether whitespace is rendered with a new, experimental method.")
     })),
-    extraEditorClass名称： register(new EditorStringOption(39 /* EditorOption.extraEditorClassName */, 'extraEditorClassName', '')),
-    fastScrollSensitivity: register(new EditorFloatOption(40 /* EditorOption.fastScrollSensitivity */, 'fastScrollSensitivity', 5, x => (x <= 0 ? 5 : x), { markdown描述： nls.localize('fastScrollSensitivity', "Scrolling speed multiplier when pressing `Alt`.") })),
+    extraEditorClass名称: register(new EditorStringOption(39 /* EditorOption.extraEditorClassName */, 'extraEditorClassName', '')),
+    fastScrollSensitivity: register(new EditorFloatOption(40 /* EditorOption.fastScrollSensitivity */, 'fastScrollSensitivity', 5, x => (x <= 0 ? 5 : x), { markdown描述: nls.localize('fastScrollSensitivity', "Scrolling speed multiplier when pressing `Alt`.") })),
     find: register(new EditorFind()),
     fixedOverflowWidgets: register(new EditorBooleanOption(42 /* EditorOption.fixedOverflowWidgets */, 'fixedOverflowWidgets', false)),
     folding: register(new EditorBooleanOption(43 /* EditorOption.folding */, 'folding', true, { description: nls.localize('folding', "Controls whether the editor has code folding enabled.") })),
@@ -2920,9 +2920,9 @@ export const EditorOptions = {
     matchBrackets: register(new EditorStringEnumOption(72 /* EditorOption.matchBrackets */, 'matchBrackets', 'always', ['always', 'near', 'never'], { description: nls.localize('matchBrackets', "Highlight matching brackets.") })),
     minimap: register(new EditorMinimap()),
     mouseStyle: register(new EditorStringEnumOption(74 /* EditorOption.mouseStyle */, 'mouseStyle', 'text', ['text', 'default', 'copy'])),
-    mouseWheelScrollSensitivity: register(new EditorFloatOption(75 /* EditorOption.mouseWheelScrollSensitivity */, 'mouseWheelScrollSensitivity', 1, x => (x === 0 ? 1 : x), { markdown描述： nls.localize('mouseWheelScrollSensitivity', "A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.") })),
+    mouseWheelScrollSensitivity: register(new EditorFloatOption(75 /* EditorOption.mouseWheelScrollSensitivity */, 'mouseWheelScrollSensitivity', 1, x => (x === 0 ? 1 : x), { markdown描述: nls.localize('mouseWheelScrollSensitivity', "A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.") })),
     mouseWheelZoom: register(new EditorBooleanOption(76 /* EditorOption.mouseWheelZoom */, 'mouseWheelZoom', false, {
-        markdown描述： platform.isMacintosh
+        markdown描述: platform.isMacintosh
             ? nls.localize('mouseWheelZoom.mac', "Zoom the font of the editor when using mouse wheel and holding `Cmd`.")
             : nls.localize('mouseWheelZoom', "Zoom the font of the editor when using mouse wheel and holding `Ctrl`.")
     })),
@@ -2932,7 +2932,7 @@ export const EditorOptions = {
             nls.localize('multiCursorModifier.ctrlCmd', "Maps to `Control` on Windows and Linux and to `Command` on macOS."),
             nls.localize('multiCursorModifier.alt', "Maps to `Alt` on Windows and Linux and to `Option` on macOS.")
         ],
-        markdown描述： nls.localize({
+        markdown描述: nls.localize({
             key: 'multiCursorModifier',
             comment: [
                 '- `ctrlCmd` refers to a value the setting can take and should not be localized.',
@@ -2945,10 +2945,10 @@ export const EditorOptions = {
             nls.localize('multiCursorPaste.spread', "Each cursor pastes a single line of the text."),
             nls.localize('multiCursorPaste.full', "Each cursor pastes the full text.")
         ],
-        markdown描述： nls.localize('multiCursorPaste', "Controls pasting when the line count of the pasted text matches the cursor count.")
+        markdown描述: nls.localize('multiCursorPaste', "Controls pasting when the line count of the pasted text matches the cursor count.")
     })),
     multiCursorLimit: register(new EditorIntOption(80 /* EditorOption.multiCursorLimit */, 'multiCursorLimit', 10000, 1, 100000, {
-        markdown描述： nls.localize('multiCursorLimit', "Controls the max number of cursors that can be in an active editor at once.")
+        markdown描述: nls.localize('multiCursorLimit', "Controls the max number of cursors that can be in an active editor at once.")
     })),
     occurrencesHighlight: register(new EditorStringEnumOption(81 /* EditorOption.occurrencesHighlight */, 'occurrencesHighlight', 'singleFile', ['off', 'singleFile', 'multiFile'], {
         markdownEnumDescriptions: [
@@ -2956,7 +2956,7 @@ export const EditorOptions = {
             nls.localize('occurrencesHighlight.singleFile', "Highlights occurrences only in the current file."),
             nls.localize('occurrencesHighlight.multiFile', "Experimental: Highlights occurrences across all valid open files.")
         ],
-        markdown描述： nls.localize('occurrencesHighlight', "Controls whether occurrences should be highlighted across open files.")
+        markdown描述: nls.localize('occurrencesHighlight', "Controls whether occurrences should be highlighted across open files.")
     })),
     overviewRulerBorder: register(new EditorBooleanOption(82 /* EditorOption.overviewRulerBorder */, 'overviewRulerBorder', true, { description: nls.localize('overviewRulerBorder', "Controls whether a border should be drawn around the overview ruler.") })),
     overviewRulerLanes: register(new EditorIntOption(83 /* EditorOption.overviewRulerLanes */, 'overviewRulerLanes', 3, 0, 3)),
@@ -3039,8 +3039,8 @@ export const EditorOptions = {
     inlineSuggest: register(new InlineEditorSuggest()),
     inlineEdit: register(new InlineEditorEdit()),
     inlineCompletionsAccessibilityVerbose: register(new EditorBooleanOption(149 /* EditorOption.inlineCompletionsAccessibilityVerbose */, 'inlineCompletionsAccessibilityVerbose', false, { description: nls.localize('inlineCompletionsAccessibilityVerbose', "Controls whether the accessibility hint should be provided to screen reader users when an inline completion is shown.") })),
-    suggestFontSize: register(new EditorIntOption(119 /* EditorOption.suggestFontSize */, 'suggestFontSize', 0, 0, 1000, { markdown描述： nls.localize('suggestFontSize', "Font size for the suggest widget. When set to {0}, the value of {1} is used.", '`0`', '`#editor.fontSize#`') })),
-    suggestLineHeight: register(new EditorIntOption(120 /* EditorOption.suggestLineHeight */, 'suggestLineHeight', 0, 0, 1000, { markdown描述： nls.localize('suggestLineHeight', "Line height for the suggest widget. When set to {0}, the value of {1} is used. The minimum value is 8.", '`0`', '`#editor.lineHeight#`') })),
+    suggestFontSize: register(new EditorIntOption(119 /* EditorOption.suggestFontSize */, 'suggestFontSize', 0, 0, 1000, { markdown描述: nls.localize('suggestFontSize', "Font size for the suggest widget. When set to {0}, the value of {1} is used.", '`0`', '`#editor.fontSize#`') })),
+    suggestLineHeight: register(new EditorIntOption(120 /* EditorOption.suggestLineHeight */, 'suggestLineHeight', 0, 0, 1000, { markdown描述: nls.localize('suggestLineHeight', "Line height for the suggest widget. When set to {0}, the value of {1} is used. The minimum value is 8.", '`0`', '`#editor.lineHeight#`') })),
     suggestOnTriggerCharacters: register(new EditorBooleanOption(121 /* EditorOption.suggestOnTriggerCharacters */, 'suggestOnTriggerCharacters', true, { description: nls.localize('suggestOnTriggerCharacters', "Controls whether suggestions should automatically show up when typing trigger characters.") })),
     suggestSelection: register(new EditorStringEnumOption(122 /* EditorOption.suggestSelection */, 'suggestSelection', 'first', ['first', 'recentlyUsed', 'recentlyUsedByPrefix'], {
         markdownEnumDescriptions: [
@@ -3107,7 +3107,7 @@ export const EditorOptions = {
     })),
     wordWrapBreakAfterCharacters: register(new EditorStringOption(133 /* EditorOption.wordWrapBreakAfterCharacters */, 'wordWrapBreakAfterCharacters', 
     // allow-any-unicode-next-line
-    ' \t})]?|/&.,;¢°′″‰℃、。｡､￠，．：；？！％・･ゝゞヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ々〻ｧｨｩｪｫｬｭｮｯｰ”〉》」』】〕）］｝｣')),
+    ' \t})]?|/&.,;¢°′″‰℃、。｡､￠,．:;？！％・･ゝゞヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ々〻ｧｨｩｪｫｬｭｮｯｰ”〉》」』】〕）］｝｣')),
     wordWrapBreakBeforeCharacters: register(new EditorStringOption(134 /* EditorOption.wordWrapBreakBeforeCharacters */, 'wordWrapBreakBeforeCharacters', 
     // allow-any-unicode-next-line
     '([{‘“〈《「『【〔（［｛｢£¥＄￡￥+＋')),

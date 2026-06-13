@@ -1175,7 +1175,7 @@ function createDOMPurify() {
 		}
 
 		const hookEvent = {
-			attr名称： '',
+			attr名称: '',
 			attrValue: '',
 			keepAttr: true,
 			allowedAttributes: ALLOWED_ATTR

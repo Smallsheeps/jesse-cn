@@ -5270,7 +5270,7 @@ var JSONDocumentSymbols = class {
       }
     }
     const toVisit = [
-      { node: root, container名称： "" }
+      { node: root, container名称: "" }
     ];
     let nextToVisit = 0;
     let limitExceeded = false;
@@ -5291,7 +5291,7 @@ var JSONDocumentSymbols = class {
               const location = Location.create(document.uri, getRange(document, property));
               const childContainerName = containerName ? containerName + "." + property.keyNode.value : property.keyNode.value;
               result.push({ name: this.getKeyLabel(property), kind: this.getSymbolKind(valueNode.type), location, containerName });
-              toVisit.push({ node: valueNode, container名称： childContainerName });
+              toVisit.push({ node: valueNode, container名称: childContainerName });
             } else {
               limitExceeded = true;
             }

@@ -99,7 +99,7 @@ let InPlaceReplaceController = InPlaceReplaceController_1 = class InPlaceReplace
 InPlaceReplaceController.ID = 'editor.contrib.inPlaceReplaceController';
 InPlaceReplaceController.DECORATION = ModelDecorationOptions.register({
     description: 'in-place-replace',
-    class名称： 'valueSetReplacement'
+    class名称: 'valueSetReplacement'
 });
 InPlaceReplaceController = InPlaceReplaceController_1 = __decorate([
     __param(1, IEditorWorkerService)

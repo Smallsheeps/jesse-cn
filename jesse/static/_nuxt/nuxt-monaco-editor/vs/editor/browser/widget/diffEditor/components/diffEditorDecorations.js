@@ -74,14 +74,14 @@ export class DiffEditorDecorations extends Disposable {
                 originalDecorations.push({
                     range: m.lineRangeMapping.original.toInclusiveRange(), options: {
                         description: 'moved',
-                        blockClass名称： 'movedOriginal' + (m === activeMovedText ? ' currentMove' : ''),
+                        blockClass名称: 'movedOriginal' + (m === activeMovedText ? ' currentMove' : ''),
                         blockPadding: [MovedBlocksLinesFeature.movedCodeBlockPadding, 0, MovedBlocksLinesFeature.movedCodeBlockPadding, MovedBlocksLinesFeature.movedCodeBlockPadding],
                     }
                 });
                 modifiedDecorations.push({
                     range: m.lineRangeMapping.modified.toInclusiveRange(), options: {
                         description: 'moved',
-                        blockClass名称： 'movedModified' + (m === activeMovedText ? ' currentMove' : ''),
+                        blockClass名称: 'movedModified' + (m === activeMovedText ? ' currentMove' : ''),
                         blockPadding: [4, 0, 4, 4],
                     }
                 });

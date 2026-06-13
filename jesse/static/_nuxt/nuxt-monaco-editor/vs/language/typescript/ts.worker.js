@@ -20780,7 +20780,7 @@ ${lanes.join("\n")}
         getParenthesizeRightSideOfBinaryForOperator: (_) => identity,
         parenthesizeLeftSideOfBinary: (_binaryOperator, leftSide) => leftSide,
         parenthesizeRightSideOfBinary: (_binaryOperator, _leftSide, rightSide) => rightSide,
-        parenthesizeExpressionOfComputedProperty名称： identity,
+        parenthesizeExpressionOfComputedProperty名称: identity,
         parenthesizeConditionOfConditionalExpression: identity,
         parenthesizeBranchOfConditionalExpression: identity,
         parenthesizeExpressionOfExportDefault: identity,
@@ -26288,16 +26288,16 @@ ${lanes.join("\n")}
           hasNoDefaultLib = true;
           break;
         case "reference":
-          referencedFiles = append(referencedFiles, { pos: -1, end: -1, file名称： section.data });
+          referencedFiles = append(referencedFiles, { pos: -1, end: -1, file名称: section.data });
           break;
         case "type":
-          typeReferenceDirectives = append(typeReferenceDirectives, { pos: -1, end: -1, file名称： section.data });
+          typeReferenceDirectives = append(typeReferenceDirectives, { pos: -1, end: -1, file名称: section.data });
           break;
         case "type-import":
           typeReferenceDirectives = append(typeReferenceDirectives, {
             pos: -1,
             end: -1,
-            file名称： section.data,
+            file名称: section.data,
             resolutionMode: 99
             /* ESNext */
           });
@@ -26306,13 +26306,13 @@ ${lanes.join("\n")}
           typeReferenceDirectives = append(typeReferenceDirectives, {
             pos: -1,
             end: -1,
-            file名称： section.data,
+            file名称: section.data,
             resolutionMode: 1
             /* CommonJS */
           });
           break;
         case "lib":
-          libReferenceDirectives = append(libReferenceDirectives, { pos: -1, end: -1, file名称： section.data });
+          libReferenceDirectives = append(libReferenceDirectives, { pos: -1, end: -1, file名称: section.data });
           break;
         case "prepend":
           let prependTexts;
@@ -27456,7 +27456,7 @@ ${lanes.join("\n")}
       })(PrivateIdentifierKind || {});
       decorateHelper = {
         name: "typescript:decorate",
-        import名称： "__decorate",
+        import名称: "__decorate",
         scoped: false,
         priority: 2,
         text: `
@@ -27469,7 +27469,7 @@ ${lanes.join("\n")}
       };
       metadataHelper = {
         name: "typescript:metadata",
-        import名称： "__metadata",
+        import名称: "__metadata",
         scoped: false,
         priority: 3,
         text: `
@@ -27479,7 +27479,7 @@ ${lanes.join("\n")}
       };
       paramHelper = {
         name: "typescript:param",
-        import名称： "__param",
+        import名称: "__param",
         scoped: false,
         priority: 4,
         text: `
@@ -27489,7 +27489,7 @@ ${lanes.join("\n")}
       };
       esDecorateHelper = {
         name: "typescript:esDecorate",
-        import名称： "__esDecorate",
+        import名称: "__esDecorate",
         scoped: false,
         priority: 2,
         text: `
@@ -27523,7 +27523,7 @@ ${lanes.join("\n")}
       };
       runInitializersHelper = {
         name: "typescript:runInitializers",
-        import名称： "__runInitializers",
+        import名称: "__runInitializers",
         scoped: false,
         priority: 2,
         text: `
@@ -27537,7 +27537,7 @@ ${lanes.join("\n")}
       };
       assignHelper = {
         name: "typescript:assign",
-        import名称： "__assign",
+        import名称: "__assign",
         scoped: false,
         priority: 1,
         text: `
@@ -27555,14 +27555,14 @@ ${lanes.join("\n")}
       };
       awaitHelper = {
         name: "typescript:await",
-        import名称： "__await",
+        import名称: "__await",
         scoped: false,
         text: `
             var __await = (this && this.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); }`
       };
       asyncGeneratorHelper = {
         name: "typescript:asyncGenerator",
-        import名称： "__asyncGenerator",
+        import名称: "__asyncGenerator",
         scoped: false,
         dependencies: [awaitHelper],
         text: `
@@ -27581,7 +27581,7 @@ ${lanes.join("\n")}
       };
       asyncDelegator = {
         name: "typescript:asyncDelegator",
-        import名称： "__asyncDelegator",
+        import名称: "__asyncDelegator",
         scoped: false,
         dependencies: [awaitHelper],
         text: `
@@ -27593,7 +27593,7 @@ ${lanes.join("\n")}
       };
       asyncValues = {
         name: "typescript:asyncValues",
-        import名称： "__asyncValues",
+        import名称: "__asyncValues",
         scoped: false,
         text: `
             var __asyncValues = (this && this.__asyncValues) || function (o) {
@@ -27606,7 +27606,7 @@ ${lanes.join("\n")}
       };
       restHelper = {
         name: "typescript:rest",
-        import名称： "__rest",
+        import名称: "__rest",
         scoped: false,
         text: `
             var __rest = (this && this.__rest) || function (s, e) {
@@ -27623,7 +27623,7 @@ ${lanes.join("\n")}
       };
       awaiterHelper = {
         name: "typescript:awaiter",
-        import名称： "__awaiter",
+        import名称: "__awaiter",
         scoped: false,
         priority: 5,
         text: `
@@ -27639,7 +27639,7 @@ ${lanes.join("\n")}
       };
       extendsHelper = {
         name: "typescript:extends",
-        import名称： "__extends",
+        import名称: "__extends",
         scoped: false,
         priority: 0,
         text: `
@@ -27662,7 +27662,7 @@ ${lanes.join("\n")}
       };
       templateObjectHelper = {
         name: "typescript:makeTemplateObject",
-        import名称： "__makeTemplateObject",
+        import名称: "__makeTemplateObject",
         scoped: false,
         priority: 0,
         text: `
@@ -27673,7 +27673,7 @@ ${lanes.join("\n")}
       };
       readHelper = {
         name: "typescript:read",
-        import名称： "__read",
+        import名称: "__read",
         scoped: false,
         text: `
             var __read = (this && this.__read) || function (o, n) {
@@ -27695,7 +27695,7 @@ ${lanes.join("\n")}
       };
       spreadArrayHelper = {
         name: "typescript:spreadArray",
-        import名称： "__spreadArray",
+        import名称: "__spreadArray",
         scoped: false,
         text: `
             var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
@@ -27710,7 +27710,7 @@ ${lanes.join("\n")}
       };
       propKeyHelper = {
         name: "typescript:propKey",
-        import名称： "__propKey",
+        import名称: "__propKey",
         scoped: false,
         text: `
         var __propKey = (this && this.__propKey) || function (x) {
@@ -27719,7 +27719,7 @@ ${lanes.join("\n")}
       };
       setFunctionNameHelper = {
         name: "typescript:setFunctionName",
-        import名称： "__setFunctionName",
+        import名称: "__setFunctionName",
         scoped: false,
         text: `
         var __setFunctionName = (this && this.__setFunctionName) || function (f, name, prefix) {
@@ -27729,7 +27729,7 @@ ${lanes.join("\n")}
       };
       valuesHelper = {
         name: "typescript:values",
-        import名称： "__values",
+        import名称: "__values",
         scoped: false,
         text: `
             var __values = (this && this.__values) || function(o) {
@@ -27746,7 +27746,7 @@ ${lanes.join("\n")}
       };
       generatorHelper = {
         name: "typescript:generator",
-        import名称： "__generator",
+        import名称: "__generator",
         scoped: false,
         priority: 6,
         text: `
@@ -27780,7 +27780,7 @@ ${lanes.join("\n")}
       };
       createBindingHelper = {
         name: "typescript:commonjscreatebinding",
-        import名称： "__createBinding",
+        import名称: "__createBinding",
         scoped: false,
         priority: 1,
         text: `
@@ -27798,7 +27798,7 @@ ${lanes.join("\n")}
       };
       setModuleDefaultHelper = {
         name: "typescript:commonjscreatevalue",
-        import名称： "__setModuleDefault",
+        import名称: "__setModuleDefault",
         scoped: false,
         priority: 1,
         text: `
@@ -27810,7 +27810,7 @@ ${lanes.join("\n")}
       };
       importStarHelper = {
         name: "typescript:commonjsimportstar",
-        import名称： "__importStar",
+        import名称: "__importStar",
         scoped: false,
         dependencies: [createBindingHelper, setModuleDefaultHelper],
         priority: 2,
@@ -27825,7 +27825,7 @@ ${lanes.join("\n")}
       };
       importDefaultHelper = {
         name: "typescript:commonjsimportdefault",
-        import名称： "__importDefault",
+        import名称: "__importDefault",
         scoped: false,
         text: `
             var __importDefault = (this && this.__importDefault) || function (mod) {
@@ -27834,7 +27834,7 @@ ${lanes.join("\n")}
       };
       exportStarHelper = {
         name: "typescript:export-star",
-        import名称： "__exportStar",
+        import名称: "__exportStar",
         scoped: false,
         dependencies: [createBindingHelper],
         priority: 2,
@@ -27845,7 +27845,7 @@ ${lanes.join("\n")}
       };
       classPrivateFieldGetHelper = {
         name: "typescript:classPrivateFieldGet",
-        import名称： "__classPrivateFieldGet",
+        import名称: "__classPrivateFieldGet",
         scoped: false,
         text: `
             var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (receiver, state, kind, f) {
@@ -27856,7 +27856,7 @@ ${lanes.join("\n")}
       };
       classPrivateFieldSetHelper = {
         name: "typescript:classPrivateFieldSet",
-        import名称： "__classPrivateFieldSet",
+        import名称: "__classPrivateFieldSet",
         scoped: false,
         text: `
             var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
@@ -27868,7 +27868,7 @@ ${lanes.join("\n")}
       };
       classPrivateFieldInHelper = {
         name: "typescript:classPrivateFieldIn",
-        import名称： "__classPrivateFieldIn",
+        import名称: "__classPrivateFieldIn",
         scoped: false,
         text: `
             var __classPrivateFieldIn = (this && this.__classPrivateFieldIn) || function(state, receiver) {
@@ -27878,7 +27878,7 @@ ${lanes.join("\n")}
       };
       addDisposableResourceHelper = {
         name: "typescript:addDisposableResource",
-        import名称： "__addDisposableResource",
+        import名称: "__addDisposableResource",
         scoped: false,
         text: `
         var __addDisposableResource = (this && this.__addDisposableResource) || function (env, value, async) {
@@ -27904,7 +27904,7 @@ ${lanes.join("\n")}
       };
       disposeResourcesHelper = {
         name: "typescript:disposeResources",
-        import名称： "__disposeResources",
+        import名称: "__disposeResources",
         scoped: false,
         text: `
         var __disposeResources = (this && this.__disposeResources) || (function (SuppressedError) {
@@ -30068,11 +30068,11 @@ ${lanes.join("\n")}
               context.hasNoDefaultLib = true;
             } else if (types) {
               const parsed = parseResolutionMode(res, types.pos, types.end, reportDiagnostic);
-              typeReferenceDirectives.push({ pos: types.pos, end: types.end, file名称： types.value, ...parsed ? { resolutionMode: parsed } : {} });
+              typeReferenceDirectives.push({ pos: types.pos, end: types.end, file名称: types.value, ...parsed ? { resolutionMode: parsed } : {} });
             } else if (lib) {
-              libReferenceDirectives.push({ pos: lib.pos, end: lib.end, file名称： lib.value });
+              libReferenceDirectives.push({ pos: lib.pos, end: lib.end, file名称: lib.value });
             } else if (path) {
-              referencedFiles.push({ pos: path.pos, end: path.end, file名称： path.value });
+              referencedFiles.push({ pos: path.pos, end: path.end, file名称: path.value });
             } else {
               reportDiagnostic(arg.range.pos, arg.range.end - arg.range.pos, Diagnostics.Invalid_reference_directive_syntax);
             }
@@ -39682,7 +39682,7 @@ ${lanes.join("\n")}
               type: "string"
             },
             category: Diagnostics.File_Management,
-            defaultValue描述： Diagnostics.if_files_is_specified_otherwise_Asterisk_Asterisk_Slash_Asterisk
+            defaultValue描述: Diagnostics.if_files_is_specified_otherwise_Asterisk_Asterisk_Slash_Asterisk
           },
           {
             name: "exclude",
@@ -39692,7 +39692,7 @@ ${lanes.join("\n")}
               type: "string"
             },
             category: Diagnostics.File_Management,
-            defaultValue描述： Diagnostics.node_modules_bower_components_jspm_packages_plus_the_value_of_outDir_if_one_is_specified
+            defaultValue描述: Diagnostics.node_modules_bower_components_jspm_packages_plus_the_value_of_outDir_if_one_is_specified
           },
           compileOnSaveCommandLineOption
         ])
@@ -40999,7 +40999,7 @@ ${lanes.join("\n")}
       compileOnSaveCommandLineOption = {
         name: "compileOnSave",
         type: "boolean",
-        defaultValue描述： false
+        defaultValue描述: false
       };
       jsxOptionMap = new Map(Object.entries({
         "preserve": 1,
@@ -41114,7 +41114,7 @@ ${lanes.join("\n")}
           })),
           category: Diagnostics.Watch_and_Build_Modes,
           description: Diagnostics.Specify_how_the_TypeScript_watch_mode_works,
-          defaultValue描述： 4
+          defaultValue描述: 4
           /* UseFsEvents */
         },
         {
@@ -41128,7 +41128,7 @@ ${lanes.join("\n")}
           })),
           category: Diagnostics.Watch_and_Build_Modes,
           description: Diagnostics.Specify_how_directories_are_watched_on_systems_that_lack_recursive_file_watching_functionality,
-          defaultValue描述： 0
+          defaultValue描述: 0
           /* UseFsEvents */
         },
         {
@@ -41142,7 +41142,7 @@ ${lanes.join("\n")}
           })),
           category: Diagnostics.Watch_and_Build_Modes,
           description: Diagnostics.Specify_what_approach_the_watcher_should_use_if_the_system_runs_out_of_native_file_watchers,
-          defaultValue描述： 1
+          defaultValue描述: 1
           /* PriorityInterval */
         },
         {
@@ -41150,7 +41150,7 @@ ${lanes.join("\n")}
           type: "boolean",
           category: Diagnostics.Watch_and_Build_Modes,
           description: Diagnostics.Synchronously_call_callbacks_and_update_the_state_of_directory_watchers_on_platforms_that_don_t_support_recursive_watching_natively,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "excludeDirectories",
@@ -41180,31 +41180,31 @@ ${lanes.join("\n")}
       commonOptionsWithBuild = [
         {
           name: "help",
-          short名称： "h",
+          short名称: "h",
           type: "boolean",
           showInSimplifiedHelpView: true,
           isCommandLineOnly: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Print_this_message,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "help",
-          short名称： "?",
+          short名称: "?",
           type: "boolean",
           isCommandLineOnly: true,
           category: Diagnostics.Command_line_Options,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "watch",
-          short名称： "w",
+          short名称: "w",
           type: "boolean",
           showInSimplifiedHelpView: true,
           isCommandLineOnly: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Watch_input_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "preserveWatchOutput",
@@ -41212,28 +41212,28 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: false,
           category: Diagnostics.Output_Formatting,
           description: Diagnostics.Disable_wiping_the_console_in_watch_mode,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "listFiles",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Print_all_of_the_files_read_during_the_compilation,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "explainFiles",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Print_files_read_during_the_compilation_including_why_it_was_included,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "listEmittedFiles",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Print_the_names_of_emitted_files_after_a_compilation,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "pretty",
@@ -41241,28 +41241,28 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Output_Formatting,
           description: Diagnostics.Enable_color_and_formatting_in_TypeScript_s_output_to_make_compiler_errors_easier_to_read,
-          defaultValue描述： true
+          defaultValue描述: true
         },
         {
           name: "traceResolution",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Log_paths_used_during_the_moduleResolution_process,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "diagnostics",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Output_compiler_performance_information_after_building,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "extendedDiagnostics",
           type: "boolean",
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Output_more_detailed_compiler_performance_information_after_building,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "generateCpuProfile",
@@ -41271,7 +41271,7 @@ ${lanes.join("\n")}
           paramType: Diagnostics.FILE_OR_DIRECTORY,
           category: Diagnostics.Compiler_Diagnostics,
           description: Diagnostics.Emit_a_v8_CPU_profile_of_the_compiler_run_for_debugging,
-          defaultValue描述： "profile.cpuprofile"
+          defaultValue描述: "profile.cpuprofile"
         },
         {
           name: "generateTrace",
@@ -41284,16 +41284,16 @@ ${lanes.join("\n")}
         },
         {
           name: "incremental",
-          short名称： "i",
+          short名称: "i",
           type: "boolean",
           category: Diagnostics.Projects,
           description: Diagnostics.Save_tsbuildinfo_files_to_allow_for_incremental_compilation_of_projects,
           transpileOptionValue: void 0,
-          defaultValue描述： Diagnostics.false_unless_composite_is_set
+          defaultValue描述: Diagnostics.false_unless_composite_is_set
         },
         {
           name: "declaration",
-          short名称： "d",
+          short名称: "d",
           type: "boolean",
           // Not setting affectsEmit because we calculate this flag might not affect full emit
           affectsBuildInfo: true,
@@ -41301,7 +41301,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Emit,
           transpileOptionValue: void 0,
           description: Diagnostics.Generate_d_ts_files_from_TypeScript_and_JavaScript_files_in_your_project,
-          defaultValue描述： Diagnostics.false_unless_composite_is_set
+          defaultValue描述: Diagnostics.false_unless_composite_is_set
         },
         {
           name: "declarationMap",
@@ -41311,7 +41311,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Emit,
           transpileOptionValue: void 0,
-          defaultValue描述： false,
+          defaultValue描述: false,
           description: Diagnostics.Create_sourcemaps_for_d_ts_files
         },
         {
@@ -41323,7 +41323,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Emit,
           description: Diagnostics.Only_output_d_ts_files_and_not_JavaScript_files,
           transpileOptionValue: void 0,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "sourceMap",
@@ -41332,7 +41332,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           showInSimplifiedHelpView: true,
           category: Diagnostics.Emit,
-          defaultValue描述： false,
+          defaultValue描述: false,
           description: Diagnostics.Create_source_map_files_for_emitted_JavaScript_files
         },
         {
@@ -41342,7 +41342,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Include_sourcemap_files_inside_the_emitted_JavaScript,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "assumeChangesOnlyAffectDirectDependencies",
@@ -41352,7 +41352,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Watch_and_Build_Modes,
           description: Diagnostics.Have_recompiles_in_projects_that_use_incremental_and_watch_mode_assume_that_changes_within_a_file_will_only_affect_files_directly_depending_on_it,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "locale",
@@ -41360,12 +41360,12 @@ ${lanes.join("\n")}
           category: Diagnostics.Command_line_Options,
           isCommandLineOnly: true,
           description: Diagnostics.Set_the_language_of_the_messaging_from_TypeScript_This_does_not_affect_emit,
-          defaultValue描述： Diagnostics.Platform_specific
+          defaultValue描述: Diagnostics.Platform_specific
         }
       ];
       targetOptionDeclaration = {
         name: "target",
-        short名称： "t",
+        short名称: "t",
         type: new Map(Object.entries({
           es3: 0,
           es5: 1,
@@ -41390,12 +41390,12 @@ ${lanes.join("\n")}
         showInSimplifiedHelpView: true,
         category: Diagnostics.Language_and_Environment,
         description: Diagnostics.Set_the_JavaScript_language_version_for_emitted_JavaScript_and_include_compatible_library_declarations,
-        defaultValue描述： 1
+        defaultValue描述: 1
         /* ES5 */
       };
       moduleOptionDeclaration = {
         name: "module",
-        short名称： "m",
+        short名称: "m",
         type: new Map(Object.entries({
           none: 0,
           commonjs: 1,
@@ -41420,7 +41420,7 @@ ${lanes.join("\n")}
         showInSimplifiedHelpView: true,
         category: Diagnostics.Modules,
         description: Diagnostics.Specify_what_module_code_is_generated,
-        defaultValue描述： void 0
+        defaultValue描述: void 0
       };
       commandOptionsWithoutBuild = [
         // CommandLine only options
@@ -41430,16 +41430,16 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Show_all_compiler_options,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "version",
-          short名称： "v",
+          short名称: "v",
           type: "boolean",
           showInSimplifiedHelpView: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Print_the_compiler_s_version,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "init",
@@ -41447,11 +41447,11 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Initializes_a_TypeScript_project_and_creates_a_tsconfig_json_file,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "project",
-          short名称： "p",
+          short名称: "p",
           type: "string",
           isFilePath: true,
           showInSimplifiedHelpView: true,
@@ -41462,11 +41462,11 @@ ${lanes.join("\n")}
         {
           name: "build",
           type: "boolean",
-          short名称： "b",
+          short名称: "b",
           showInSimplifiedHelpView: true,
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Build_one_or_more_projects_and_their_dependencies_if_out_of_date,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "showConfig",
@@ -41475,7 +41475,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Command_line_Options,
           isCommandLineOnly: true,
           description: Diagnostics.Print_the_final_configuration_instead_of_building,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "listFilesOnly",
@@ -41483,7 +41483,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Command_line_Options,
           isCommandLineOnly: true,
           description: Diagnostics.Print_names_of_files_that_are_part_of_the_compilation_and_then_stop_processing,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         // Basic
         targetOptionDeclaration,
@@ -41494,7 +41494,7 @@ ${lanes.join("\n")}
           element: {
             name: "lib",
             type: libMap,
-            defaultValue描述： void 0
+            defaultValue描述: void 0
           },
           affectsProgramStructure: true,
           showInSimplifiedHelpView: true,
@@ -41510,7 +41510,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.JavaScript_Support,
           description: Diagnostics.Allow_JavaScript_files_to_be_a_part_of_your_program_Use_the_checkJS_option_to_get_errors_from_these_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "checkJs",
@@ -41521,7 +41521,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.JavaScript_Support,
           description: Diagnostics.Enable_error_reporting_in_type_checked_JavaScript_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "jsx",
@@ -41538,7 +41538,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Specify_what_JSX_code_is_generated,
-          defaultValue描述： void 0
+          defaultValue描述: void 0
         },
         {
           name: "outFile",
@@ -41575,7 +41575,7 @@ ${lanes.join("\n")}
           paramType: Diagnostics.LOCATION,
           category: Diagnostics.Modules,
           description: Diagnostics.Specify_the_root_folder_within_your_source_files,
-          defaultValue描述： Diagnostics.Computed_from_the_list_of_input_files
+          defaultValue描述: Diagnostics.Computed_from_the_list_of_input_files
         },
         {
           name: "composite",
@@ -41585,7 +41585,7 @@ ${lanes.join("\n")}
           isTSConfigOnly: true,
           category: Diagnostics.Projects,
           transpileOptionValue: void 0,
-          defaultValue描述： false,
+          defaultValue描述: false,
           description: Diagnostics.Enable_constraints_that_allow_a_TypeScript_project_to_be_used_with_project_references
         },
         {
@@ -41597,7 +41597,7 @@ ${lanes.join("\n")}
           paramType: Diagnostics.FILE,
           category: Diagnostics.Projects,
           transpileOptionValue: void 0,
-          defaultValue描述： ".tsbuildinfo",
+          defaultValue描述: ".tsbuildinfo",
           description: Diagnostics.Specify_the_path_to_tsbuildinfo_incremental_compilation_file
         },
         {
@@ -41607,7 +41607,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           showInSimplifiedHelpView: true,
           category: Diagnostics.Emit,
-          defaultValue描述： false,
+          defaultValue描述: false,
           description: Diagnostics.Disable_emitting_comments
         },
         {
@@ -41617,7 +41617,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Emit,
           description: Diagnostics.Disable_emitting_files_from_a_compilation,
           transpileOptionValue: void 0,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "importHelpers",
@@ -41626,7 +41626,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Allow_importing_helper_functions_from_tslib_once_per_project_instead_of_including_them_per_file,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "importsNotUsedAsValues",
@@ -41641,7 +41641,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Specify_emit_Slashchecking_behavior_for_imports_that_are_only_used_for_types,
-          defaultValue描述： 0
+          defaultValue描述: 0
           /* Remove */
         },
         {
@@ -41651,7 +41651,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Emit_more_compliant_but_verbose_and_less_performant_JavaScript_for_iteration,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "isolatedModules",
@@ -41659,14 +41659,14 @@ ${lanes.join("\n")}
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Ensure_that_each_file_can_be_safely_transpiled_without_relying_on_other_imports,
           transpileOptionValue: true,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "verbatimModuleSyntax",
           type: "boolean",
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Do_not_transform_or_elide_any_imports_or_exports_not_marked_as_type_only_ensuring_they_are_written_in_the_output_file_s_format_based_on_the_module_setting,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         // Strict Type Checks
         {
@@ -41680,7 +41680,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_all_strict_type_checking_options,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noImplicitAny",
@@ -41690,7 +41690,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_error_reporting_for_expressions_and_declarations_with_an_implied_any_type,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "strictNullChecks",
@@ -41700,7 +41700,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.When_type_checking_take_into_account_null_and_undefined,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "strictFunctionTypes",
@@ -41710,7 +41710,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.When_assigning_functions_check_to_ensure_parameters_and_the_return_values_are_subtype_compatible,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "strictBindCallApply",
@@ -41720,7 +41720,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Check_that_the_arguments_for_bind_call_and_apply_methods_match_the_original_function,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "strictPropertyInitialization",
@@ -41730,7 +41730,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Check_for_class_properties_that_are_declared_but_not_set_in_the_constructor,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "noImplicitThis",
@@ -41740,7 +41740,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_error_reporting_when_this_is_given_the_type_any,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "useUnknownInCatchVariables",
@@ -41750,7 +41750,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Default_catch_clause_variables_as_unknown_instead_of_any,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         {
           name: "alwaysStrict",
@@ -41761,7 +41761,7 @@ ${lanes.join("\n")}
           strictFlag: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Ensure_use_strict_is_always_emitted,
-          defaultValue描述： Diagnostics.false_unless_strict_is_set
+          defaultValue描述: Diagnostics.false_unless_strict_is_set
         },
         // Additional Checks
         {
@@ -41771,7 +41771,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_error_reporting_when_local_variables_aren_t_read,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noUnusedParameters",
@@ -41780,7 +41780,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Raise_an_error_when_a_function_parameter_isn_t_read,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "exactOptionalPropertyTypes",
@@ -41789,7 +41789,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Interpret_optional_property_types_as_written_rather_than_adding_undefined,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noImplicitReturns",
@@ -41798,7 +41798,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_error_reporting_for_codepaths_that_do_not_explicitly_return_in_a_function,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noFallthroughCasesInSwitch",
@@ -41808,7 +41808,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enable_error_reporting_for_fallthrough_cases_in_switch_statements,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noUncheckedIndexedAccess",
@@ -41817,7 +41817,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Add_undefined_to_a_type_when_accessed_using_an_index,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noImplicitOverride",
@@ -41826,7 +41826,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Ensure_overriding_members_in_derived_classes_are_marked_with_an_override_modifier,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noPropertyAccessFromIndexSignature",
@@ -41836,7 +41836,7 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: false,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Enforces_using_indexed_accessors_for_keys_declared_using_an_indexed_type,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         // Module Resolution
         {
@@ -41857,7 +41857,7 @@ ${lanes.join("\n")}
           paramType: Diagnostics.STRATEGY,
           category: Diagnostics.Modules,
           description: Diagnostics.Specify_how_TypeScript_looks_up_a_file_from_a_given_module_specifier,
-          defaultValue描述： Diagnostics.module_AMD_or_UMD_or_System_or_ES6_then_Classic_Otherwise_Node
+          defaultValue描述: Diagnostics.module_AMD_or_UMD_or_System_or_ES6_then_Classic_Otherwise_Node
         },
         {
           name: "baseUrl",
@@ -41893,7 +41893,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Modules,
           description: Diagnostics.Allow_multiple_folders_to_be_treated_as_one_when_resolving_modules,
           transpileOptionValue: void 0,
-          defaultValue描述： Diagnostics.Computed_from_the_list_of_input_files
+          defaultValue描述: Diagnostics.Computed_from_the_list_of_input_files
         },
         {
           name: "typeRoots",
@@ -41927,7 +41927,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Allow_import_x_from_y_when_a_module_doesn_t_have_a_default_export,
-          defaultValue描述： Diagnostics.module_system_or_esModuleInterop
+          defaultValue描述: Diagnostics.module_system_or_esModuleInterop
         },
         {
           name: "esModuleInterop",
@@ -41938,14 +41938,14 @@ ${lanes.join("\n")}
           showInSimplifiedHelpView: true,
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Emit_additional_JavaScript_to_ease_support_for_importing_CommonJS_modules_This_enables_allowSyntheticDefaultImports_for_type_compatibility,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "preserveSymlinks",
           type: "boolean",
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Disable_resolving_symlinks_to_their_realpath_This_correlates_to_the_same_flag_in_node,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "allowUmdGlobalAccess",
@@ -41954,7 +41954,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Allow_accessing_UMD_globals_from_modules,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "moduleSuffixes",
@@ -41975,7 +41975,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Allow_imports_to_include_TypeScript_file_extensions_Requires_moduleResolution_bundler_and_either_noEmit_or_emitDeclarationOnly_to_be_set,
-          defaultValue描述： false,
+          defaultValue描述: false,
           transpileOptionValue: void 0
         },
         {
@@ -41984,7 +41984,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Use_the_package_json_exports_field_when_resolving_package_imports,
-          defaultValue描述： Diagnostics.true_when_moduleResolution_is_node16_nodenext_or_bundler_otherwise_false
+          defaultValue描述: Diagnostics.true_when_moduleResolution_is_node16_nodenext_or_bundler_otherwise_false
         },
         {
           name: "resolvePackageJsonImports",
@@ -41992,7 +41992,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Use_the_package_json_imports_field_when_resolving_imports,
-          defaultValue描述： Diagnostics.true_when_moduleResolution_is_node16_nodenext_or_bundler_otherwise_false
+          defaultValue描述: Diagnostics.true_when_moduleResolution_is_node16_nodenext_or_bundler_otherwise_false
         },
         {
           name: "customConditions",
@@ -42031,7 +42031,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Include_source_code_in_the_sourcemaps_inside_the_emitted_JavaScript,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         // Experimental
         {
@@ -42042,7 +42042,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Enable_experimental_support_for_legacy_experimental_decorators,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "emitDecoratorMetadata",
@@ -42052,7 +42052,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Emit_design_type_metadata_for_decorated_declarations_in_source_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         // Advanced
         {
@@ -42060,14 +42060,14 @@ ${lanes.join("\n")}
           type: "string",
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Specify_the_JSX_factory_function_used_when_targeting_React_JSX_emit_e_g_React_createElement_or_h,
-          defaultValue描述： "`React.createElement`"
+          defaultValue描述: "`React.createElement`"
         },
         {
           name: "jsxFragmentFactory",
           type: "string",
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Specify_the_JSX_Fragment_reference_used_for_fragments_when_targeting_React_JSX_emit_e_g_React_Fragment_or_Fragment,
-          defaultValue描述： "React.Fragment"
+          defaultValue描述: "React.Fragment"
         },
         {
           name: "jsxImportSource",
@@ -42078,7 +42078,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Specify_module_specifier_used_to_import_the_JSX_factory_functions_when_using_jsx_Colon_react_jsx_Asterisk,
-          defaultValue描述： "react"
+          defaultValue描述: "react"
         },
         {
           name: "resolveJsonModule",
@@ -42086,7 +42086,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Enable_importing_json_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "allowArbitraryExtensions",
@@ -42094,7 +42094,7 @@ ${lanes.join("\n")}
           affectsProgramStructure: true,
           category: Diagnostics.Modules,
           description: Diagnostics.Enable_importing_files_with_any_extension_provided_a_declaration_file_is_present,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "out",
@@ -42117,7 +42117,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Specify_the_object_invoked_for_createElement_This_only_applies_when_targeting_react_JSX_emit,
-          defaultValue描述： "`React`"
+          defaultValue描述: "`React`"
         },
         {
           name: "skipDefaultLibCheck",
@@ -42126,14 +42126,14 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Completeness,
           description: Diagnostics.Skip_type_checking_d_ts_files_that_are_included_with_TypeScript,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "charset",
           type: "string",
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.No_longer_supported_In_early_versions_manually_set_the_text_encoding_for_reading_files,
-          defaultValue描述： "utf8"
+          defaultValue描述: "utf8"
         },
         {
           name: "emitBOM",
@@ -42142,7 +42142,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Emit_a_UTF_8_Byte_Order_Mark_BOM_in_the_beginning_of_output_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "newLine",
@@ -42156,7 +42156,7 @@ ${lanes.join("\n")}
           paramType: Diagnostics.NEWLINE,
           category: Diagnostics.Emit,
           description: Diagnostics.Set_the_newline_character_for_emitting_files,
-          defaultValue描述： "lf"
+          defaultValue描述: "lf"
         },
         {
           name: "noErrorTruncation",
@@ -42165,7 +42165,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Output_Formatting,
           description: Diagnostics.Disable_truncating_types_in_error_messages,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noLib",
@@ -42176,7 +42176,7 @@ ${lanes.join("\n")}
           // We are not returning a sourceFile for lib file when asked by the program,
           // so pass --noLib to avoid reporting a file not found error.
           transpileOptionValue: true,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noResolve",
@@ -42187,7 +42187,7 @@ ${lanes.join("\n")}
           // We are not doing a full typecheck, we are not resolving the whole context,
           // so pass --noResolve to avoid reporting missing file errors.
           transpileOptionValue: true,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "stripInternal",
@@ -42196,7 +42196,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Disable_emitting_declarations_that_have_internal_in_their_JSDoc_comments,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "disableSizeLimit",
@@ -42204,7 +42204,7 @@ ${lanes.join("\n")}
           affectsProgramStructure: true,
           category: Diagnostics.Editor_Support,
           description: Diagnostics.Remove_the_20mb_cap_on_total_source_code_size_for_JavaScript_files_in_the_TypeScript_language_server,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "disableSourceOfProjectReferenceRedirect",
@@ -42212,7 +42212,7 @@ ${lanes.join("\n")}
           isTSConfigOnly: true,
           category: Diagnostics.Projects,
           description: Diagnostics.Disable_preferring_source_files_instead_of_declaration_files_when_referencing_composite_projects,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "disableSolutionSearching",
@@ -42220,7 +42220,7 @@ ${lanes.join("\n")}
           isTSConfigOnly: true,
           category: Diagnostics.Projects,
           description: Diagnostics.Opt_a_project_out_of_multi_project_reference_checking_when_editing,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "disableReferencedProjectLoad",
@@ -42228,7 +42228,7 @@ ${lanes.join("\n")}
           isTSConfigOnly: true,
           category: Diagnostics.Projects,
           description: Diagnostics.Reduce_the_number_of_projects_loaded_automatically_by_TypeScript,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noImplicitUseStrict",
@@ -42237,7 +42237,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.Disable_adding_use_strict_directives_in_emitted_JavaScript_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noEmitHelpers",
@@ -42246,7 +42246,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Disable_generating_custom_helper_functions_like_extends_in_compiled_output,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "noEmitOnError",
@@ -42256,7 +42256,7 @@ ${lanes.join("\n")}
           category: Diagnostics.Emit,
           transpileOptionValue: void 0,
           description: Diagnostics.Disable_emitting_files_if_any_type_checking_errors_are_reported,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "preserveConstEnums",
@@ -42265,7 +42265,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Disable_erasing_const_enum_declarations_in_generated_code,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "declarationDir",
@@ -42286,7 +42286,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Completeness,
           description: Diagnostics.Skip_type_checking_all_d_ts_files,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "allowUnusedLabels",
@@ -42296,7 +42296,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Disable_error_reporting_for_unused_labels,
-          defaultValue描述： void 0
+          defaultValue描述: void 0
         },
         {
           name: "allowUnreachableCode",
@@ -42306,7 +42306,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Type_Checking,
           description: Diagnostics.Disable_error_reporting_for_unreachable_code,
-          defaultValue描述： void 0
+          defaultValue描述: void 0
         },
         {
           name: "suppressExcessPropertyErrors",
@@ -42315,7 +42315,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.Disable_reporting_of_excess_property_errors_during_the_creation_of_object_literals,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "suppressImplicitAnyIndexErrors",
@@ -42324,7 +42324,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.Suppress_noImplicitAny_errors_when_indexing_objects_that_lack_index_signatures,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "forceConsistentCasingInFileNames",
@@ -42332,7 +42332,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.Interop_Constraints,
           description: Diagnostics.Ensure_that_casing_is_correct_in_imports,
-          defaultValue描述： true
+          defaultValue描述: true
         },
         {
           name: "maxNodeModuleJsDepth",
@@ -42340,7 +42340,7 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           category: Diagnostics.JavaScript_Support,
           description: Diagnostics.Specify_the_maximum_folder_depth_used_for_checking_JavaScript_files_from_node_modules_Only_applicable_with_allowJs,
-          defaultValue描述： 0
+          defaultValue描述: 0
         },
         {
           name: "noStrictGenericChecks",
@@ -42349,7 +42349,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.Disable_strict_checking_of_generic_signatures_in_function_types,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "useDefineForClassFields",
@@ -42359,7 +42359,7 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Language_and_Environment,
           description: Diagnostics.Emit_ECMAScript_standard_compliant_class_fields,
-          defaultValue描述： Diagnostics.true_for_ES2022_and_above_including_ESNext
+          defaultValue描述: Diagnostics.true_for_ES2022_and_above_including_ESNext
         },
         {
           name: "preserveValueImports",
@@ -42368,14 +42368,14 @@ ${lanes.join("\n")}
           affectsBuildInfo: true,
           category: Diagnostics.Emit,
           description: Diagnostics.Preserve_unused_imported_values_in_the_JavaScript_output_that_would_otherwise_be_removed,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "keyofStringsOnly",
           type: "boolean",
           category: Diagnostics.Backwards_Compatibility,
           description: Diagnostics.Make_keyof_only_return_strings_instead_of_string_numbers_or_symbols_Legacy_option,
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           // A list of plugins to load in the language service
@@ -42401,12 +42401,12 @@ ${lanes.join("\n")}
           affectsModuleResolution: true,
           description: Diagnostics.Control_what_method_is_used_to_detect_module_format_JS_files,
           category: Diagnostics.Language_and_Environment,
-          defaultValue描述： Diagnostics.auto_Colon_Treat_files_with_imports_exports_import_meta_jsx_with_jsx_Colon_react_jsx_or_esm_format_with_module_Colon_node16_as_modules
+          defaultValue描述: Diagnostics.auto_Colon_Treat_files_with_imports_exports_import_meta_jsx_with_jsx_Colon_react_jsx_or_esm_format_with_module_Colon_node16_as_modules
         },
         {
           name: "ignoreDeprecations",
           type: "string",
-          defaultValue描述： void 0
+          defaultValue描述: void 0
         }
       ];
       optionDeclarations = [
@@ -42423,34 +42423,34 @@ ${lanes.join("\n")}
       optionsForBuild = [
         {
           name: "verbose",
-          short名称： "v",
+          short名称: "v",
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Enable_verbose_logging,
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "dry",
-          short名称： "d",
+          short名称: "d",
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Show_what_would_be_built_or_deleted_if_specified_with_clean,
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "force",
-          short名称： "f",
+          short名称: "f",
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Build_all_projects_including_those_that_appear_to_be_up_to_date,
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "clean",
           category: Diagnostics.Command_line_Options,
           description: Diagnostics.Delete_the_outputs_of_all_projects,
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         }
       ];
       buildOpts = [
@@ -42461,7 +42461,7 @@ ${lanes.join("\n")}
         {
           name: "enable",
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         },
         {
           name: "include",
@@ -42482,7 +42482,7 @@ ${lanes.join("\n")}
         {
           name: "disableFilenameBasedTypeAcquisition",
           type: "boolean",
-          defaultValue描述： false
+          defaultValue描述: false
         }
       ];
       compilerOptionsAlternateMode = {
@@ -42575,7 +42575,7 @@ ${lanes.join("\n")}
       if (typeof packageJsonContent.name === "string" && typeof packageJsonContent.version === "string") {
         packageId = {
           name: packageJsonContent.name,
-          subModule名称： r.path.slice(packageInfo.packageDirectory.length + directorySeparator.length),
+          subModule名称: r.path.slice(packageInfo.packageDirectory.length + directorySeparator.length),
           version: packageJsonContent.version
         };
       }
@@ -42627,7 +42627,7 @@ ${lanes.join("\n")}
       return void 0;
     }
     Debug.assert(extensionIsTS(resolved.extension));
-    return { file名称： resolved.path, packageId: resolved.packageId };
+    return { file名称: resolved.path, packageId: resolved.packageId };
   }
   function createResolvedModuleWithFailedLookupLocationsHandlingSymlink(moduleName, resolved, isExternalLibraryImport, failedLookupLocations, affectingLocations, diagnostics, state, cache, alternateResult) {
     if (!state.resultFromCache && !state.compilerOptions.preserveSymlinks && resolved && isExternalLibraryImport && !resolved.originalPath && !isExternalModuleNameRelative(moduleName)) {
@@ -42664,7 +42664,7 @@ ${lanes.join("\n")}
     }
     return {
       resolvedModule: resolved && {
-        resolvedFile名称： resolved.path,
+        resolvedFile名称: resolved.path,
         originalPath: resolved.originalPath === true ? void 0 : resolved.originalPath,
         extension: resolved.extension,
         isExternalLibraryImport,
@@ -42819,7 +42819,7 @@ ${lanes.join("\n")}
     const pathsAreEqual = arePathsEqual(fileName, resolvedFileName, host);
     return {
       // If the fileName and realpath are differing only in casing prefer fileName so that we can issue correct errors for casing under forceConsistentCasingInFileNames
-      resolvedFile名称： pathsAreEqual ? fileName : resolvedFileName,
+      resolvedFile名称: pathsAreEqual ? fileName : resolvedFileName,
       originalPath: pathsAreEqual ? void 0 : fileName
     };
   }
@@ -44426,7 +44426,7 @@ ${lanes.join("\n")}
     if (moduleName[0] === "@") {
       idx = moduleName.indexOf(directorySeparator, idx + 1);
     }
-    return idx === -1 ? { package名称： moduleName, rest: "" } : { package名称： moduleName.slice(0, idx), rest: moduleName.slice(idx + 1) };
+    return idx === -1 ? { package名称: moduleName, rest: "" } : { package名称: moduleName.slice(0, idx), rest: moduleName.slice(idx + 1) };
   }
   function allKeysStartWithDot(obj) {
     return every(getOwnKeys(obj), (k) => startsWith(k, "."));
@@ -49619,7 +49619,7 @@ ${lanes.join("\n")}
     return noExtension.substring(0, noExtension.indexOf(".d.")) + ext;
   }
   function getJSExtensionForFile(fileName, options) {
-    return tryGetJSExtensionForFile(fileName, options) ?? Debug.fail(`Extension ${extensionFromPath(fileName)} is unsupported:: File名称：: ${fileName}`);
+    return tryGetJSExtensionForFile(fileName, options) ?? Debug.fail(`Extension ${extensionFromPath(fileName)} is unsupported:: File名称:: ${fileName}`);
   }
   function tryGetJSExtensionForFile(fileName, options) {
     const ext = tryGetExtensionFromPath2(fileName);
@@ -49682,10 +49682,10 @@ ${lanes.join("\n")}
     getModuleSpecifierPreferences: () => getModuleSpecifierPreferences,
     getModuleSpecifiers: () => getModuleSpecifiers,
     getModuleSpecifiersWithCacheInfo: () => getModuleSpecifiersWithCacheInfo,
-    getNodeModulesPackage名称： () => getNodeModulesPackageName,
+    getNodeModulesPackage名称: () => getNodeModulesPackageName,
     tryGetJSExtensionForFile: () => tryGetJSExtensionForFile,
     tryGetModuleSpecifiersFromCache: () => tryGetModuleSpecifiersFromCache,
-    tryGetRealFileNameForNonJsDeclarationFile名称： () => tryGetRealFileNameForNonJsDeclarationFileName,
+    tryGetRealFileNameForNonJsDeclarationFile名称: () => tryGetRealFileNameForNonJsDeclarationFileName,
     updateModuleSpecifier: () => updateModuleSpecifier
   });
   var init_ts_moduleSpecifiers = __esm({
@@ -49854,7 +49854,7 @@ ${lanes.join("\n")}
       typeToTypeNode: nodeBuilder.typeToTypeNode,
       indexInfoToIndexSignatureDeclaration: nodeBuilder.indexInfoToIndexSignatureDeclaration,
       signatureToSignatureDeclaration: nodeBuilder.signatureToSignatureDeclaration,
-      symbolToEntity名称： nodeBuilder.symbolToEntityName,
+      symbolToEntity名称: nodeBuilder.symbolToEntityName,
       symbolToExpression: nodeBuilder.symbolToExpression,
       symbolToNode: nodeBuilder.symbolToNode,
       symbolToTypeParameterDeclarations: nodeBuilder.symbolToTypeParameterDeclarations,
@@ -50116,7 +50116,7 @@ ${lanes.join("\n")}
       },
       getAccessibleSymbolChain,
       getTypePredicateOfSignature,
-      resolveExternalModule名称： (moduleSpecifierIn) => {
+      resolveExternalModule名称: (moduleSpecifierIn) => {
         const moduleSpecifier = getParseTreeNode(moduleSpecifierIn, isExpression);
         return moduleSpecifier && resolveExternalModuleName(
           moduleSpecifier,
@@ -50582,7 +50582,7 @@ ${lanes.join("\n")}
     var asyncIterationTypesResolver = {
       iterableCacheKey: "iterationTypesOfAsyncIterable",
       iteratorCacheKey: "iterationTypesOfAsyncIterator",
-      iteratorSymbol名称： "asyncIterator",
+      iteratorSymbol名称: "asyncIterator",
       getGlobalIteratorType: getGlobalAsyncIteratorType,
       getGlobalIterableType: getGlobalAsyncIterableType,
       getGlobalIterableIteratorType: getGlobalAsyncIterableIteratorType,
@@ -50595,7 +50595,7 @@ ${lanes.join("\n")}
     var syncIterationTypesResolver = {
       iterableCacheKey: "iterationTypesOfIterable",
       iteratorCacheKey: "iterationTypesOfIterator",
-      iteratorSymbol名称： "iterator",
+      iteratorSymbol名称: "iterator",
       getGlobalIteratorType,
       getGlobalIterableType,
       getGlobalIterableIteratorType,
@@ -54223,8 +54223,8 @@ ${lanes.join("\n")}
       if (hadAccessibleChain) {
         return {
           accessibility: 1,
-          errorSymbol名称： symbolToString(initialSymbol, enclosingDeclaration, meaning),
-          errorModule名称： hadAccessibleChain !== initialSymbol ? symbolToString(
+          errorSymbol名称: symbolToString(initialSymbol, enclosingDeclaration, meaning),
+          errorModule名称: hadAccessibleChain !== initialSymbol ? symbolToString(
             hadAccessibleChain,
             enclosingDeclaration,
             1920
@@ -54255,15 +54255,15 @@ ${lanes.join("\n")}
           if (symbolExternalModule !== enclosingExternalModule) {
             return {
               accessibility: 2,
-              errorSymbol名称： symbolToString(symbol, enclosingDeclaration, meaning),
-              errorModule名称： symbolToString(symbolExternalModule),
+              errorSymbol名称: symbolToString(symbol, enclosingDeclaration, meaning),
+              errorModule名称: symbolToString(symbolExternalModule),
               errorNode: isInJSFile(enclosingDeclaration) ? enclosingDeclaration : void 0
             };
           }
         }
         return {
           accessibility: 1,
-          errorSymbol名称： symbolToString(symbol, enclosingDeclaration, meaning)
+          errorSymbol名称: symbolToString(symbol, enclosingDeclaration, meaning)
         };
       }
       return {
@@ -54404,7 +54404,7 @@ ${lanes.join("\n")}
         true
       ) || {
         accessibility: 1,
-        errorSymbol名称： getTextOfNode(firstIdentifier),
+        errorSymbol名称: getTextOfNode(firstIdentifier),
         errorNode: firstIdentifier
       };
     }
@@ -54527,7 +54527,7 @@ ${lanes.join("\n")}
           void 0
         )),
         signatureToSignatureDeclaration: (signature, kind, enclosingDeclaration, flags, tracker) => withContext(enclosingDeclaration, flags, tracker, (context) => signatureToSignatureDeclarationHelper(signature, kind, context)),
-        symbolToEntity名称： (symbol, meaning, enclosingDeclaration, flags, tracker) => withContext(enclosingDeclaration, flags, tracker, (context) => symbolToName(
+        symbolToEntity名称: (symbol, meaning, enclosingDeclaration, flags, tracker) => withContext(enclosingDeclaration, flags, tracker, (context) => symbolToName(
           symbol,
           context,
           meaning,
@@ -119683,7 +119683,7 @@ ${lanes.join("\n")}
       return diagnosticMessage !== void 0 ? {
         diagnosticMessage,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       } : void 0;
     }
     function getAccessorNameVisibilityDiagnosticMessage(symbolAccessibilityResult) {
@@ -119700,7 +119700,7 @@ ${lanes.join("\n")}
       return diagnosticMessage !== void 0 ? {
         diagnosticMessage,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       } : void 0;
     }
     function getMethodNameVisibilityDiagnosticMessage(symbolAccessibilityResult) {
@@ -119762,7 +119762,7 @@ ${lanes.join("\n")}
       return diagnosticMessage !== void 0 ? {
         diagnosticMessage,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       } : void 0;
     }
     function getAccessorDeclarationTypeVisibilityError(symbolAccessibilityResult) {
@@ -119783,7 +119783,7 @@ ${lanes.join("\n")}
       return {
         diagnosticMessage,
         errorNode: node.name,
-        type名称： node.name
+        type名称: node.name
       };
     }
     function getReturnTypeVisibilityError(symbolAccessibilityResult) {
@@ -119824,7 +119824,7 @@ ${lanes.join("\n")}
       return diagnosticMessage !== void 0 ? {
         diagnosticMessage,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       } : void 0;
     }
     function getParameterDeclarationTypeVisibilityDiagnosticMessage(symbolAccessibilityResult) {
@@ -119902,7 +119902,7 @@ ${lanes.join("\n")}
       return {
         diagnosticMessage,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       };
     }
     function getHeritageClauseVisibilityError() {
@@ -119915,21 +119915,21 @@ ${lanes.join("\n")}
       return {
         diagnosticMessage,
         errorNode: node,
-        type名称： getNameOfDeclaration(node.parent.parent)
+        type名称: getNameOfDeclaration(node.parent.parent)
       };
     }
     function getImportEntityNameVisibilityError() {
       return {
         diagnosticMessage: Diagnostics.Import_declaration_0_is_using_private_name_1,
         errorNode: node,
-        type名称： node.name
+        type名称: node.name
       };
     }
     function getTypeAliasDeclarationVisibilityError(symbolAccessibilityResult) {
       return {
         diagnosticMessage: symbolAccessibilityResult.errorModuleName ? Diagnostics.Exported_type_alias_0_has_or_is_using_private_name_1_from_module_2 : Diagnostics.Exported_type_alias_0_has_or_is_using_private_name_1,
         errorNode: isJSDocTypeAlias(node) ? Debug.checkDefined(node.typeExpression) : node.type,
-        type名称： isJSDocTypeAlias(node) ? getNameOfDeclaration(node) : node.name
+        type名称: isJSDocTypeAlias(node) ? getNameOfDeclaration(node) : node.name
       };
     }
   }
@@ -120277,7 +120277,7 @@ ${lanes.join("\n")}
       updated.exportedModulesFromDeclarationEmit = exportedModulesFromDeclarationEmit;
       return updated;
       function getLibReferences() {
-        return arrayFrom(libs2.keys(), (lib) => ({ file名称： lib, pos: -1, end: -1 }));
+        return arrayFrom(libs2.keys(), (lib) => ({ file名称: lib, pos: -1, end: -1 }));
       }
       function getFileReferencesForUsedTypeReferences() {
         return necessaryTypeReferences ? mapDefined(arrayFrom(necessaryTypeReferences.keys()), getFileReferenceForSpecifierModeTuple) : [];
@@ -120295,7 +120295,7 @@ ${lanes.join("\n")}
             }
           }
         }
-        return { file名称： typeName, pos: -1, end: -1, ...mode ? { resolutionMode: mode } : void 0 };
+        return { file名称: typeName, pos: -1, end: -1, ...mode ? { resolutionMode: mode } : void 0 };
       }
       function mapReferencesIntoArray(references2, outputFilePath2) {
         return (file) => {
@@ -121495,7 +121495,7 @@ ${lanes.join("\n")}
             getSymbolAccessibilityDiagnostic = () => ({
               diagnosticMessage: Diagnostics.extends_clause_of_exported_class_0_has_or_is_using_private_name_1,
               errorNode: extendsClause,
-              type名称： input.name
+              type名称: input.name
             });
             const varDecl = factory2.createVariableDeclaration(
               newId,
@@ -122628,7 +122628,7 @@ ${lanes.join("\n")}
       };
       const printer = createPrinter(printerOptions, {
         // resolver hooks
-        hasGlobal名称： resolver.hasGlobalName,
+        hasGlobal名称: resolver.hasGlobalName,
         // transform hooks
         onEmitNode: transform2.emitNodeWithNotification,
         isEmitNotificationEnabled: transform2.isEmitNotificationEnabled,
@@ -122696,7 +122696,7 @@ ${lanes.join("\n")}
         };
         const declarationPrinter = createPrinter(printerOptions, {
           // resolver hooks
-          hasGlobal名称： resolver.hasGlobalName,
+          hasGlobal名称: resolver.hasGlobalName,
           // transform hooks
           onEmitNode: declarationTransform.emitNodeWithNotification,
           isEmitNotificationEnabled: declarationTransform.isEmitNotificationEnabled,
@@ -122982,7 +122982,7 @@ ${lanes.join("\n")}
     let changedDtsData;
     const emitHost = {
       getPrependNodes: memoize(() => [...prependNodes, ownPrependInput]),
-      getCanonicalFile名称： host.getCanonicalFileName,
+      getCanonicalFile名称: host.getCanonicalFileName,
       getCommonSourceDirectory: () => getNormalizedAbsolutePath(buildInfo.bundle.commonSourceDirectory, buildInfoDirectory),
       getCompilerOptions: () => config.options,
       getCurrentDirectory: () => host.getCurrentDirectory(),
@@ -127985,14 +127985,14 @@ ${lanes.join("\n")}
       init_ts_performance();
       brackets = createBracketsMap();
       notImplementedResolver = {
-        hasGlobal名称： notImplemented,
+        hasGlobal名称: notImplemented,
         getReferencedExportContainer: notImplemented,
         getReferencedImportDeclaration: notImplemented,
-        getReferencedDeclarationWithColliding名称： notImplemented,
-        isDeclarationWithColliding名称： notImplemented,
+        getReferencedDeclarationWithColliding名称: notImplemented,
+        isDeclarationWithColliding名称: notImplemented,
         isValueAliasDeclaration: notImplemented,
         isReferencedAliasDeclaration: notImplemented,
-        isTopLevelValueImportEqualsWithEntity名称： notImplemented,
+        isTopLevelValueImportEqualsWithEntity名称: notImplemented,
         getNodeCheckFlags: notImplemented,
         isDeclarationVisible: notImplemented,
         isLateBound: (_node) => false,
@@ -128017,7 +128017,7 @@ ${lanes.join("\n")}
         moduleExportsSomeValue: notImplemented,
         isArgumentsLocalBinding: notImplemented,
         getExternalModuleFileFromDeclaration: notImplemented,
-        getTypeReferenceDirectivesForEntity名称： notImplemented,
+        getTypeReferenceDirectivesForEntity名称: notImplemented,
         getTypeReferenceDirectivesForSymbol: notImplemented,
         isLiteralConstDeclaration: notImplemented,
         getJsxFactoryEntity: notImplemented,
@@ -128663,7 +128663,7 @@ ${lanes.join("\n")}
     const compilerHost = {
       getSourceFile: createGetSourceFile((fileName) => compilerHost.readFile(fileName), () => options, setParentNodes),
       getDefaultLibLocation,
-      getDefaultLibFile名称： (options2) => combinePaths(getDefaultLibLocation(), getDefaultLibFileName(options2)),
+      getDefaultLibFile名称: (options2) => combinePaths(getDefaultLibLocation(), getDefaultLibFileName(options2)),
       writeFile: createWriteFileMeasuringIO(
         (path, data, writeByteOrderMark) => system.writeFile(path, data, writeByteOrderMark),
         (path) => (compilerHost.createDirectory || system.createDirectory)(path),
@@ -132654,11 +132654,11 @@ ${lanes.join("\n")}
         resolvedTypeReferenceDirective: void 0
       };
       moduleResolutionNameAndModeGetter = {
-        get名称： getModuleResolutionName,
+        get名称: getModuleResolutionName,
         getMode: (entry, file, compilerOptions) => getModeForUsageLocation(file, entry, compilerOptions)
       };
       typeReferenceResolutionNameAndModeGetter = {
-        get名称： getTypeReferenceResolutionName,
+        get名称: getTypeReferenceResolutionName,
         getMode: (entry, file) => getModeForFileReference(entry, file == null ? void 0 : file.impliedNodeFormat)
       };
       inferredTypesContainingFile = "__inferred type names__.ts";
@@ -135072,7 +135072,7 @@ ${lanes.join("\n")}
           getModuleResolutionHost(resolutionHost),
           typeReferenceDirectiveResolutionCache
         ),
-        getResolutionWithResolvedFile名称： getResolvedTypeReferenceDirective,
+        getResolutionWithResolvedFile名称: getResolvedTypeReferenceDirective,
         shouldRetryResolution: (resolution) => resolution.resolvedTypeReferenceDirective === void 0,
         deferWatchingNonRelativeResolution: false
       });
@@ -135093,7 +135093,7 @@ ${lanes.join("\n")}
           resolutionHost,
           moduleResolutionCache
         ),
-        getResolutionWithResolvedFile名称： getResolvedModule,
+        getResolutionWithResolvedFile名称: getResolvedModule,
         shouldRetryResolution: (resolution) => !resolution.resolvedModule || !resolutionExtensionIsTSOrJson(resolution.resolvedModule.extension),
         logChanges: logChangesWhenResolvingModule,
         deferWatchingNonRelativeResolution: true
@@ -135629,7 +135629,7 @@ ${lanes.join("\n")}
     const host = system === sys && sysFormatDiagnosticsHost ? sysFormatDiagnosticsHost : {
       getCurrentDirectory: () => system.getCurrentDirectory(),
       getNewLine: () => system.newLine,
-      getCanonicalFile名称： createGetCanonicalFileName(system.useCaseSensitiveFileNames)
+      getCanonicalFile名称: createGetCanonicalFileName(system.useCaseSensitiveFileNames)
     };
     if (!pretty) {
       return (diagnostic) => system.write(formatDiagnostic(diagnostic, host));
@@ -136097,7 +136097,7 @@ ${lanes.join("\n")}
         void 0
       ),
       getDefaultLibLocation: maybeBind(host, host.getDefaultLibLocation),
-      getDefaultLibFile名称： (options) => host.getDefaultLibFileName(options),
+      getDefaultLibFile名称: (options) => host.getDefaultLibFileName(options),
       writeFile: createWriteFileMeasuringIO(
         (path, data, writeByteOrderMark) => host.writeFile(path, data, writeByteOrderMark),
         (path) => host.createDirectory(path),
@@ -136105,7 +136105,7 @@ ${lanes.join("\n")}
       ),
       getCurrentDirectory: memoize(() => host.getCurrentDirectory()),
       useCaseSensitiveFileNames: () => useCaseSensitiveFileNames2,
-      getCanonicalFile名称： createGetCanonicalFileName(useCaseSensitiveFileNames2),
+      getCanonicalFile名称: createGetCanonicalFileName(useCaseSensitiveFileNames2),
       getNewLine: () => getNewLineCharacter(getCompilerOptions()),
       fileExists: (f) => host.fileExists(f),
       readFile: (f) => host.readFile(f),
@@ -136170,7 +136170,7 @@ ${lanes.join("\n")}
       getNewLine: () => system.newLine,
       getCurrentDirectory: memoize(() => system.getCurrentDirectory()),
       getDefaultLibLocation,
-      getDefaultLibFile名称： (options) => combinePaths(getDefaultLibLocation(), getDefaultLibFileName(options)),
+      getDefaultLibFile名称: (options) => combinePaths(getDefaultLibLocation(), getDefaultLibFileName(options)),
       fileExists: (path) => system.fileExists(path),
       readFile: (path, encoding) => system.readFile(path, encoding),
       directoryExists: (path) => system.directoryExists(path),
@@ -136273,7 +136273,7 @@ ${lanes.join("\n")}
       sysFormatDiagnosticsHost = sys ? {
         getCurrentDirectory: () => sys.getCurrentDirectory(),
         getNewLine: () => sys.newLine,
-        getCanonicalFile名称： createGetCanonicalFileName(sys.useCaseSensitiveFileNames)
+        getCanonicalFile名称: createGetCanonicalFileName(sys.useCaseSensitiveFileNames)
       } : void 0;
       screenStartingMessageCodes = [
         Diagnostics.Starting_compilation_in_watch_mode.code,
@@ -136363,7 +136363,7 @@ ${lanes.join("\n")}
       });
     } else {
       return createWatchCompilerHostOfConfigFile({
-        configFile名称： rootFilesOrConfigFileName,
+        configFile名称: rootFilesOrConfigFileName,
         optionsToExtend: options,
         watchOptionsToExtend: projectReferencesOrWatchOptionsToExtend,
         extraFileExtensions: watchOptionsOrExtraFileExtensions,
@@ -137017,7 +137017,7 @@ ${lanes.join("\n")}
                 watchedDirPath: toPath3(directory),
                 fileOrDirectory,
                 fileOrDirectoryPath,
-                configFile名称： configFileName2,
+                configFile名称: configFileName2,
                 options: config.parsedCommandLine.options,
                 program: config.parsedCommandLine.fileNames,
                 currentDirectory,
@@ -138226,8 +138226,8 @@ ${lanes.join("\n")}
     if (oldestOutputFileTime < tsconfigTime) {
       return {
         type: 6,
-        outOfDateOutputFile名称： oldestOutputFileName,
-        newerInputFile名称： configFile
+        outOfDateOutputFile名称: oldestOutputFileName,
+        newerInputFile名称: configFile
       };
     }
   }
@@ -138257,7 +138257,7 @@ ${lanes.join("\n")}
         if (refStatus.type === 0 || refStatus.type === 12) {
           return {
             type: 12,
-            upstreamProject名称： ref.path,
+            upstreamProject名称: ref.path,
             upstreamProjectBlocked: refStatus.type === 12
             /* UpstreamBlocked */
           };
@@ -138265,7 +138265,7 @@ ${lanes.join("\n")}
         if (refStatus.type !== 1) {
           return {
             type: 11,
-            upstreamProject名称： ref.path
+            upstreamProject名称: ref.path
           };
         }
         if (!force)
@@ -138297,14 +138297,14 @@ ${lanes.join("\n")}
         }
         return {
           type: 4,
-          missingOutputFile名称： buildInfoPath
+          missingOutputFile名称: buildInfoPath
         };
       }
       const buildInfo = getBuildInfo3(state, buildInfoPath, resolvedPath, buildInfoTime);
       if (!buildInfo) {
         return {
           type: 5,
-          file名称： buildInfoPath
+          file名称: buildInfoPath
         };
       }
       if ((buildInfo.bundle || buildInfo.program) && buildInfo.version !== version) {
@@ -138358,8 +138358,8 @@ ${lanes.join("\n")}
         if (!version2 || version2 !== currentVersion) {
           return {
             type: 6,
-            outOfDateOutputFile名称： buildInfoPath,
-            newerInputFile名称： inputFile
+            outOfDateOutputFile名称: buildInfoPath,
+            newerInputFile名称: inputFile
           };
         }
       }
@@ -138396,14 +138396,14 @@ ${lanes.join("\n")}
         if (outputTime === missingFileModifiedTime) {
           return {
             type: 4,
-            missingOutputFile名称： output
+            missingOutputFile名称: output
           };
         }
         if (outputTime < newestInputFileTime) {
           return {
             type: 6,
-            outOfDateOutputFile名称： output,
-            newerInputFile名称： newestInputFileName
+            outOfDateOutputFile名称: output,
+            newerInputFile名称: newestInputFileName
           };
         }
         if (outputTime < oldestOutputFileTime) {
@@ -138425,8 +138425,8 @@ ${lanes.join("\n")}
         if (buildInfoCacheEntry && hasSameBuildInfo(state, buildInfoCacheEntry, resolvedRefPath)) {
           return {
             type: 7,
-            outOfDateOutputFile名称： buildInfoPath,
-            newerProject名称： ref.path
+            outOfDateOutputFile名称: buildInfoPath,
+            newerProject名称: ref.path
           };
         }
         const newestDeclarationFileContentChangedTime = getLatestChangedDtsTime(state, resolvedConfig.options, resolvedRefPath);
@@ -138438,8 +138438,8 @@ ${lanes.join("\n")}
         Debug.assert(oldestOutputFileName !== void 0, "Should have an oldest output filename here");
         return {
           type: 7,
-          outOfDateOutputFile名称： oldestOutputFileName,
-          newerProject名称： ref.path
+          outOfDateOutputFile名称: oldestOutputFileName,
+          newerProject名称: ref.path
         };
       }
     }
@@ -138459,8 +138459,8 @@ ${lanes.join("\n")}
     if (usesPrepend && pseudoUpToDate) {
       return {
         type: 3,
-        outOfDateOutputFile名称： oldestOutputFileName,
-        newerProject名称： upstreamChangedProject
+        outOfDateOutputFile名称: oldestOutputFileName,
+        newerProject名称: upstreamChangedProject
       };
     }
     return {
@@ -138547,7 +138547,7 @@ ${lanes.join("\n")}
     updateOutputTimestampsWorker(state, proj, resolvedPath, Diagnostics.Updating_output_timestamps_of_project_0);
     state.projectStatus.set(resolvedPath, {
       type: 1,
-      oldestOutputFile名称： getFirstProjectOutput(proj, !state.host.useCaseSensitiveFileNames())
+      oldestOutputFile名称: getFirstProjectOutput(proj, !state.host.useCaseSensitiveFileNames())
     });
   }
   function queueReferencingProjects(state, project, projectPath, projectIndex, config, buildOrder, buildResult) {
@@ -138575,8 +138575,8 @@ ${lanes.join("\n")}
                 if (ref.prepend) {
                   state.projectStatus.set(nextProjectPath, {
                     type: 3,
-                    outOfDateOutputFile名称： status.oldestOutputFileName,
-                    newerProject名称： project
+                    outOfDateOutputFile名称: status.oldestOutputFileName,
+                    newerProject名称: project
                   });
                 } else {
                   status.type = 2;
@@ -138589,8 +138589,8 @@ ${lanes.join("\n")}
               if (!(buildResult & 2)) {
                 state.projectStatus.set(nextProjectPath, {
                   type: 7,
-                  outOfDateOutputFile名称： status.type === 3 ? status.outOfDateOutputFileName : status.oldestOutputFileName,
-                  newerProject名称： project
+                  outOfDateOutputFile名称: status.type === 3 ? status.outOfDateOutputFileName : status.oldestOutputFileName,
+                  newerProject名称: project
                 });
               }
               break;
@@ -138838,7 +138838,7 @@ ${lanes.join("\n")}
             watchedDirPath: toPath2(state, dir),
             fileOrDirectory,
             fileOrDirectoryPath: toPath2(state, fileOrDirectory),
-            configFile名称： resolved,
+            configFile名称: resolved,
             currentDirectory: state.compilerHost.getCurrentDirectory(),
             options: parsed.options,
             program: state.builderPrograms.get(resolvedPath) || ((_a = getCachedParsedConfigFile(state, resolvedPath)) == null ? void 0 : _a.fileNames),
@@ -139523,7 +139523,7 @@ ${lanes.join("\n")}
           false
         );
         if (scopeResult !== 0) {
-          return { name: matches[1], isScope名称： true, result: scopeResult };
+          return { name: matches[1], isScope名称: true, result: scopeResult };
         }
         const packageResult = validatePackageNameWorker(
           matches[2],
@@ -139531,7 +139531,7 @@ ${lanes.join("\n")}
           false
         );
         if (packageResult !== 0) {
-          return { name: matches[2], isScope名称： false, result: packageResult };
+          return { name: matches[2], isScope名称: false, result: packageResult };
         }
         return 0;
       }
@@ -139651,7 +139651,7 @@ ${lanes.join("\n")}
     nonRelativeModuleNameForTypingCache: () => nonRelativeModuleNameForTypingCache,
     prefixedNodeCoreModuleList: () => prefixedNodeCoreModuleList,
     renderPackageNameValidationFailure: () => renderPackageNameValidationFailure,
-    validatePackage名称： () => validatePackageName
+    validatePackage名称: () => validatePackageName
   });
   var init_ts_JsTyping = __esm({
     "src/jsTyping/_namespaces/ts.JsTyping.ts"() {
@@ -141632,12 +141632,12 @@ ${lanes.join("\n")}
     const newEndPosition = getMappedLocation({ fileName, pos: textSpan.start + textSpan.length }, sourceMapper, fileExists);
     const newLength = newEndPosition ? newEndPosition.pos - newPosition.pos : textSpan.length;
     return {
-      file名称： newPosition.fileName,
+      file名称: newPosition.fileName,
       textSpan: {
         start: newPosition.pos,
         length: newLength
       },
-      originalFile名称： documentSpan.fileName,
+      originalFile名称: documentSpan.fileName,
       originalTextSpan: documentSpan.textSpan,
       contextSpan: getMappedContextSpan(documentSpan, sourceMapper, fileExists),
       originalContextSpan: documentSpan.contextSpan
@@ -141645,12 +141645,12 @@ ${lanes.join("\n")}
   }
   function getMappedContextSpan(documentSpan, sourceMapper, fileExists) {
     const contextSpanStart = documentSpan.contextSpan && getMappedLocation(
-      { file名称： documentSpan.fileName, pos: documentSpan.contextSpan.start },
+      { file名称: documentSpan.fileName, pos: documentSpan.contextSpan.start },
       sourceMapper,
       fileExists
     );
     const contextSpanEnd = documentSpan.contextSpan && getMappedLocation(
-      { file名称： documentSpan.fileName, pos: documentSpan.contextSpan.start + documentSpan.contextSpan.length },
+      { file名称: documentSpan.fileName, pos: documentSpan.contextSpan.start + documentSpan.contextSpan.length },
       sourceMapper,
       fileExists
     );
@@ -141922,7 +141922,7 @@ ${lanes.join("\n")}
         /* linkName */
       ],
       target: {
-        file名称： getSourceFileOfNode(target).fileName,
+        file名称: getSourceFileOfNode(target).fileName,
         textSpan: createTextSpanFromNode(target)
       }
     };
@@ -142992,11 +142992,11 @@ ${lanes.join("\n")}
         exportInfo.add(key(symbolName2, symbol, isExternalModuleNameRelative(moduleName) ? void 0 : moduleName, checker), {
           id,
           symbolTableKey,
-          symbol名称： symbolName2,
+          symbol名称: symbolName2,
           capitalizedSymbolName,
           moduleName,
           moduleFile,
-          moduleFile名称： moduleFile == null ? void 0 : moduleFile.fileName,
+          moduleFile名称: moduleFile == null ? void 0 : moduleFile.fileName,
           packageName,
           exportKind,
           targetFlags: target.flags,
@@ -143015,7 +143015,7 @@ ${lanes.join("\n")}
         if (importingFile !== usableByFileName)
           return;
         return forEachEntry(exportInfo, (info, key2) => {
-          const { symbol名称： symbolName2, ambientModuleName } = parseKey(key2);
+          const { symbol名称: symbolName2, ambientModuleName } = parseKey(key2);
           const name = preferCapitalized && info[0].capitalizedSymbolName || symbolName2;
           if (matches(name, info[0].targetFlags)) {
             const rehydrated = info.map(rehydrateCachedInfo);
@@ -144372,14 +144372,14 @@ ${lanes.join("\n")}
           if (node.parent && (isJsxOpeningElement(node.parent) && node.parent.tagName === node || isJsxClosingElement(node.parent))) {
             const { openingElement, closingElement } = node.parent.parent;
             const highlightSpans = [openingElement, closingElement].map(({ tagName }) => getHighlightSpanForNode(tagName, sourceFile));
-            return [{ file名称： sourceFile.fileName, highlightSpans }];
+            return [{ file名称: sourceFile.fileName, highlightSpans }];
           }
           return getSemanticDocumentHighlights(position, node, program, cancellationToken, sourceFilesToSearch) || getSyntacticDocumentHighlights(node, sourceFile);
         }
         DocumentHighlights3.getDocumentHighlights = getDocumentHighlights;
         function getHighlightSpanForNode(node, sourceFile) {
           return {
-            file名称： sourceFile.fileName,
+            file名称: sourceFile.fileName,
             textSpan: createTextSpanFromNode(node, sourceFile),
             kind: "none"
             /* none */
@@ -144416,7 +144416,7 @@ ${lanes.join("\n")}
         }
         function getSyntacticDocumentHighlights(node, sourceFile) {
           const highlightSpans = getHighlightSpans(node, sourceFile);
-          return highlightSpans && [{ file名称： sourceFile.fileName, highlightSpans }];
+          return highlightSpans && [{ file名称: sourceFile.fileName, highlightSpans }];
         }
         function getHighlightSpans(node, sourceFile) {
           switch (node.kind) {
@@ -144807,7 +144807,7 @@ ${lanes.join("\n")}
               }
               if (shouldCombineElseAndIf) {
                 result.push({
-                  file名称： sourceFile.fileName,
+                  file名称: sourceFile.fileName,
                   textSpan: createTextSpanFromBounds(elseKeyword.getStart(), ifKeyword.end),
                   kind: "reference"
                   /* reference */
@@ -145080,7 +145080,7 @@ ${lanes.join("\n")}
   function getPathUpdater(oldFileOrDirPath, newFileOrDirPath, getCanonicalFileName, sourceMapper) {
     const canonicalOldPath = getCanonicalFileName(oldFileOrDirPath);
     return (path) => {
-      const originalPath = sourceMapper && sourceMapper.tryGetSourcePosition({ file名称： path, pos: 0 });
+      const originalPath = sourceMapper && sourceMapper.tryGetSourcePosition({ file名称: path, pos: 0 });
       const updatedPath = getUpdatedPath(originalPath ? originalPath.fileName : path);
       return originalPath ? updatedPath === void 0 ? void 0 : makeCorrespondingRelativeChange(originalPath.fileName, updatedPath, path, getCanonicalFileName) : updatedPath;
     };
@@ -145209,7 +145209,7 @@ ${lanes.join("\n")}
     if (importedModuleSymbol) {
       const oldFileName = find(importedModuleSymbol.declarations, isSourceFile).fileName;
       const newFileName = oldToNew(oldFileName);
-      return newFileName === void 0 ? { newFile名称： oldFileName, updated: false } : { newFileName, updated: true };
+      return newFileName === void 0 ? { newFile名称: oldFileName, updated: false } : { newFileName, updated: true };
     } else {
       const mode = program.getModeForUsageLocation(importingSourceFile, importLiteral);
       const resolved = host.resolveModuleNameLiterals || !host.resolveModuleNames ? program.getResolvedModuleFromModuleSpecifier(importLiteral) : host.getResolvedModuleWithFailedLookupLocationsFromCache && host.getResolvedModuleWithFailedLookupLocationsFromCache(importLiteral.text, importingSourceFile.fileName, mode);
@@ -145227,7 +145227,7 @@ ${lanes.join("\n")}
     const result = forEach(resolved.failedLookupLocations, tryChangeWithIgnoringPackageJsonExisting) || pathIsRelative(importLiteral.text) && forEach(resolved.failedLookupLocations, tryChangeWithIgnoringPackageJson);
     if (result)
       return result;
-    return resolved.resolvedModule && { newFile名称： resolved.resolvedModule.resolvedFileName, updated: false };
+    return resolved.resolvedModule && { newFile名称: resolved.resolvedModule.resolvedFileName, updated: false };
     function tryChangeWithIgnoringPackageJsonExisting(oldFileName) {
       const newFileName = oldToNew(oldFileName);
       return newFileName && find(sourceFiles, (src) => src.fileName === newFileName) ? tryChangeWithIgnoringPackageJson(oldFileName) : void 0;
@@ -145657,7 +145657,7 @@ ${lanes.join("\n")}
       libReferenceDirectives: [],
       amdDependencies: [],
       hasNoDefaultLib: void 0,
-      module名称： void 0
+      module名称: void 0
     };
     const importedFiles = [];
     let ambientExternalModules;
@@ -146385,9 +146385,9 @@ ${lanes.join("\n")}
           outputText = text;
         }
       },
-      getDefaultLibFile名称： () => "lib.d.ts",
+      getDefaultLibFile名称: () => "lib.d.ts",
       useCaseSensitiveFileNames: () => false,
-      getCanonicalFile名称： (fileName) => fileName,
+      getCanonicalFile名称: (fileName) => fileName,
       getCurrentDirectory: () => "",
       getNewLine: () => newLine,
       fileExists: (fileName) => fileName === inputFileName,
@@ -146580,10 +146580,10 @@ ${lanes.join("\n")}
       kindModifiers: getNodeModifiers(declaration),
       matchKind: PatternMatchKind[rawItem.matchKind],
       isCaseSensitive: rawItem.isCaseSensitive,
-      file名称： rawItem.fileName,
+      file名称: rawItem.fileName,
       textSpan: createTextSpanFromNode(declaration),
       // TODO(jfreeman): What should be the containerName when the container has a computed name?
-      container名称： containerName ? containerName.text : "",
+      container名称: containerName ? containerName.text : "",
       containerKind: containerName ? getNodeKind(container) : ""
       /* unknown */
     };
@@ -147454,7 +147454,7 @@ ${lanes.join("\n")}
         const node = exportNode;
         if (!node.name)
           return void 0;
-        return noSymbolError(node.name) || { exportNode: node, export名称： node.name, wasDefault, exportingModuleSymbol };
+        return noSymbolError(node.name) || { exportNode: node, export名称: node.name, wasDefault, exportingModuleSymbol };
       }
       case 243: {
         const vs = exportNode;
@@ -147465,13 +147465,13 @@ ${lanes.join("\n")}
         if (!decl.initializer)
           return void 0;
         Debug.assert(!wasDefault, "Can't have a default flag here");
-        return noSymbolError(decl.name) || { exportNode: vs, export名称： decl.name, wasDefault, exportingModuleSymbol };
+        return noSymbolError(decl.name) || { exportNode: vs, export名称: decl.name, wasDefault, exportingModuleSymbol };
       }
       case 277: {
         const node = exportNode;
         if (node.isExportEquals)
           return void 0;
-        return noSymbolError(node.expression) || { exportNode: node, export名称： node.expression, wasDefault, exportingModuleSymbol };
+        return noSymbolError(node.expression) || { exportNode: node, export名称: node.expression, wasDefault, exportingModuleSymbol };
       }
       default:
         return void 0;
@@ -153160,7 +153160,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     convertParamsToDestructuredObject: () => ts_refactor_convertParamsToDestructuredObject_exports,
     convertStringOrTemplateLiteral: () => ts_refactor_convertStringOrTemplateLiteral_exports,
     convertToOptionalChainExpression: () => ts_refactor_convertToOptionalChainExpression_exports,
-    createNewFile名称： () => createNewFileName,
+    createNewFile名称: () => createNewFileName,
     createOldFileImportsFromTargetFile: () => createOldFileImportsFromTargetFile,
     deleteMovedStatements: () => deleteMovedStatements,
     deleteUnusedImports: () => deleteUnusedImports,
@@ -153832,7 +153832,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
         getCanonicalFileName,
         useCaseSensitiveFileNames: () => useCaseSensitiveFileNames2,
         getNewLine: () => getNewLineCharacter(newSettings),
-        getDefaultLibFile名称： (options2) => host.getDefaultLibFileName(options2),
+        getDefaultLibFile名称: (options2) => host.getDefaultLibFileName(options2),
         writeFile: noop,
         getCurrentDirectory: () => currentDirectory,
         fileExists: (fileName) => host.fileExists(fileName),
@@ -154209,7 +154209,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
         return [openingElement, closingElement].map((node2) => {
           const textSpan = createTextSpanFromNode(node2.tagName, sourceFile);
           return {
-            file名称： sourceFile.fileName,
+            file名称: sourceFile.fileName,
             textSpan,
             ...ts_FindAllReferences_exports.toContextSpan(textSpan, sourceFile, node2.parent)
           };
@@ -154427,7 +154427,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     function applySingleCodeActionCommand(action) {
       const getPath = (path) => toPath(path, currentDirectory, getCanonicalFileName);
       Debug.assertEqual(action.type, "install package");
-      return host.installPackage ? host.installPackage({ file名称： getPath(action.file), package名称： action.packageName }) : Promise.reject("Host does not implement `installPackage`");
+      return host.installPackage ? host.installPackage({ file名称: getPath(action.file), package名称: action.packageName }) : Promise.reject("Host does not implement `installPackage`");
     }
     function getDocCommentTemplateAtPosition2(fileName, position, options, formatOptions) {
       const formatSettings = formatOptions ? ts_formatting_exports.getFormatContext(formatOptions, host).options : void 0;
@@ -154832,7 +154832,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
         const isValidSourceFile = !(program == null ? void 0 : program.isSourceFileFromExternalLibrary(sourceFile)) && !(sourceFile === getValidSourceFile(file.fileName) || extension === ".ts" && fileNameExtension === ".d.ts" || extension === ".d.ts" && startsWith(getBaseFileName(file.fileName), "lib.") && fileNameExtension === ".d.ts");
         return isValidSourceFile && (extension === fileNameExtension || (extension === ".tsx" && fileNameExtension === ".ts" || extension === ".jsx" && fileNameExtension === ".js") && !toMoveContainsJsx) ? file.fileName : void 0;
       });
-      return { newFile名称： createNewFileName(sourceFile, program, host, toMove), files };
+      return { newFile名称: createNewFileName(sourceFile, program, host, toMove), files };
     }
     function getEditsForRefactor2(fileName, formatOptions, positionOrRange, refactorName14, actionName2, preferences = emptyOptions, interactiveRefactorArguments) {
       synchronizeHostData();
@@ -156793,7 +156793,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     return createCodeFixActionWorker(fixName8, diagnosticToString(description3), changes, fixId52, fixAllDescription && diagnosticToString(fixAllDescription), command);
   }
   function createCodeFixActionWorker(fixName8, description3, changes, fixId52, fixAllDescription, command) {
-    return { fix名称： fixName8, description: description3, changes, fixId: fixId52, fixAllDescription, commands: command ? [command] : void 0 };
+    return { fix名称: fixName8, description: description3, changes, fixId: fixId52, fixAllDescription, commands: command ? [command] : void 0 };
   }
   function registerCodeFix(reg) {
     for (const error2 of reg.errorCodes) {
@@ -160120,12 +160120,12 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
         preferences
       );
       if (fix) {
-        addImport({ fix, symbol名称： symbolName2, errorIdentifierText: void 0 });
+        addImport({ fix, symbol名称: symbolName2, errorIdentifierText: void 0 });
       }
     }
     function addImport(info) {
       var _a, _b;
-      const { fix, symbol名称： symbolName2 } = info;
+      const { fix, symbol名称: symbolName2 } = info;
       switch (fix.kind) {
         case 0:
           addToNamespace.push(fix);
@@ -160370,11 +160370,11 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     function getInfoWithChecker(checker, isFromPackageJson) {
       const defaultInfo = getDefaultLikeExportInfo(moduleSymbol, checker, compilerOptions);
       if (defaultInfo && skipAlias(defaultInfo.symbol, checker) === symbol) {
-        return { symbol: defaultInfo.symbol, moduleSymbol, moduleFile名称： void 0, exportKind: defaultInfo.exportKind, targetFlags: skipAlias(symbol, checker).flags, isFromPackageJson };
+        return { symbol: defaultInfo.symbol, moduleSymbol, moduleFile名称: void 0, exportKind: defaultInfo.exportKind, targetFlags: skipAlias(symbol, checker).flags, isFromPackageJson };
       }
       const named = checker.tryGetMemberInModuleExportsAndProperties(symbolName2, moduleSymbol);
       if (named && skipAlias(named, checker) === symbol) {
-        return { symbol: named, moduleSymbol, moduleFile名称： void 0, exportKind: 0, targetFlags: skipAlias(symbol, checker).flags, isFromPackageJson };
+        return { symbol: named, moduleSymbol, moduleFile名称: void 0, exportKind: 0, targetFlags: skipAlias(symbol, checker).flags, isFromPackageJson };
       }
     }
   }
@@ -160662,7 +160662,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     } else if (errorCode === Diagnostics._0_cannot_be_used_as_a_value_because_it_was_imported_using_import_type.code) {
       const symbolName2 = single(getSymbolNamesToImport(context.sourceFile, context.program.getTypeChecker(), symbolToken, context.program.getCompilerOptions()));
       const fix = getTypeOnlyPromotionFix(context.sourceFile, symbolToken, symbolName2, context.program);
-      return fix && [{ fix, symbol名称： symbolName2, errorIdentifierText: symbolToken.text }];
+      return fix && [{ fix, symbol名称: symbolName2, errorIdentifierText: symbolToken.text }];
     } else {
       info = getFixesInfoForNonUMDImport(context, symbolToken, useAutoImportProvider);
     }
@@ -160732,7 +160732,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
       return void 0;
     const symbol = checker.getAliasedSymbol(umdSymbol);
     const symbolName2 = umdSymbol.name;
-    const exportInfo = [{ symbol: umdSymbol, moduleSymbol: symbol, moduleFile名称： void 0, exportKind: 3, targetFlags: symbol.flags, isFromPackageJson: false }];
+    const exportInfo = [{ symbol: umdSymbol, moduleSymbol: symbol, moduleFile名称: void 0, exportKind: 3, targetFlags: symbol.flags, isFromPackageJson: false }];
     const useRequire = shouldUseRequire(sourceFile, program);
     const fixes = getImportFixes(
       exportInfo,
@@ -160748,7 +160748,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     ).fixes;
     return fixes.map((fix) => {
       var _a;
-      return { fix, symbol名称： symbolName2, errorIdentifierText: (_a = tryCast(token, isIdentifier)) == null ? void 0 : _a.text };
+      return { fix, symbol名称: symbolName2, errorIdentifierText: (_a = tryCast(token, isIdentifier)) == null ? void 0 : _a.text };
     });
   }
   function getUmdSymbol(token, checker) {
@@ -160827,7 +160827,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
       const exportInfo = getExportInfos(symbolName2, isJSXTagName(symbolToken), getMeaningFromLocation(symbolToken), cancellationToken, sourceFile, program, useAutoImportProvider, host, preferences);
       return arrayFrom(
         flatMapIterator(exportInfo.values(), (exportInfos) => getImportFixes(exportInfos, symbolToken.getStart(sourceFile), isValidTypeOnlyUseSite, useRequire, program, sourceFile, host, preferences).fixes),
-        (fix) => ({ fix, symbol名称： symbolName2, errorIdentifierText: symbolToken.text, isJsxNamespaceFix: symbolName2 !== symbolToken.text })
+        (fix) => ({ fix, symbol名称: symbolName2, errorIdentifierText: symbolToken.text, isJsxNamespaceFix: symbolName2 !== symbolToken.text })
       );
     });
   }
@@ -160888,7 +160888,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
       const moduleSpecifierResolutionHost = getModuleSpecifierResolutionHost(isFromPackageJson);
       if (toFile && isImportableFile(program2, fromFile, toFile, preferences, packageJsonFilter, moduleSpecifierResolutionHost, moduleSpecifierCache) || !toFile && packageJsonFilter.allowsImportingAmbientModule(moduleSymbol, moduleSpecifierResolutionHost)) {
         const checker = program2.getTypeChecker();
-        originalSymbolToExportInfos.add(getUniqueSymbolId(exportedSymbol, checker).toString(), { symbol: exportedSymbol, moduleSymbol, moduleFile名称： toFile == null ? void 0 : toFile.fileName, exportKind, targetFlags: skipAlias(exportedSymbol, checker).flags, isFromPackageJson });
+        originalSymbolToExportInfos.add(getUniqueSymbolId(exportedSymbol, checker).toString(), { symbol: exportedSymbol, moduleSymbol, moduleFile名称: toFile == null ? void 0 : toFile.fileName, exportKind, targetFlags: skipAlias(exportedSymbol, checker).flags, isFromPackageJson });
       }
     }
     forEachExternalModuleToImportFrom(program, host, preferences, useAutoImportProvider, (moduleSymbol, sourceFile, program2, isFromPackageJson) => {
@@ -161354,7 +161354,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
           if (!info)
             return void 0;
           return info.map(
-            ({ fix, symbol名称： symbolName2, errorIdentifierText }) => codeActionForFix(
+            ({ fix, symbol名称: symbolName2, errorIdentifierText }) => codeActionForFix(
               context,
               sourceFile,
               symbolName2,
@@ -163816,7 +163816,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
   function getInfo13(sourceFile, pos, diagCode) {
     const node = getTokenAtPosition(sourceFile, pos);
     if (isIdentifier(node) || isPrivateIdentifier(node)) {
-      return { node, class名称： diagCode === didYouMeanStaticMemberCode ? getContainingClass(node).name.text : void 0 };
+      return { node, class名称: diagCode === didYouMeanStaticMemberCode ? getContainingClass(node).name.text : void 0 };
     }
   }
   function doChange25(changes, sourceFile, { node, className }) {
@@ -166780,7 +166780,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
       isReadonly: hasEffectiveReadonlyModifier(declaration),
       type: getDeclarationType(declaration, program),
       container: declaration.kind === 169 ? declaration.parent.parent : declaration.parent,
-      original名称： declaration.name.text,
+      original名称: declaration.name.text,
       declaration,
       fieldName,
       accessorName,
@@ -167893,7 +167893,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     getNoopSymbolTrackerWithResolver: () => getNoopSymbolTrackerWithResolver,
     getPromoteTypeOnlyCompletionAction: () => getPromoteTypeOnlyCompletionAction,
     getSupportedErrorCodes: () => getSupportedErrorCodes,
-    importFix名称： () => importFixName,
+    importFix名称: () => importFixName,
     importSymbols: () => importSymbols,
     moduleSpecifierToValidIdentifier: () => moduleSpecifierToValidIdentifier,
     moduleSymbolToValidIdentifier: () => moduleSymbolToValidIdentifier,
@@ -169413,20 +169413,20 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     const isPackageJsonImport = origin.isFromPackageJson ? true : void 0;
     if (originIsResolvedExport(origin)) {
       const resolvedData = {
-        export名称： origin.exportName,
+        export名称: origin.exportName,
         exportMapKey: origin.exportMapKey,
         moduleSpecifier: origin.moduleSpecifier,
         ambientModuleName,
-        file名称： origin.fileName,
+        file名称: origin.fileName,
         isPackageJsonImport
       };
       return resolvedData;
     }
     const unresolvedData = {
-      export名称： origin.exportName,
+      export名称: origin.exportName,
       exportMapKey: origin.exportMapKey,
-      file名称： origin.fileName,
-      ambientModule名称： origin.fileName ? void 0 : stripQuotes(origin.moduleSymbol.name),
+      file名称: origin.fileName,
+      ambientModule名称: origin.fileName ? void 0 : stripQuotes(origin.moduleSymbol.name),
       isPackageJsonImport: origin.isFromPackageJson ? true : void 0
     };
     return unresolvedData;
@@ -169437,11 +169437,11 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     if (completionEntryDataIsResolved(data)) {
       const resolvedOrigin = {
         kind: 32,
-        export名称： data.exportName,
+        export名称: data.exportName,
         exportMapKey: data.exportMapKey,
         moduleSpecifier: data.moduleSpecifier,
-        symbol名称： completionName,
-        file名称： data.fileName,
+        symbol名称: completionName,
+        file名称: data.fileName,
         moduleSymbol,
         isDefaultExport,
         isFromPackageJson
@@ -169450,10 +169450,10 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
     }
     const unresolvedOrigin = {
       kind: 4,
-      export名称： data.exportName,
+      export名称: data.exportName,
       exportMapKey: data.exportMapKey,
-      symbol名称： completionName,
-      file名称： data.fileName,
+      symbol名称: completionName,
+      file名称: data.fileName,
       moduleSymbol,
       isDefaultExport,
       isFromPackageJson
@@ -170381,7 +170381,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
             const { moduleSpecifier } = (importSpecifierResolver || (importSpecifierResolver = ts_codefix_exports.createImportSpecifierResolver(sourceFile, program, host, preferences))).getModuleSpecifierForBestExportInfo(
               [{
                 exportKind: 0,
-                moduleFile名称： fileName,
+                moduleFile名称: fileName,
                 isFromPackageJson: false,
                 moduleSymbol,
                 symbol: firstAccessibleSymbol,
@@ -170398,8 +170398,8 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
                 ),
                 moduleSymbol,
                 isDefaultExport: false,
-                symbol名称： firstAccessibleSymbol.name,
-                export名称： firstAccessibleSymbol.name,
+                symbol名称: firstAccessibleSymbol.name,
+                export名称: firstAccessibleSymbol.name,
                 fileName,
                 moduleSpecifier
               };
@@ -170644,10 +170644,10 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
               pushAutoImportSymbol(symbol, {
                 kind: moduleSpecifier ? 32 : 4,
                 moduleSpecifier,
-                symbol名称： symbolName2,
+                symbol名称: symbolName2,
                 exportMapKey,
-                export名称： exportInfo2.exportKind === 2 ? "export=" : exportInfo2.symbol.name,
-                file名称： exportInfo2.moduleFileName,
+                export名称: exportInfo2.exportKind === 2 ? "export=" : exportInfo2.symbol.name,
+                file名称: exportInfo2.moduleFileName,
                 isDefaultExport,
                 moduleSymbol: exportInfo2.moduleSymbol,
                 isFromPackageJson: exportInfo2.isFromPackageJson
@@ -170996,7 +170996,7 @@ ${newComment.split("\n").map((c) => ` * ${c}`).join("\n")}
           if (declaration && isClassElement(declaration) && declaration.name && isComputedPropertyName(declaration.name)) {
             const origin = {
               kind: 512,
-              symbol名称： typeChecker.symbolToString(symbol)
+              symbol名称: typeChecker.symbolToString(symbol)
             };
             symbolToOriginInfoMap[index] = origin;
           }
@@ -186268,7 +186268,7 @@ ${options.prefix}` : "\n" : options.prefix
             kind: EventBeginInstallTypes,
             eventId: requestId,
             typingsInstallerVersion: version,
-            project名称： req.projectName
+            project名称: req.projectName
           });
           const scopedTypings = filteredTypings.map(typingsName);
           this.installTypingsAsync(requestId, scopedTypings, cachePath, (ok) => {
@@ -186306,7 +186306,7 @@ ${options.prefix}` : "\n" : options.prefix
               const response = {
                 kind: EventEndInstallTypes,
                 eventId: requestId,
-                project名称： req.projectName,
+                project名称: req.projectName,
                 packagesToInstall: scopedTypings,
                 installSuccess: ok,
                 typingsInstallerVersion: version
@@ -186340,7 +186340,7 @@ ${options.prefix}` : "\n" : options.prefix
         }
         createSetTypings(request, typings) {
           return {
-            project名称： request.projectName,
+            project名称: request.projectName,
             typeAcquisition: request.typeAcquisition,
             compilerOptions: request.compilerOptions,
             typings,
@@ -186371,7 +186371,7 @@ ${options.prefix}` : "\n" : options.prefix
     TypingsInstaller: () => TypingsInstaller,
     getNpmCommandForInstallation: () => getNpmCommandForInstallation,
     installNpmPackages: () => installNpmPackages,
-    typings名称： () => typingsName
+    typings名称: () => typingsName
   });
   var init_ts_server_typingsInstaller = __esm({
     "src/typingsInstallerCore/_namespaces/ts.server.typingsInstaller.ts"() {
@@ -186393,7 +186393,7 @@ ${options.prefix}` : "\n" : options.prefix
   });
   function createInstallTypingsRequest(project, typeAcquisition, unresolvedImports, cachePath) {
     return {
-      project名称： project.getProjectName(),
+      project名称: project.getProjectName(),
       fileNames: project.getFileNames(
         /*excludeFilesFromExternalLibraries*/
         true,
@@ -187386,7 +187386,7 @@ ${options.prefix}` : "\n" : options.prefix
       init_ts7();
       init_ts_server3();
       nullTypingsInstaller = {
-        isKnownTypesPackage名称： returnFalse,
+        isKnownTypesPackage名称: returnFalse,
         // Should never be called because we never provide a types registry.
         installPackage: notImplemented,
         enqueueInstallTypingsRequest: noop,
@@ -187706,7 +187706,7 @@ ${options.prefix}` : "\n" : options.prefix
           return this.typingsCache.isKnownTypesPackageName(name);
         }
         installPackage(options) {
-          return this.typingsCache.installPackage({ ...options, project名称： this.projectName, projectRootPath: this.toPath(this.currentDirectory) });
+          return this.typingsCache.installPackage({ ...options, project名称: this.projectName, projectRootPath: this.toPath(this.currentDirectory) });
         }
         /** @internal */
         getGlobalTypingsCacheLocation() {
@@ -188283,7 +188283,7 @@ ${options.prefix}` : "\n" : options.prefix
         addRoot(info, fileName) {
           Debug.assert(!this.isRoot(info));
           this.rootFiles.push(info);
-          this.rootFilesMap.set(info.path, { file名称： fileName || info.fileName, info });
+          this.rootFilesMap.set(info.path, { file名称: fileName || info.fileName, info });
           info.attachToProject(this);
           this.markAsDirty();
         }
@@ -188420,7 +188420,7 @@ ${options.prefix}` : "\n" : options.prefix
         /** @internal */
         onTypingInstallerWatchInvoke() {
           this.typingWatchers.isInvoked = true;
-          this.projectService.updateTypingsForProject({ project名称： this.getProjectName(), kind: ActionInvalidate });
+          this.projectService.updateTypingsForProject({ project名称: this.getProjectName(), kind: ActionInvalidate });
         }
         /** @internal */
         watchTypingLocations(files) {
@@ -188892,7 +188892,7 @@ ${options.prefix}` : "\n" : options.prefix
             updateProjectIfDirty(this);
           }
           const info = {
-            project名称： this.getProjectName(),
+            project名称: this.getProjectName(),
             version: this.projectProgramVersion,
             isInferred: isInferredProject(this),
             options: this.getCompilationSettings(),
@@ -188907,7 +188907,7 @@ ${options.prefix}` : "\n" : options.prefix
             }
             const lastReportedFileNames = this.lastReportedFileNames;
             const externalFiles = ((_a = this.externalFiles) == null ? void 0 : _a.map((f) => ({
-              file名称： toNormalizedPath(f),
+              file名称: toNormalizedPath(f),
               isSourceOfProjectReferenceRedirect: false
             }))) || emptyArray2;
             const currentFiles = arrayToMap(
@@ -188952,7 +188952,7 @@ ${options.prefix}` : "\n" : options.prefix
           } else {
             const projectFileNames = this.getFileNamesWithRedirectInfo(!!includeProjectReferenceRedirectInfo);
             const externalFiles = ((_b = this.externalFiles) == null ? void 0 : _b.map((f) => ({
-              file名称： toNormalizedPath(f),
+              file名称: toNormalizedPath(f),
               isSourceOfProjectReferenceRedirect: false
             }))) || emptyArray2;
             const allFiles = projectFileNames.concat(externalFiles);
@@ -190025,7 +190025,7 @@ ${options.prefix}` : "\n" : options.prefix
         watchedFiles,
         path,
         callback,
-        (id) => ({ event名称： CreateFileWatcherEvent, data: { id, path } })
+        (id) => ({ event名称: CreateFileWatcherEvent, data: { id, path } })
       );
     }
     function watchDirectory(path, callback, recursive) {
@@ -190034,7 +190034,7 @@ ${options.prefix}` : "\n" : options.prefix
         path,
         callback,
         (id) => ({
-          event名称： CreateDirectoryWatcherEvent,
+          event名称: CreateDirectoryWatcherEvent,
           data: {
             id,
             path,
@@ -190065,7 +190065,7 @@ ${options.prefix}` : "\n" : options.prefix
             return;
           idToCallbacks.delete(id);
           pathToId.delete(key);
-          service.eventHandler({ event名称： CloseFileWatcherEvent, data: { id } });
+          service.eventHandler({ event名称: CloseFileWatcherEvent, data: { id } });
         }
       };
     }
@@ -190201,7 +190201,7 @@ ${options.prefix}` : "\n" : options.prefix
         }
       };
       fileNamePropertyReader = {
-        getFile名称： (x) => x,
+        getFile名称: (x) => x,
         getScriptKind: (fileName, extraFileExtensions) => {
           let result;
           if (extraFileExtensions) {
@@ -190221,7 +190221,7 @@ ${options.prefix}` : "\n" : options.prefix
         hasMixedContent: (fileName, extraFileExtensions) => some(extraFileExtensions, (ext) => ext.isMixedContent && fileExtensionIs(fileName, ext.extension))
       };
       externalFilePropertyReader = {
-        getFile名称： (x) => x.fileName,
+        getFile名称: (x) => x.fileName,
         getScriptKind: (x) => tryConvertScriptKindName(x.scriptKind),
         // TODO: GH#18217
         hasMixedContent: (x) => !!x.hasMixedContent
@@ -190359,7 +190359,7 @@ ${options.prefix}` : "\n" : options.prefix
             return;
           }
           const event = {
-            event名称： ProjectLanguageServiceStateEvent,
+            event名称: ProjectLanguageServiceStateEvent,
             data: { project, languageServiceEnabled }
           };
           this.eventHandler(event);
@@ -190460,7 +190460,7 @@ ${options.prefix}` : "\n" : options.prefix
             return;
           }
           const event = {
-            event名称： ProjectsUpdatedInBackgroundEvent,
+            event名称: ProjectsUpdatedInBackgroundEvent,
             data: {
               openFiles: arrayFrom(this.openFiles.keys(), (path) => this.getScriptInfoForPath(path).fileName)
             }
@@ -190473,7 +190473,7 @@ ${options.prefix}` : "\n" : options.prefix
             return;
           }
           const event = {
-            event名称： LargeFileReferencedEvent,
+            event名称: LargeFileReferencedEvent,
             data: { file, fileSize, maxFileSize }
           };
           this.eventHandler(event);
@@ -190485,7 +190485,7 @@ ${options.prefix}` : "\n" : options.prefix
           }
           project.sendLoadingProjectFinish = true;
           const event = {
-            event名称： ProjectLoadingStartEvent,
+            event名称: ProjectLoadingStartEvent,
             data: { project, reason }
           };
           this.eventHandler(event);
@@ -190497,7 +190497,7 @@ ${options.prefix}` : "\n" : options.prefix
           }
           project.sendLoadingProjectFinish = false;
           const event = {
-            event名称： ProjectLoadingFinishEvent,
+            event名称: ProjectLoadingFinishEvent,
             data: { project }
           };
           this.eventHandler(event);
@@ -190855,7 +190855,7 @@ ${options.prefix}` : "\n" : options.prefix
                     mapDefinedIterator(
                       this.filenameToScriptInfo.values(),
                       (info2) => info2.isAttached(project) ? {
-                        file名称： info2.fileName,
+                        file名称: info2.fileName,
                         projects: info2.containingProjects.map((p) => p.projectName),
                         hasMixedContent: info2.hasMixedContent
                       } : void 0
@@ -191222,7 +191222,7 @@ ${options.prefix}` : "\n" : options.prefix
           this.logger.info("Open files: ");
           this.openFiles.forEach((projectRootPath, path) => {
             const info = this.getScriptInfoForPath(path);
-            this.logger.info(`	File名称： ${info.fileName} ProjectRootPath: ${projectRootPath}`);
+            this.logger.info(`	File名称: ${info.fileName} ProjectRootPath: ${projectRootPath}`);
             this.logger.info(`		Projects: ${info.containingProjects.map((p) => p.getProjectName())}`);
           });
           this.logger.endGroup();
@@ -191309,12 +191309,12 @@ ${options.prefix}` : "\n" : options.prefix
             include: projectOptions && projectOptions.configHasIncludeProperty,
             exclude: projectOptions && projectOptions.configHasExcludeProperty,
             compileOnSave: project.compileOnSaveEnabled,
-            configFile名称： configFileName(),
+            configFile名称: configFileName(),
             projectType: project instanceof ExternalProject2 ? "external" : "configured",
             languageServiceEnabled: project.languageServiceEnabled,
             version
           };
-          this.eventHandler({ event名称： ProjectInfoTelemetryEvent, data });
+          this.eventHandler({ event名称: ProjectInfoTelemetryEvent, data });
           function configFileName() {
             if (!isConfiguredProject(project)) {
               return "other";
@@ -191703,8 +191703,8 @@ ${options.prefix}` : "\n" : options.prefix
           diagnostics.push(...project.getAllProjectErrors());
           this.eventHandler(
             {
-              event名称： ConfigFileDiagEvent,
-              data: { configFile名称： project.getConfigFilePath(), diagnostics, triggerFile }
+              event名称: ConfigFileDiagEvent,
+              data: { configFile名称: project.getConfigFilePath(), diagnostics, triggerFile }
             }
           );
         }
@@ -191812,7 +191812,7 @@ ${options.prefix}` : "\n" : options.prefix
         }
         /** @internal */
         logErrorForScriptInfoNotFound(fileName) {
-          const names = arrayFrom(this.filenameToScriptInfo.entries(), ([path, scriptInfo]) => ({ path, file名称： scriptInfo.fileName }));
+          const names = arrayFrom(this.filenameToScriptInfo.entries(), ([path, scriptInfo]) => ({ path, file名称: scriptInfo.fileName }));
           this.logger.msg(
             `Could not find file ${JSON.stringify(fileName)}.
 All files are: ${JSON.stringify(names)}`,
@@ -192088,7 +192088,7 @@ Dynamic files must always be opened with service's current directory or service 
           };
           const projectName = project.projectName;
           const documentPositionMapper = getDocumentPositionMapper(
-            { getCanonicalFile名称： this.toCanonicalFileName, log: (s) => this.logger.info(s), getSourceFileLike: (f) => this.getSourceFileLike(f, projectName, declarationInfo) },
+            { getCanonicalFile名称: this.toCanonicalFileName, log: (s) => this.logger.info(s), getSourceFileLike: (f) => this.getSourceFileLike(f, projectName, declarationInfo) },
             declarationInfo.fileName,
             declarationInfo.textStorage.getLineInfo(),
             readMapFile
@@ -192422,7 +192422,7 @@ Dynamic files must always be opened with service's current directory or service 
           const scriptInfo = this.getScriptInfo(fileName);
           if (!scriptInfo && !this.host.fileExists(fileName))
             return void 0;
-          const originalFileInfo = { file名称： toNormalizedPath(fileName), path: this.toPath(fileName) };
+          const originalFileInfo = { file名称: toNormalizedPath(fileName), path: this.toPath(fileName) };
           const configFileName = this.getConfigFileNameForFile(originalFileInfo);
           if (!configFileName)
             return void 0;
@@ -192563,7 +192563,7 @@ Dynamic files must always be opened with service's current directory or service 
             if (!project.isInitialLoadPending() && (!project.getCompilerOptions().composite || project.getCompilerOptions().disableSolutionSearching))
               return;
             const configFileName = this.getConfigFileNameForFile({
-              file名称： project.getConfigFilePath(),
+              file名称: project.getConfigFilePath(),
               path: info.path,
               configFileInfo: true
             });
@@ -192723,7 +192723,7 @@ Dynamic files must always be opened with service's current directory or service 
           }
           const sourceFile = project.getSourceFile(scriptInfo.path);
           const checkJs = !!sourceFile && !!sourceFile.checkJsDirective;
-          this.eventHandler({ event名称： OpenFileInfoTelemetryEvent, data: { info: { checkJs } } });
+          this.eventHandler({ event名称: OpenFileInfoTelemetryEvent, data: { info: { checkJs } } });
         }
         closeClientFile(uncheckedFileName, skipAssignOrphanScriptInfosToInferredProject) {
           const info = this.getScriptInfoForNormalizedPath(toNormalizedPath(uncheckedFileName));
@@ -193455,7 +193455,7 @@ Dynamic files must always be opened with service's current directory or service 
       source,
       relatedInformation: map(diag2.relatedInformation, formatRelatedInformation)
     };
-    return includeFileName ? { ...common, file名称： diag2.file && diag2.file.fileName } : common;
+    return includeFileName ? { ...common, file名称: diag2.file && diag2.file.fileName } : common;
   }
   function allEditsBeforePos(edits, pos) {
     return edits.every((edit) => textSpanEnd(edit.span) < pos);
@@ -193530,7 +193530,7 @@ ${json}${newLine}`;
       isForRename
     );
     const info = infos && firstOrUndefined(infos);
-    return info && !info.isLocal ? { file名称： info.fileName, pos: info.textSpan.start } : void 0;
+    return info && !info.isLocal ? { file名称: info.fileName, pos: info.textSpan.start } : void 0;
   }
   function getReferencesWorker(projects, defaultProject, initialLocation, useCaseSensitiveFileNames2, logger) {
     var _a, _b;
@@ -193607,7 +193607,7 @@ ${json}${newLine}`;
           ...referencedSymbol.definition,
           textSpan: createTextSpan(mappedDefinitionFile.pos, referencedSymbol.definition.textSpan.length),
           // Why would the length be the same in the original?
-          file名称： mappedDefinitionFile.fileName,
+          file名称: mappedDefinitionFile.fileName,
           contextSpan: getMappedContextSpanForProject(referencedSymbol.definition, project)
         };
         let symbolToAddTo = find(results, (o) => documentSpansEqual(o.definition, definition, useCaseSensitiveFileNames2));
@@ -193642,7 +193642,7 @@ ${json}${newLine}`;
     const queue = createQueue();
     queue.enqueue({ project: defaultProject, location: initialLocation });
     forEachProjectInProjects(projects, initialLocation.fileName, (project, path) => {
-      const location = { file名称： path, pos: initialLocation.pos };
+      const location = { file名称: path, pos: initialLocation.pos };
       queue.enqueue({ project, location });
     });
     const projectService = defaultProject.projectService;
@@ -193711,7 +193711,7 @@ ${json}${newLine}`;
             symlinkedProjectsMap.forEach((symlinkedProjects, symlinkedPath) => {
               for (const symlinkedProject of symlinkedProjects) {
                 if (!symlinkedProject.isOrphan() && !resultsMap.has(symlinkedProject)) {
-                  queue.enqueue({ project: symlinkedProject, location: { file名称： symlinkedPath, pos: originalLocation.pos } });
+                  queue.enqueue({ project: symlinkedProject, location: { file名称: symlinkedPath, pos: originalLocation.pos } });
                 }
               }
             });
@@ -193792,7 +193792,7 @@ ${json}${newLine}`;
     Debug.assert(textChanges2.textChanges.length === 1);
     const change = first(textChanges2.textChanges);
     Debug.assert(change.span.start === 0 && change.span.length === 0);
-    return { file名称： textChanges2.fileName, textChanges: [{ start: { line: 0, offset: 0 }, end: { line: 0, offset: 0 }, newText: change.newText }] };
+    return { file名称: textChanges2.fileName, textChanges: [{ start: { line: 0, offset: 0 }, end: { line: 0, offset: 0 }, newText: change.newText }] };
   }
   function getLocationInNewDocument(oldText, renameFilename, renameLocation, edits) {
     const newText = applyEdits(oldText, renameFilename, edits);
@@ -194071,13 +194071,13 @@ ${json}${newLine}`;
               this.changeSeq++;
               this.projectService.applyChangesInOpenFiles(
                 request.arguments.openFiles && mapIterator(request.arguments.openFiles, (file) => ({
-                  file名称： file.file,
+                  file名称: file.file,
                   content: file.fileContent,
                   scriptKind: file.scriptKindName,
                   projectRootPath: file.projectRootPath
                 })),
                 request.arguments.changedFiles && mapIterator(request.arguments.changedFiles, (file) => ({
-                  file名称： file.fileName,
+                  file名称: file.fileName,
                   changes: mapDefinedIterator(arrayReverseIterator(file.textChanges), (change) => {
                     const scriptInfo = Debug.checkDefined(this.projectService.getScriptInfo(file.fileName));
                     const start = scriptInfo.lineOffsetToPosition(change.start.line, change.start.offset);
@@ -194100,7 +194100,7 @@ ${json}${newLine}`;
               this.projectService.applyChangesInOpenFiles(
                 request.arguments.openFiles,
                 request.arguments.changedFiles && mapIterator(request.arguments.changedFiles, (file) => ({
-                  file名称： file.fileName,
+                  file名称: file.fileName,
                   // apply changes in reverse order
                   changes: arrayReverseIterator(file.changes)
                 })),
@@ -195067,13 +195067,13 @@ ${json}${newLine}`;
               break;
             case ProjectLoadingStartEvent:
               this.event({
-                project名称： event.data.project.getProjectName(),
+                project名称: event.data.project.getProjectName(),
                 reason: event.data.reason
               }, event.eventName);
               break;
             case ProjectLoadingFinishEvent:
               this.event({
-                project名称： event.data.project.getProjectName()
+                project名称: event.data.project.getProjectName()
               }, event.eventName);
               break;
             case LargeFileReferencedEvent:
@@ -195095,7 +195095,7 @@ ${json}${newLine}`;
               break;
             case ProjectLanguageServiceStateEvent: {
               this.event({
-                project名称： event.data.project.getProjectName(),
+                project名称: event.data.project.getProjectName(),
                 languageServiceEnabled: event.data.languageServiceEnabled
               }, event.eventName);
               break;
@@ -195103,7 +195103,7 @@ ${json}${newLine}`;
             case ProjectInfoTelemetryEvent: {
               const eventName = "telemetry";
               this.event({
-                telemetryEvent名称： event.eventName,
+                telemetryEvent名称: event.eventName,
                 payload: event.data
               }, eventName);
               break;
@@ -195456,7 +195456,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
             return !newDocumentSpan ? info : {
               ...newDocumentSpan,
               containerKind: info.containerKind,
-              container名称： info.containerName,
+              container名称: info.containerName,
               kind: info.kind,
               name: info.name,
               failedAliasResolution: info.failedAliasResolution,
@@ -195605,7 +195605,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
                   /*stopAtAlias*/
                   false
                 )) == null ? void 0 : _a2.filter((d) => toNormalizedPath(d.fileName) !== file && d.isAmbient).map((d) => ({
-                  file名称： d.fileName,
+                  file名称: d.fileName,
                   name: getTextOfIdentifierOrLiteral(initialNode)
                 }));
                 if (some(candidates)) {
@@ -195709,9 +195709,9 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
             Debug.assert(def.originalTextSpan !== void 0, "originalTextSpan should be present if originalFileName is");
             return {
               ...def,
-              file名称： def.originalFileName,
+              file名称: def.originalFileName,
               textSpan: def.originalTextSpan,
-              targetFile名称： def.fileName,
+              targetFile名称: def.fileName,
               targetTextSpan: def.textSpan,
               contextSpan: def.originalContextSpan,
               targetContextSpan: def.contextSpan
@@ -195873,7 +195873,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const { project } = this.getFileAndProjectWorker(uncheckedFileName, projectFileName);
           updateProjectIfDirty(project);
           const projectInfo = {
-            configFile名称： project.getProjectName(),
+            configFile名称: project.getProjectName(),
             languageServiceDisabled: !project.languageServiceEnabled,
             fileNames: needFileNameList ? project.getFileNames(
               /*excludeFilesFromExternalLibraries*/
@@ -195945,7 +195945,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const locations = getRenameLocationsWorker(
             projects,
             defaultProject,
-            { file名称： args.file, pos: position },
+            { file名称: args.file, pos: position },
             !!args.findInStrings,
             !!args.findInComments,
             preferences,
@@ -195967,7 +195967,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
         }
         toSpanGroups(locations) {
           const map2 = /* @__PURE__ */ new Map();
-          for (const { fileName, textSpan, contextSpan, originalContextSpan: _2, originalTextSpan: _, originalFile名称： _1, ...prefixSuffixText } of locations) {
+          for (const { fileName, textSpan, contextSpan, originalContextSpan: _2, originalTextSpan: _, originalFile名称: _1, ...prefixSuffixText } of locations) {
             let group2 = map2.get(fileName);
             if (!group2)
               map2.set(fileName, group2 = { file: fileName, locs: [] });
@@ -195983,7 +195983,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const references = getReferencesWorker(
             projects,
             this.getDefaultProject(args),
-            { file名称： args.file, pos: position },
+            { file名称: args.file, pos: position },
             this.host.useCaseSensitiveFileNames,
             this.logger
           );
@@ -196000,7 +196000,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const refs = flatMap(references, (referencedSymbol) => {
             return referencedSymbol.references.map((entry) => referenceEntryToReferencesResponseItem(this.projectService, entry, preferences));
           });
-          return { refs, symbol名称： symbolName2, symbolStartOffset, symbolDisplayString };
+          return { refs, symbol名称: symbolName2, symbolStartOffset, symbolDisplayString };
         }
         getFileReferences(args, simplifiedResult) {
           const projects = this.getProjects(args);
@@ -196031,7 +196031,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const refs = references.map((entry) => referenceEntryToReferencesResponseItem(this.projectService, entry, preferences));
           return {
             refs,
-            symbol名称： `"${args.file}"`
+            symbol名称: `"${args.file}"`
           };
         }
         /**
@@ -196345,7 +196345,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
                 return void 0;
               }
               return {
-                projectFile名称： project.getProjectName(),
+                projectFile名称: project.getProjectName(),
                 fileNames: project.getCompileOnSaveAffectedFileList(info2),
                 projectUsesOutFile: !!outFile(compilationSettings)
               };
@@ -196666,7 +196666,7 @@ Project '${project.projectName}' (${ProjectKind[project.projectKind]}) ${counter
           const { file, project } = this.getFileAndProject(args.scope.args);
           const changes = project.getLanguageService().organizeImports(
             {
-              file名称： file,
+              file名称: file,
               mode: args.mode ?? (args.skipDestructiveCodeActions ? "SortAndCombine" : void 0),
               type: "file"
             },
@@ -196730,7 +196730,7 @@ ${e.message}`;
         getCombinedCodeFix({ scope, fixId: fixId52 }, simplifiedResult) {
           Debug.assert(scope.type === "file");
           const { file, project } = this.getFileAndProject(scope.args);
-          const res = project.getLanguageService().getCombinedCodeFix({ type: "file", file名称： file }, fixId52, this.getFormatOptions(file), this.getPreferences(file));
+          const res = project.getLanguageService().getCombinedCodeFix({ type: "file", file名称: file }, fixId52, this.getFormatOptions(file), this.getPreferences(file));
           if (simplifiedResult) {
             return { changes: this.mapTextChangesToCodeEdits(res.changes), commands: res.commands };
           } else {
@@ -196769,8 +196769,8 @@ ${e.message}`;
         mapCodeAction({ description: description3, changes, commands }) {
           return { description: description3, changes: this.mapTextChangesToCodeEdits(changes), commands };
         }
-        mapCodeFixAction({ fix名称： fixName8, description: description3, changes, commands, fixId: fixId52, fixAllDescription }) {
-          return { fix名称： fixName8, description: description3, changes: this.mapTextChangesToCodeEdits(changes), commands, fixId: fixId52, fixAllDescription };
+        mapCodeFixAction({ fix名称: fixName8, description: description3, changes, commands, fixId: fixId52, fixAllDescription }) {
+          return { fix名称: fixName8, description: description3, changes: this.mapTextChangesToCodeEdits(changes), commands, fixId: fixId52, fixAllDescription };
         }
         mapTextChangesToCodeEdits(textChanges2) {
           return textChanges2.map((change) => this.mapTextChangeToCodeEdit(change));
@@ -196783,7 +196783,7 @@ ${e.message}`;
             }
             Debug.fail("Expected isNewFile for (only) new files. " + JSON.stringify({ isNewFile: !!textChanges2.isNewFile, hasScriptInfo: !!scriptInfo }));
           }
-          return scriptInfo ? { file名称： textChanges2.fileName, textChanges: textChanges2.textChanges.map((textChange) => convertTextChangeToCodeEdit(textChange, scriptInfo)) } : convertNewFileTextChangeToCodeEdit(textChanges2);
+          return scriptInfo ? { file名称: textChanges2.fileName, textChanges: textChanges2.textChanges.map((textChange) => convertTextChangeToCodeEdit(textChange, scriptInfo)) } : convertNewFileTextChangeToCodeEdit(textChanges2);
         }
         convertTextChangeToCodeEdit(change, scriptInfo) {
           return {
@@ -196842,7 +196842,7 @@ ${e.message}`;
             }
           }
           const sortedFiles = [...highPriorityFiles, ...mediumPriorityFiles, ...lowPriorityFiles, ...veryLowPriorityFiles];
-          const checkList = sortedFiles.map((fileName2) => ({ file名称： fileName2, project }));
+          const checkList = sortedFiles.map((fileName2) => ({ file名称: fileName2, project }));
           this.updateErrorCheck(
             next,
             checkList,
@@ -196933,7 +196933,7 @@ ${e.message}`;
             kind: item.kind,
             kindModifiers: item.kindModifiers,
             file: item.file,
-            container名称： item.containerName,
+            container名称: item.containerName,
             span: toProtocolTextSpan(item.span, scriptInfo),
             selectionSpan: toProtocolTextSpan(item.selectionSpan, scriptInfo)
           };
@@ -197935,7 +197935,7 @@ ${e.message}`;
           this.installer = this.createInstallerProcess();
         }
         onProjectClosed(p) {
-          this.installer.send({ project名称： p.getProjectName(), kind: "closeProject" });
+          this.installer.send({ project名称: p.getProjectName(), kind: "closeProject" });
         }
         enqueueInstallTypingsRequest(project, typeAcquisition, unresolvedImports) {
           const request = createInstallTypingsRequest(project, typeAcquisition, unresolvedImports);
@@ -198003,7 +198003,7 @@ ${e.message}`;
             case EventEndInstallTypes: {
               if (this.telemetryEnabled) {
                 const body2 = {
-                  telemetryEvent名称： "typingsInstalled",
+                  telemetryEvent名称: "typingsInstalled",
                   payload: {
                     installedPackages: response.packagesToInstall.join(","),
                     installSuccess: response.installSuccess,
@@ -198136,7 +198136,7 @@ ${e.message}`;
     asNormalizedPath: () => asNormalizedPath,
     convertCompilerOptions: () => convertCompilerOptions,
     convertFormatOptions: () => convertFormatOptions,
-    convertScriptKind名称： () => convertScriptKindName,
+    convertScriptKind名称: () => convertScriptKindName,
     convertTypeAcquisition: () => convertTypeAcquisition,
     convertUserPreferences: () => convertUserPreferences,
     convertWatchOptions: () => convertWatchOptions,
@@ -198151,7 +198151,7 @@ ${e.message}`;
     forEachResolvedProjectReferenceProject: () => forEachResolvedProjectReferenceProject,
     formatDiagnosticToProtocol: () => formatDiagnosticToProtocol,
     formatMessage: () => formatMessage2,
-    getBaseConfigFile名称： () => getBaseConfigFileName,
+    getBaseConfigFile名称: () => getBaseConfigFileName,
     getLocationInNewDocument: () => getLocationInNewDocument,
     hasArgument: () => hasArgument,
     hasNoTypeScriptSource: () => hasNoTypeScriptSource,
@@ -198159,13 +198159,13 @@ ${e.message}`;
     isBackgroundProject: () => isBackgroundProject,
     isConfigFile: () => isConfigFile,
     isConfiguredProject: () => isConfiguredProject,
-    isDynamicFile名称： () => isDynamicFileName,
+    isDynamicFile名称: () => isDynamicFileName,
     isExternalProject: () => isExternalProject,
     isInferredProject: () => isInferredProject,
-    isInferredProject名称： () => isInferredProjectName,
-    makeAutoImportProviderProject名称： () => makeAutoImportProviderProjectName,
-    makeAuxiliaryProject名称： () => makeAuxiliaryProjectName,
-    makeInferredProject名称： () => makeInferredProjectName,
+    isInferredProject名称: () => isInferredProjectName,
+    makeAutoImportProviderProject名称: () => makeAutoImportProviderProjectName,
+    makeAuxiliaryProject名称: () => makeAuxiliaryProjectName,
+    makeInferredProject名称: () => makeInferredProjectName,
     maxFileSize: () => maxFileSize,
     maxProgramSizeForNonTsFiles: () => maxProgramSizeForNonTsFiles,
     normalizedPathToPath: () => normalizedPathToPath,
@@ -198178,7 +198178,7 @@ ${e.message}`;
     stringifyIndented: () => stringifyIndented,
     toEvent: () => toEvent,
     toNormalizedPath: () => toNormalizedPath,
-    tryConvertScriptKind名称： () => tryConvertScriptKindName,
+    tryConvertScriptKind名称: () => tryConvertScriptKindName,
     typingsInstaller: () => ts_server_typingsInstaller_exports,
     updateProjectIfDirty: () => updateProjectIfDirty
   });
@@ -198267,7 +198267,7 @@ ${e.message}`;
     InlayHintKind: () => InlayHintKind,
     InlayHints: () => ts_InlayHints_exports,
     InternalEmitFlags: () => InternalEmitFlags,
-    InternalSymbol名称： () => InternalSymbolName,
+    InternalSymbol名称: () => InternalSymbolName,
     InvalidatedProjectKind: () => InvalidatedProjectKind,
     JSDocParsingMode: () => JSDocParsingMode,
     JsDoc: () => ts_JsDoc_exports,
@@ -198443,8 +198443,8 @@ ${e.message}`;
     childIsDecorated: () => childIsDecorated,
     classElementOrClassElementParameterIsDecorated: () => classElementOrClassElementParameterIsDecorated,
     classHasClassThisAssignment: () => classHasClassThisAssignment,
-    classHasDeclaredOrExplicitlyAssigned名称： () => classHasDeclaredOrExplicitlyAssignedName,
-    classHasExplicitlyAssigned名称： () => classHasExplicitlyAssignedName,
+    classHasDeclaredOrExplicitlyAssigned名称: () => classHasDeclaredOrExplicitlyAssignedName,
+    classHasExplicitlyAssigned名称: () => classHasExplicitlyAssignedName,
     classOrConstructorParameterIsDecorated: () => classOrConstructorParameterIsDecorated,
     classPrivateFieldGetHelper: () => classPrivateFieldGetHelper,
     classPrivateFieldInHelper: () => classPrivateFieldInHelper,
@@ -198573,16 +198573,16 @@ ${e.message}`;
     createExpressionForJsxElement: () => createExpressionForJsxElement,
     createExpressionForJsxFragment: () => createExpressionForJsxFragment,
     createExpressionForObjectLiteralElementLike: () => createExpressionForObjectLiteralElementLike,
-    createExpressionForProperty名称： () => createExpressionForPropertyName,
-    createExpressionFromEntity名称： () => createExpressionFromEntityName,
+    createExpressionForProperty名称: () => createExpressionForPropertyName,
+    createExpressionFromEntity名称: () => createExpressionFromEntityName,
     createExternalHelpersImportDeclarationIfNeeded: () => createExternalHelpersImportDeclarationIfNeeded,
     createFileDiagnostic: () => createFileDiagnostic,
     createFileDiagnosticFromMessageChain: () => createFileDiagnosticFromMessageChain,
     createForOfBindingStatement: () => createForOfBindingStatement,
-    createGetCanonicalFile名称： () => createGetCanonicalFileName,
+    createGetCanonicalFile名称: () => createGetCanonicalFileName,
     createGetSourceFile: () => createGetSourceFile,
     createGetSymbolAccessibilityDiagnosticForNode: () => createGetSymbolAccessibilityDiagnosticForNode,
-    createGetSymbolAccessibilityDiagnosticForNode名称： () => createGetSymbolAccessibilityDiagnosticForNodeName,
+    createGetSymbolAccessibilityDiagnosticForNode名称: () => createGetSymbolAccessibilityDiagnosticForNodeName,
     createGetSymbolWalker: () => createGetSymbolWalker,
     createIncrementalCompilerHost: () => createIncrementalCompilerHost,
     createIncrementalProgram: () => createIncrementalProgram,
@@ -198592,7 +198592,7 @@ ${e.message}`;
     createJsxFactoryExpression: () => createJsxFactoryExpression,
     createLanguageService: () => createLanguageService2,
     createLanguageServiceSourceFile: () => createLanguageServiceSourceFile,
-    createMemberAccessForProperty名称： () => createMemberAccessForPropertyName,
+    createMemberAccessForProperty名称: () => createMemberAccessForPropertyName,
     createModeAwareCache: () => createModeAwareCache,
     createModeAwareCacheKey: () => createModeAwareCacheKey,
     createModuleNotFoundChain: () => createModuleNotFoundChain,
@@ -198671,7 +198671,7 @@ ${e.message}`;
     defaultInitCompilerOptions: () => defaultInitCompilerOptions,
     defaultMaximumTruncationLength: () => defaultMaximumTruncationLength,
     detectSortCaseSensitivity: () => detectSortCaseSensitivity,
-    diagnosticCategory名称： () => diagnosticCategoryName,
+    diagnosticCategory名称: () => diagnosticCategoryName,
     diagnosticToString: () => diagnosticToString,
     directoryProbablyExists: () => directoryProbablyExists,
     directorySeparator: () => directorySeparator,
@@ -198700,7 +198700,7 @@ ${e.message}`;
     emptyOptions: () => emptyOptions,
     emptySet: () => emptySet,
     endsWith: () => endsWith,
-    ensurePathIsNonModule名称： () => ensurePathIsNonModuleName,
+    ensurePathIsNonModule名称: () => ensurePathIsNonModuleName,
     ensureScriptKind: () => ensureScriptKind,
     ensureTrailingDirectorySeparator: () => ensureTrailingDirectorySeparator,
     entityNameToString: () => entityNameToString,
@@ -198802,7 +198802,7 @@ ${e.message}`;
     formatDiagnostic: () => formatDiagnostic,
     formatDiagnostics: () => formatDiagnostics,
     formatDiagnosticsWithColorAndContext: () => formatDiagnosticsWithColorAndContext,
-    formatGenerated名称： () => formatGeneratedName,
+    formatGenerated名称: () => formatGeneratedName,
     formatGeneratedNamePart: () => formatGeneratedNamePart,
     formatLocation: () => formatLocation,
     formatMessage: () => formatMessage,
@@ -198815,7 +198815,7 @@ ${e.message}`;
     generatorHelper: () => generatorHelper,
     getAdjustedReferenceLocation: () => getAdjustedReferenceLocation,
     getAdjustedRenameLocation: () => getAdjustedRenameLocation,
-    getAliasDeclarationFrom名称： () => getAliasDeclarationFromName,
+    getAliasDeclarationFrom名称: () => getAliasDeclarationFromName,
     getAllAccessorDeclarations: () => getAllAccessorDeclarations,
     getAllDecoratorsOfClass: () => getAllDecoratorsOfClass,
     getAllDecoratorsOfClassElement: () => getAllDecoratorsOfClassElement,
@@ -198831,13 +198831,13 @@ ${e.message}`;
     getAnyExtensionFromPath: () => getAnyExtensionFromPath,
     getAreDeclarationMapsEnabled: () => getAreDeclarationMapsEnabled,
     getAssignedExpandoInitializer: () => getAssignedExpandoInitializer,
-    getAssigned名称： () => getAssignedName,
+    getAssigned名称: () => getAssignedName,
     getAssignedNameOfIdentifier: () => getAssignedNameOfIdentifier,
     getAssignmentDeclarationKind: () => getAssignmentDeclarationKind,
     getAssignmentDeclarationPropertyAccessKind: () => getAssignmentDeclarationPropertyAccessKind,
     getAssignmentTargetKind: () => getAssignmentTargetKind,
     getAutomaticTypeDirectiveNames: () => getAutomaticTypeDirectiveNames,
-    getBaseFile名称： () => getBaseFileName,
+    getBaseFile名称: () => getBaseFileName,
     getBinaryOperatorPrecedence: () => getBinaryOperatorPrecedence,
     getBuildInfo: () => getBuildInfo,
     getBuildInfoFileVersionMap: () => getBuildInfoFileVersionMap,
@@ -198878,7 +198878,7 @@ ${e.message}`;
     getDeclarationEmitOutputFilePath: () => getDeclarationEmitOutputFilePath,
     getDeclarationEmitOutputFilePathWorker: () => getDeclarationEmitOutputFilePathWorker,
     getDeclarationFileExtension: () => getDeclarationFileExtension,
-    getDeclarationFrom名称： () => getDeclarationFromName,
+    getDeclarationFrom名称: () => getDeclarationFromName,
     getDeclarationModifierFlagsFromSymbol: () => getDeclarationModifierFlagsFromSymbol,
     getDeclarationOfKind: () => getDeclarationOfKind,
     getDeclarationsOfKind: () => getDeclarationsOfKind,
@@ -198887,7 +198887,7 @@ ${e.message}`;
     getDefaultCompilerOptions: () => getDefaultCompilerOptions2,
     getDefaultExportInfoWorker: () => getDefaultExportInfoWorker,
     getDefaultFormatCodeSettings: () => getDefaultFormatCodeSettings,
-    getDefaultLibFile名称： () => getDefaultLibFileName,
+    getDefaultLibFile名称: () => getDefaultLibFileName,
     getDefaultLibFilePath: () => getDefaultLibFilePath,
     getDefaultLikeExportInfo: () => getDefaultLikeExportInfo,
     getDiagnosticText: () => getDiagnosticText,
@@ -198913,8 +198913,8 @@ ${e.message}`;
     getEffectiveTypeAnnotationNode: () => getEffectiveTypeAnnotationNode,
     getEffectiveTypeParameterDeclarations: () => getEffectiveTypeParameterDeclarations,
     getEffectiveTypeRoots: () => getEffectiveTypeRoots,
-    getElementOrPropertyAccessArgumentExpressionOr名称： () => getElementOrPropertyAccessArgumentExpressionOrName,
-    getElementOrPropertyAccess名称： () => getElementOrPropertyAccessName,
+    getElementOrPropertyAccessArgumentExpressionOr名称: () => getElementOrPropertyAccessArgumentExpressionOrName,
+    getElementOrPropertyAccess名称: () => getElementOrPropertyAccessName,
     getElementsOfBindingOrAssignmentPattern: () => getElementsOfBindingOrAssignmentPattern,
     getEmitDeclarations: () => getEmitDeclarations,
     getEmitFlags: () => getEmitFlags,
@@ -198935,17 +198935,17 @@ ${e.message}`;
     getErrorSpanForNode: () => getErrorSpanForNode,
     getErrorSummaryText: () => getErrorSummaryText,
     getEscapedTextOfIdentifierOrLiteral: () => getEscapedTextOfIdentifierOrLiteral,
-    getEscapedTextOfJsxAttribute名称： () => getEscapedTextOfJsxAttributeName,
-    getEscapedTextOfJsxNamespaced名称： () => getEscapedTextOfJsxNamespacedName,
+    getEscapedTextOfJsxAttribute名称: () => getEscapedTextOfJsxAttributeName,
+    getEscapedTextOfJsxNamespaced名称: () => getEscapedTextOfJsxNamespacedName,
     getExpandoInitializer: () => getExpandoInitializer,
     getExportAssignmentExpression: () => getExportAssignmentExpression,
     getExportInfoMap: () => getExportInfoMap,
     getExportNeedsImportStarHelper: () => getExportNeedsImportStarHelper,
     getExpressionAssociativity: () => getExpressionAssociativity,
     getExpressionPrecedence: () => getExpressionPrecedence,
-    getExternalHelpersModule名称： () => getExternalHelpersModuleName,
+    getExternalHelpersModule名称: () => getExternalHelpersModuleName,
     getExternalModuleImportEqualsDeclarationExpression: () => getExternalModuleImportEqualsDeclarationExpression,
-    getExternalModule名称： () => getExternalModuleName,
+    getExternalModule名称: () => getExternalModuleName,
     getExternalModuleNameFromDeclaration: () => getExternalModuleNameFromDeclaration,
     getExternalModuleNameFromPath: () => getExternalModuleNameFromPath,
     getExternalModuleNameLiteral: () => getExternalModuleNameLiteral,
@@ -199015,7 +199015,7 @@ ${e.message}`;
     getJSDocTemplateTag: () => getJSDocTemplateTag,
     getJSDocThisTag: () => getJSDocThisTag,
     getJSDocType: () => getJSDocType,
-    getJSDocTypeAlias名称： () => getJSDocTypeAliasName,
+    getJSDocTypeAlias名称: () => getJSDocTypeAliasName,
     getJSDocTypeAssertionType: () => getJSDocTypeAssertionType,
     getJSDocTypeParameterDeclarations: () => getJSDocTypeParameterDeclarations,
     getJSDocTypeParameterTags: () => getJSDocTypeParameterTags,
@@ -199031,7 +199031,7 @@ ${e.message}`;
     getLeadingCommentRangesOfNode: () => getLeadingCommentRangesOfNode,
     getLeftmostAccessExpression: () => getLeftmostAccessExpression,
     getLeftmostExpression: () => getLeftmostExpression,
-    getLibraryNameFromLibFile名称： () => getLibraryNameFromLibFileName,
+    getLibraryNameFromLibFile名称: () => getLibraryNameFromLibFileName,
     getLineAndCharacterOfPosition: () => getLineAndCharacterOfPosition,
     getLineInfo: () => getLineInfo,
     getLineOfLocalPosition: () => getLineOfLocalPosition,
@@ -199068,7 +199068,7 @@ ${e.message}`;
     getNameForExportedSymbol: () => getNameForExportedSymbol,
     getNameFromImportAttribute: () => getNameFromImportAttribute,
     getNameFromIndexInfo: () => getNameFromIndexInfo,
-    getNameFromProperty名称： () => getNameFromPropertyName,
+    getNameFromProperty名称: () => getNameFromPropertyName,
     getNameOfAccessExpression: () => getNameOfAccessExpression,
     getNameOfCompilerOptionValue: () => getNameOfCompilerOptionValue,
     getNameOfDeclaration: () => getNameOfDeclaration,
@@ -199083,7 +199083,7 @@ ${e.message}`;
     getNewLineOrDefaultFromHost: () => getNewLineOrDefaultFromHost,
     getNewTargetContainer: () => getNewTargetContainer,
     getNextJSDocCommentLocation: () => getNextJSDocCommentLocation,
-    getNodeForGenerated名称： () => getNodeForGeneratedName,
+    getNodeForGenerated名称: () => getNodeForGeneratedName,
     getNodeId: () => getNodeId,
     getNodeKind: () => getNodeKind,
     getNodeModifiers: () => getNodeModifiers,
@@ -199099,7 +199099,7 @@ ${e.message}`;
     getOperator: () => getOperator,
     getOperatorAssociativity: () => getOperatorAssociativity,
     getOperatorPrecedence: () => getOperatorPrecedence,
-    getOptionFrom名称： () => getOptionFromName,
+    getOptionFrom名称: () => getOptionFromName,
     getOptionsForLibraryResolution: () => getOptionsForLibraryResolution,
     getOptionsNameMap: () => getOptionsNameMap,
     getOrCreateEmitNode: () => getOrCreateEmitNode,
@@ -199108,7 +199108,7 @@ ${e.message}`;
     getOriginalNode: () => getOriginalNode,
     getOriginalNodeId: () => getOriginalNodeId,
     getOriginalSourceFile: () => getOriginalSourceFile,
-    getOutputDeclarationFile名称： () => getOutputDeclarationFileName,
+    getOutputDeclarationFile名称: () => getOutputDeclarationFileName,
     getOutputDeclarationFileNameWorker: () => getOutputDeclarationFileNameWorker,
     getOutputExtension: () => getOutputExtension,
     getOutputFileNames: () => getOutputFileNames,
@@ -199121,7 +199121,7 @@ ${e.message}`;
     getPackageJsonInfo: () => getPackageJsonInfo,
     getPackageJsonTypesVersionsPaths: () => getPackageJsonTypesVersionsPaths,
     getPackageJsonsVisibleToFile: () => getPackageJsonsVisibleToFile,
-    getPackageNameFromTypesPackage名称： () => getPackageNameFromTypesPackageName,
+    getPackageNameFromTypesPackage名称: () => getPackageNameFromTypesPackageName,
     getPackageScopeForPath: () => getPackageScopeForPath,
     getParameterSymbolFromJSDoc: () => getParameterSymbolFromJSDoc,
     getParameterTypeNode: () => getParameterTypeNode,
@@ -199170,7 +199170,7 @@ ${e.message}`;
     getResolveJsonModule: () => getResolveJsonModule,
     getResolvePackageJsonExports: () => getResolvePackageJsonExports,
     getResolvePackageJsonImports: () => getResolvePackageJsonImports,
-    getResolvedExternalModule名称： () => getResolvedExternalModuleName,
+    getResolvedExternalModule名称: () => getResolvedExternalModuleName,
     getRestIndicatorOfBindingOrAssignmentElement: () => getRestIndicatorOfBindingOrAssignmentElement,
     getRestParameterElementType: () => getRestParameterElementType,
     getRightMostAssignedExpression: () => getRightMostAssignedExpression,
@@ -199179,7 +199179,7 @@ ${e.message}`;
     getRootLength: () => getRootLength,
     getRootPathSplitLength: () => getRootPathSplitLength,
     getScriptKind: () => getScriptKind,
-    getScriptKindFromFile名称： () => getScriptKindFromFileName,
+    getScriptKindFromFile名称: () => getScriptKindFromFileName,
     getScriptTargetFeatures: () => getScriptTargetFeatures,
     getSelectedEffectiveModifierFlags: () => getSelectedEffectiveModifierFlags,
     getSelectedSyntacticModifierFlags: () => getSelectedSyntacticModifierFlags,
@@ -199235,17 +199235,17 @@ ${e.message}`;
     getTextOfConstantValue: () => getTextOfConstantValue,
     getTextOfIdentifierOrLiteral: () => getTextOfIdentifierOrLiteral,
     getTextOfJSDocComment: () => getTextOfJSDocComment,
-    getTextOfJsxAttribute名称： () => getTextOfJsxAttributeName,
-    getTextOfJsxNamespaced名称： () => getTextOfJsxNamespacedName,
+    getTextOfJsxAttribute名称: () => getTextOfJsxAttributeName,
+    getTextOfJsxNamespaced名称: () => getTextOfJsxNamespacedName,
     getTextOfNode: () => getTextOfNode,
     getTextOfNodeFromSourceText: () => getTextOfNodeFromSourceText,
-    getTextOfProperty名称： () => getTextOfPropertyName,
+    getTextOfProperty名称: () => getTextOfPropertyName,
     getThisContainer: () => getThisContainer,
     getThisParameter: () => getThisParameter,
     getTokenAtPosition: () => getTokenAtPosition,
     getTokenPosOfNode: () => getTokenPosOfNode,
     getTokenSourceMapRange: () => getTokenSourceMapRange,
-    getTouchingProperty名称： () => getTouchingPropertyName,
+    getTouchingProperty名称: () => getTouchingPropertyName,
     getTouchingToken: () => getTouchingToken,
     getTrailingCommentRanges: () => getTrailingCommentRanges,
     getTrailingSemicolonDeferringWriter: () => getTrailingSemicolonDeferringWriter,
@@ -199261,9 +199261,9 @@ ${e.message}`;
     getTypeNodeIfAccessible: () => getTypeNodeIfAccessible,
     getTypeParameterFromJsDoc: () => getTypeParameterFromJsDoc,
     getTypeParameterOwner: () => getTypeParameterOwner,
-    getTypesPackage名称： () => getTypesPackageName,
+    getTypesPackage名称: () => getTypesPackageName,
     getUILocale: () => getUILocale,
-    getUnique名称： () => getUniqueName,
+    getUnique名称: () => getUniqueName,
     getUniqueSymbolId: () => getUniqueSymbolId,
     getUseDefineForClassFields: () => getUseDefineForClassFields,
     getWatchErrorSummaryDiagnosticMessage: () => getWatchErrorSummaryDiagnosticMessage,
@@ -199280,7 +199280,7 @@ ${e.message}`;
     hasContextSensitiveParameters: () => hasContextSensitiveParameters,
     hasDecorators: () => hasDecorators,
     hasDocComment: () => hasDocComment,
-    hasDynamic名称： () => hasDynamicName,
+    hasDynamic名称: () => hasDynamicName,
     hasEffectiveModifier: () => hasEffectiveModifier,
     hasEffectiveModifiers: () => hasEffectiveModifiers,
     hasEffectiveReadonlyModifier: () => hasEffectiveReadonlyModifier,
@@ -199296,7 +199296,7 @@ ${e.message}`;
     hasOverrideModifier: () => hasOverrideModifier,
     hasPossibleExternalModuleReference: () => hasPossibleExternalModuleReference,
     hasProperty: () => hasProperty,
-    hasPropertyAccessExpressionWith名称： () => hasPropertyAccessExpressionWithName,
+    hasPropertyAccessExpressionWith名称: () => hasPropertyAccessExpressionWithName,
     hasQuestionToken: () => hasQuestionToken,
     hasRecordedExternalHelpers: () => hasRecordedExternalHelpers,
     hasResolutionModeOverride: () => hasResolutionModeOverride,
@@ -199312,7 +199312,7 @@ ${e.message}`;
     hasTypeArguments: () => hasTypeArguments,
     hasZeroOrOneAsteriskCharacter: () => hasZeroOrOneAsteriskCharacter,
     helperString: () => helperString,
-    hostGetCanonicalFile名称： () => hostGetCanonicalFileName,
+    hostGetCanonicalFile名称: () => hostGetCanonicalFileName,
     hostUsesCaseSensitiveFileNames: () => hostUsesCaseSensitiveFileNames,
     idText: () => idText,
     identifierIsThisKeyword: () => identifierIsThisKeyword,
@@ -199394,7 +199394,7 @@ ${e.message}`;
     isBindableStaticNameExpression: () => isBindableStaticNameExpression,
     isBindingElement: () => isBindingElement,
     isBindingElementOfBareOrAccessedRequire: () => isBindingElementOfBareOrAccessedRequire,
-    isBinding名称： () => isBindingName,
+    isBinding名称: () => isBindingName,
     isBindingOrAssignmentElement: () => isBindingOrAssignmentElement,
     isBindingOrAssignmentPattern: () => isBindingOrAssignmentPattern,
     isBindingPattern: () => isBindingPattern,
@@ -199448,8 +199448,8 @@ ${e.message}`;
     isCommonJsExportPropertyAssignment: () => isCommonJsExportPropertyAssignment,
     isCommonJsExportedExpression: () => isCommonJsExportedExpression,
     isCompoundAssignment: () => isCompoundAssignment,
-    isComputedNonLiteral名称： () => isComputedNonLiteralName,
-    isComputedProperty名称： () => isComputedPropertyName,
+    isComputedNonLiteral名称: () => isComputedNonLiteralName,
+    isComputedProperty名称: () => isComputedPropertyName,
     isConciseBody: () => isConciseBody,
     isConditionalExpression: () => isConditionalExpression,
     isConditionalTypeNode: () => isConditionalTypeNode,
@@ -199463,8 +199463,8 @@ ${e.message}`;
     isDebuggerStatement: () => isDebuggerStatement,
     isDeclaration: () => isDeclaration,
     isDeclarationBindingElement: () => isDeclarationBindingElement,
-    isDeclarationFile名称： () => isDeclarationFileName,
-    isDeclaration名称： () => isDeclarationName,
+    isDeclarationFile名称: () => isDeclarationFileName,
+    isDeclaration名称: () => isDeclarationName,
     isDeclarationNameOfEnumOrNamespace: () => isDeclarationNameOfEnumOrNamespace,
     isDeclarationReadonly: () => isDeclarationReadonly,
     isDeclarationStatement: () => isDeclarationStatement,
@@ -199485,8 +199485,8 @@ ${e.message}`;
     isDoStatement: () => isDoStatement,
     isDocumentRegistryEntry: () => isDocumentRegistryEntry,
     isDotDotDotToken: () => isDotDotDotToken,
-    isDotted名称： () => isDottedName,
-    isDynamic名称： () => isDynamicName,
+    isDotted名称: () => isDottedName,
+    isDynamic名称: () => isDynamicName,
     isESSymbolIdentifier: () => isESSymbolIdentifier,
     isEffectiveExternalModule: () => isEffectiveExternalModule,
     isEffectiveModuleDeclaration: () => isEffectiveModuleDeclaration,
@@ -199500,7 +199500,7 @@ ${e.message}`;
     isEmptyObjectLiteral: () => isEmptyObjectLiteral,
     isEmptyStatement: () => isEmptyStatement,
     isEmptyStringLiteral: () => isEmptyStringLiteral,
-    isEntity名称： () => isEntityName,
+    isEntity名称: () => isEntityName,
     isEntityNameExpression: () => isEntityNameExpression,
     isEnumConst: () => isEnumConst,
     isEnumDeclaration: () => isEnumDeclaration,
@@ -199514,7 +199514,7 @@ ${e.message}`;
     isExportAssignment: () => isExportAssignment,
     isExportDeclaration: () => isExportDeclaration,
     isExportModifier: () => isExportModifier,
-    isExport名称： () => isExportName,
+    isExport名称: () => isExportName,
     isExportNamespaceAsDefaultDeclaration: () => isExportNamespaceAsDefaultDeclaration,
     isExportOrDefaultModifier: () => isExportOrDefaultModifier,
     isExportSpecifier: () => isExportSpecifier,
@@ -199536,7 +199536,7 @@ ${e.message}`;
     isExternalModuleSymbol: () => isExternalModuleSymbol,
     isExternalOrCommonJsModule: () => isExternalOrCommonJsModule,
     isFileLevelReservedGeneratedIdentifier: () => isFileLevelReservedGeneratedIdentifier,
-    isFileLevelUnique名称： () => isFileLevelUniqueName,
+    isFileLevelUnique名称: () => isFileLevelUniqueName,
     isFileProbablyExternalModule: () => isFileProbablyExternalModule,
     isFirstDeclarationOfSymbolParameter: () => isFirstDeclarationOfSymbolParameter,
     isFixablePromiseHandler: () => isFixablePromiseHandler,
@@ -199572,7 +199572,7 @@ ${e.message}`;
     isHoistedVariableStatement: () => isHoistedVariableStatement,
     isIdentifier: () => isIdentifier,
     isIdentifierANonContextualKeyword: () => isIdentifierANonContextualKeyword,
-    isIdentifier名称： () => isIdentifierName,
+    isIdentifier名称: () => isIdentifierName,
     isIdentifierOrThisTypeNode: () => isIdentifierOrThisTypeNode,
     isIdentifierPart: () => isIdentifierPart,
     isIdentifierStart: () => isIdentifierStart,
@@ -199583,7 +199583,7 @@ ${e.message}`;
     isIgnoredFileFromWildCardWatching: () => isIgnoredFileFromWildCardWatching,
     isImplicitGlob: () => isImplicitGlob,
     isImportAttribute: () => isImportAttribute,
-    isImportAttribute名称： () => isImportAttributeName,
+    isImportAttribute名称: () => isImportAttributeName,
     isImportAttributes: () => isImportAttributes,
     isImportCall: () => isImportCall,
     isImportClause: () => isImportClause,
@@ -199592,7 +199592,7 @@ ${e.message}`;
     isImportKeyword: () => isImportKeyword,
     isImportMeta: () => isImportMeta,
     isImportOrExportSpecifier: () => isImportOrExportSpecifier,
-    isImportOrExportSpecifier名称： () => isImportOrExportSpecifierName,
+    isImportOrExportSpecifier名称: () => isImportOrExportSpecifierName,
     isImportSpecifier: () => isImportSpecifier,
     isImportTypeAssertionContainer: () => isImportTypeAssertionContainer,
     isImportTypeNode: () => isImportTypeNode,
@@ -199627,9 +199627,9 @@ ${e.message}`;
     isInterfaceDeclaration: () => isInterfaceDeclaration,
     isInternalDeclaration: () => isInternalDeclaration,
     isInternalModuleImportEqualsDeclaration: () => isInternalModuleImportEqualsDeclaration,
-    isInternal名称： () => isInternalName,
+    isInternal名称: () => isInternalName,
     isIntersectionTypeNode: () => isIntersectionTypeNode,
-    isIntrinsicJsx名称： () => isIntrinsicJsxName,
+    isIntrinsicJsx名称: () => isIntrinsicJsxName,
     isIterationStatement: () => isIterationStatement,
     isJSDoc: () => isJSDoc,
     isJSDocAllType: () => isJSDocAllType,
@@ -199649,7 +199649,7 @@ ${e.message}`;
     isJSDocLinkCode: () => isJSDocLinkCode,
     isJSDocLinkLike: () => isJSDocLinkLike,
     isJSDocLinkPlain: () => isJSDocLinkPlain,
-    isJSDocMember名称： () => isJSDocMemberName,
+    isJSDocMember名称: () => isJSDocMemberName,
     isJSDocNameReference: () => isJSDocNameReference,
     isJSDocNamepathType: () => isJSDocNamepathType,
     isJSDocNamespaceBody: () => isJSDocNamespaceBody,
@@ -199685,12 +199685,12 @@ ${e.message}`;
     isJSDocUnknownTag: () => isJSDocUnknownTag,
     isJSDocUnknownType: () => isJSDocUnknownType,
     isJSDocVariadicType: () => isJSDocVariadicType,
-    isJSXTag名称： () => isJSXTagName,
+    isJSXTag名称: () => isJSXTagName,
     isJsonEqual: () => isJsonEqual,
     isJsonSourceFile: () => isJsonSourceFile,
     isJsxAttribute: () => isJsxAttribute,
     isJsxAttributeLike: () => isJsxAttributeLike,
-    isJsxAttribute名称： () => isJsxAttributeName,
+    isJsxAttribute名称: () => isJsxAttributeName,
     isJsxAttributes: () => isJsxAttributes,
     isJsxChild: () => isJsxChild,
     isJsxClosingElement: () => isJsxClosingElement,
@@ -199698,11 +199698,11 @@ ${e.message}`;
     isJsxElement: () => isJsxElement,
     isJsxExpression: () => isJsxExpression,
     isJsxFragment: () => isJsxFragment,
-    isJsxNamespaced名称： () => isJsxNamespacedName,
+    isJsxNamespaced名称: () => isJsxNamespacedName,
     isJsxOpeningElement: () => isJsxOpeningElement,
     isJsxOpeningFragment: () => isJsxOpeningFragment,
     isJsxOpeningLikeElement: () => isJsxOpeningLikeElement,
-    isJsxOpeningLikeElementTag名称： () => isJsxOpeningLikeElementTagName,
+    isJsxOpeningLikeElementTag名称: () => isJsxOpeningLikeElementTagName,
     isJsxSelfClosingElement: () => isJsxSelfClosingElement,
     isJsxSpreadAttribute: () => isJsxSpreadAttribute,
     isJsxTagNameExpression: () => isJsxTagNameExpression,
@@ -199711,7 +199711,7 @@ ${e.message}`;
     isKeyword: () => isKeyword,
     isKeywordOrPunctuation: () => isKeywordOrPunctuation,
     isKnownSymbol: () => isKnownSymbol,
-    isLabel名称： () => isLabelName,
+    isLabel名称: () => isLabelName,
     isLabelOfLabeledStatement: () => isLabelOfLabeledStatement,
     isLabeledStatement: () => isLabeledStatement,
     isLateVisibilityPaintedStatement: () => isLateVisibilityPaintedStatement,
@@ -199719,7 +199719,7 @@ ${e.message}`;
     isLeftHandSideOfAssignment: () => isLeftHandSideOfAssignment,
     isLet: () => isLet,
     isLineBreak: () => isLineBreak,
-    isLiteralComputedPropertyDeclaration名称： () => isLiteralComputedPropertyDeclarationName,
+    isLiteralComputedPropertyDeclaration名称: () => isLiteralComputedPropertyDeclarationName,
     isLiteralExpression: () => isLiteralExpression,
     isLiteralExpressionOfObject: () => isLiteralExpressionOfObject,
     isLiteralImportTypeNode: () => isLiteralImportTypeNode,
@@ -199730,14 +199730,14 @@ ${e.message}`;
     isLiteralTypeLikeExpression: () => isLiteralTypeLikeExpression,
     isLiteralTypeLiteral: () => isLiteralTypeLiteral,
     isLiteralTypeNode: () => isLiteralTypeNode,
-    isLocal名称： () => isLocalName,
+    isLocal名称: () => isLocalName,
     isLogicalOperator: () => isLogicalOperator,
     isLogicalOrCoalescingAssignmentExpression: () => isLogicalOrCoalescingAssignmentExpression,
     isLogicalOrCoalescingAssignmentOperator: () => isLogicalOrCoalescingAssignmentOperator,
     isLogicalOrCoalescingBinaryExpression: () => isLogicalOrCoalescingBinaryExpression,
     isLogicalOrCoalescingBinaryOperator: () => isLogicalOrCoalescingBinaryOperator,
     isMappedTypeNode: () => isMappedTypeNode,
-    isMember名称： () => isMemberName,
+    isMember名称: () => isMemberName,
     isMetaProperty: () => isMetaProperty,
     isMethodDeclaration: () => isMethodDeclaration,
     isMethodOrAccessor: () => isMethodOrAccessor,
@@ -199754,11 +199754,11 @@ ${e.message}`;
     isModuleDeclaration: () => isModuleDeclaration,
     isModuleExportsAccessExpression: () => isModuleExportsAccessExpression,
     isModuleIdentifier: () => isModuleIdentifier,
-    isModule名称： () => isModuleName,
+    isModule名称: () => isModuleName,
     isModuleOrEnumDeclaration: () => isModuleOrEnumDeclaration,
     isModuleReference: () => isModuleReference,
     isModuleSpecifierLike: () => isModuleSpecifierLike,
-    isModuleWithStringLiteral名称： () => isModuleWithStringLiteralName,
+    isModuleWithStringLiteral名称: () => isModuleWithStringLiteralName,
     isNameOfFunctionDeclaration: () => isNameOfFunctionDeclaration,
     isNameOfModuleDeclaration: () => isNameOfModuleDeclaration,
     isNamedClassElement: () => isNamedClassElement,
@@ -199794,14 +199794,14 @@ ${e.message}`;
     isNonNullAccess: () => isNonNullAccess,
     isNonNullChain: () => isNonNullChain,
     isNonNullExpression: () => isNonNullExpression,
-    isNonStaticMethodOrAccessorWithPrivate名称： () => isNonStaticMethodOrAccessorWithPrivateName,
+    isNonStaticMethodOrAccessorWithPrivate名称: () => isNonStaticMethodOrAccessorWithPrivateName,
     isNotEmittedOrPartiallyEmittedNode: () => isNotEmittedOrPartiallyEmittedNode,
     isNotEmittedStatement: () => isNotEmittedStatement,
     isNullishCoalesce: () => isNullishCoalesce,
     isNumber: () => isNumber,
     isNumericLiteral: () => isNumericLiteral,
-    isNumericLiteral名称： () => isNumericLiteralName,
-    isObjectBindingElementWithoutProperty名称： () => isObjectBindingElementWithoutPropertyName,
+    isNumericLiteral名称: () => isNumericLiteralName,
+    isObjectBindingElementWithoutProperty名称: () => isObjectBindingElementWithoutPropertyName,
     isObjectBindingOrAssignmentElement: () => isObjectBindingOrAssignmentElement,
     isObjectBindingOrAssignmentPattern: () => isObjectBindingOrAssignmentPattern,
     isObjectBindingPattern: () => isObjectBindingPattern,
@@ -199850,11 +199850,11 @@ ${e.message}`;
     isPropertyAccessChain: () => isPropertyAccessChain,
     isPropertyAccessEntityNameExpression: () => isPropertyAccessEntityNameExpression,
     isPropertyAccessExpression: () => isPropertyAccessExpression,
-    isPropertyAccessOrQualified名称： () => isPropertyAccessOrQualifiedName,
+    isPropertyAccessOrQualified名称: () => isPropertyAccessOrQualifiedName,
     isPropertyAccessOrQualifiedNameOrImportTypeNode: () => isPropertyAccessOrQualifiedNameOrImportTypeNode,
     isPropertyAssignment: () => isPropertyAssignment,
     isPropertyDeclaration: () => isPropertyDeclaration,
-    isProperty名称： () => isPropertyName,
+    isProperty名称: () => isPropertyName,
     isPropertyNameLiteral: () => isPropertyNameLiteral,
     isPropertySignature: () => isPropertySignature,
     isProtoSetter: () => isProtoSetter,
@@ -199862,7 +199862,7 @@ ${e.message}`;
     isPrototypePropertyAssignment: () => isPrototypePropertyAssignment,
     isPunctuation: () => isPunctuation,
     isPushOrUnshiftIdentifier: () => isPushOrUnshiftIdentifier,
-    isQualified名称： () => isQualifiedName,
+    isQualified名称: () => isQualifiedName,
     isQuestionDotToken: () => isQuestionDotToken,
     isQuestionOrExclamationToken: () => isQuestionOrExclamationToken,
     isQuestionOrPlusOrMinusToken: () => isQuestionOrPlusOrMinusToken,
@@ -199883,11 +199883,11 @@ ${e.message}`;
     isRightSideOfAccessExpression: () => isRightSideOfAccessExpression,
     isRightSideOfInstanceofExpression: () => isRightSideOfInstanceofExpression,
     isRightSideOfPropertyAccess: () => isRightSideOfPropertyAccess,
-    isRightSideOfQualified名称： () => isRightSideOfQualifiedName,
+    isRightSideOfQualified名称: () => isRightSideOfQualifiedName,
     isRightSideOfQualifiedNameOrPropertyAccess: () => isRightSideOfQualifiedNameOrPropertyAccess,
-    isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMember名称： () => isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMemberName,
+    isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMember名称: () => isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMemberName,
     isRootedDiskPath: () => isRootedDiskPath,
-    isSameEntity名称： () => isSameEntityName,
+    isSameEntity名称: () => isSameEntityName,
     isSatisfiesExpression: () => isSatisfiesExpression,
     isScopeMarker: () => isScopeMarker,
     isSemicolonClassElement: () => isSemicolonClassElement,
@@ -199934,12 +199934,12 @@ ${e.message}`;
     isSuperKeyword: () => isSuperKeyword,
     isSuperOrSuperProperty: () => isSuperOrSuperProperty,
     isSuperProperty: () => isSuperProperty,
-    isSupportedSourceFile名称： () => isSupportedSourceFileName,
+    isSupportedSourceFile名称: () => isSupportedSourceFileName,
     isSwitchStatement: () => isSwitchStatement,
     isSyntaxList: () => isSyntaxList,
     isSyntheticExpression: () => isSyntheticExpression,
     isSyntheticReference: () => isSyntheticReference,
-    isTag名称： () => isTagName,
+    isTag名称: () => isTagName,
     isTaggedTemplateExpression: () => isTaggedTemplateExpression,
     isTaggedTemplateTag: () => isTaggedTemplateTag,
     isTemplateExpression: () => isTemplateExpression,
@@ -199993,7 +199993,7 @@ ${e.message}`;
     isTypeQueryNode: () => isTypeQueryNode,
     isTypeReferenceNode: () => isTypeReferenceNode,
     isTypeReferenceType: () => isTypeReferenceType,
-    isTypeUsableAsProperty名称： () => isTypeUsableAsPropertyName,
+    isTypeUsableAsProperty名称: () => isTypeUsableAsPropertyName,
     isUMDExportSymbol: () => isUMDExportSymbol,
     isUnaryExpression: () => isUnaryExpression,
     isUnaryExpressionWithWrite: () => isUnaryExpressionWithWrite,
@@ -200042,11 +200042,11 @@ ${e.message}`;
     listFiles: () => listFiles,
     loadModuleFromGlobalCache: () => loadModuleFromGlobalCache,
     loadWithModeAwareCache: () => loadWithModeAwareCache,
-    makeIdentifierFromModule名称： () => makeIdentifierFromModuleName,
+    makeIdentifierFromModule名称: () => makeIdentifierFromModuleName,
     makeImport: () => makeImport,
     makeImportIfNecessary: () => makeImportIfNecessary,
     makeStringLiteral: () => makeStringLiteral,
-    mangleScopedPackage名称： () => mangleScopedPackageName,
+    mangleScopedPackage名称: () => mangleScopedPackageName,
     map: () => map,
     mapAllOrFail: () => mapAllOrFail,
     mapDefined: () => mapDefined,
@@ -200096,7 +200096,7 @@ ${e.message}`;
     noTransformers: () => noTransformers,
     noTruncationMaximumTruncationLength: () => noTruncationMaximumTruncationLength,
     nodeCanBeDecorated: () => nodeCanBeDecorated,
-    nodeHas名称： () => nodeHasName,
+    nodeHas名称: () => nodeHasName,
     nodeIsDecorated: () => nodeIsDecorated,
     nodeIsMissing: () => nodeIsMissing,
     nodeIsPresent: () => nodeIsPresent,
@@ -200133,7 +200133,7 @@ ${e.message}`;
     orderedRemoveItem: () => orderedRemoveItem,
     orderedRemoveItemAt: () => orderedRemoveItemAt,
     outFile: () => outFile,
-    packageIdToPackage名称： () => packageIdToPackageName,
+    packageIdToPackage名称: () => packageIdToPackageName,
     packageIdToString: () => packageIdToString,
     paramHelper: () => paramHelper,
     parameterIsThisKeyword: () => parameterIsThisKeyword,
@@ -200147,7 +200147,7 @@ ${e.message}`;
     parseConfigFileWithSystem: () => parseConfigFileWithSystem,
     parseConfigHostFromCompilerHostLike: () => parseConfigHostFromCompilerHostLike,
     parseCustomTypeOption: () => parseCustomTypeOption,
-    parseIsolatedEntity名称： () => parseIsolatedEntityName,
+    parseIsolatedEntity名称: () => parseIsolatedEntityName,
     parseIsolatedJSDocComment: () => parseIsolatedJSDocComment,
     parseJSDocTypeExpressionForTests: () => parseJSDocTypeExpressionForTests,
     parseJsonConfigFileContent: () => parseJsonConfigFileContent,
@@ -200156,7 +200156,7 @@ ${e.message}`;
     parseListTypeOption: () => parseListTypeOption,
     parseNodeFactory: () => parseNodeFactory,
     parseNodeModuleFromPath: () => parseNodeModuleFromPath,
-    parsePackage名称： () => parsePackageName,
+    parsePackage名称: () => parsePackageName,
     parsePseudoBigInt: () => parsePseudoBigInt,
     parseValidBigInt: () => parseValidBigInt,
     patchWriteFileEnsuringDirectory: () => patchWriteFileEnsuringDirectory,
@@ -200230,10 +200230,10 @@ ${e.message}`;
     replaceElement: () => replaceElement,
     replaceFirstStar: () => replaceFirstStar,
     resolutionExtensionIsTSOrJson: () => resolutionExtensionIsTSOrJson,
-    resolveConfigFileProject名称： () => resolveConfigFileProjectName,
+    resolveConfigFileProject名称: () => resolveConfigFileProjectName,
     resolveJSModule: () => resolveJSModule,
     resolveLibrary: () => resolveLibrary,
-    resolveModule名称： () => resolveModuleName,
+    resolveModule名称: () => resolveModuleName,
     resolveModuleNameFromCache: () => resolveModuleNameFromCache,
     resolvePackageNameToPackageJson: () => resolvePackageNameToPackageJson,
     resolvePath: () => resolvePath,
@@ -200352,7 +200352,7 @@ ${e.message}`;
     suppressLeadingTrivia: () => suppressLeadingTrivia,
     suppressTrailingTrivia: () => suppressTrailingTrivia,
     symbolEscapedNameNoDefault: () => symbolEscapedNameNoDefault,
-    symbol名称： () => symbolName,
+    symbol名称: () => symbolName,
     symbolNameNoDefault: () => symbolNameNoDefault,
     symbolPart: () => symbolPart,
     symbolToDisplayParts: () => symbolToDisplayParts,
@@ -200442,7 +200442,7 @@ ${e.message}`;
     tryGetPropertyAccessOrIdentifierToString: () => tryGetPropertyAccessOrIdentifierToString,
     tryGetPropertyNameOfBindingOrAssignmentElement: () => tryGetPropertyNameOfBindingOrAssignmentElement,
     tryGetSourceMappingURL: () => tryGetSourceMappingURL,
-    tryGetTextOfProperty名称： () => tryGetTextOfPropertyName,
+    tryGetTextOfProperty名称: () => tryGetTextOfPropertyName,
     tryIOAndConsumeErrors: () => tryIOAndConsumeErrors,
     tryParseJson: () => tryParseJson,
     tryParsePattern: () => tryParsePattern,
@@ -200463,7 +200463,7 @@ ${e.message}`;
     unchangedPollThresholds: () => unchangedPollThresholds,
     unchangedTextChangeRange: () => unchangedTextChangeRange,
     unescapeLeadingUnderscores: () => unescapeLeadingUnderscores,
-    unmangleScopedPackage名称： () => unmangleScopedPackageName,
+    unmangleScopedPackage名称: () => unmangleScopedPackageName,
     unorderedRemoveItem: () => unorderedRemoveItem,
     unorderedRemoveItemAt: () => unorderedRemoveItemAt,
     unreachableCodeIsError: () => unreachableCodeIsError,
@@ -200566,7 +200566,7 @@ ${e.message}`;
     asNormalizedPath: () => asNormalizedPath,
     convertCompilerOptions: () => convertCompilerOptions,
     convertFormatOptions: () => convertFormatOptions,
-    convertScriptKind名称： () => convertScriptKindName,
+    convertScriptKind名称: () => convertScriptKindName,
     convertTypeAcquisition: () => convertTypeAcquisition,
     convertUserPreferences: () => convertUserPreferences,
     convertWatchOptions: () => convertWatchOptions,
@@ -200581,7 +200581,7 @@ ${e.message}`;
     forEachResolvedProjectReferenceProject: () => forEachResolvedProjectReferenceProject,
     formatDiagnosticToProtocol: () => formatDiagnosticToProtocol,
     formatMessage: () => formatMessage2,
-    getBaseConfigFile名称： () => getBaseConfigFileName,
+    getBaseConfigFile名称: () => getBaseConfigFileName,
     getLocationInNewDocument: () => getLocationInNewDocument,
     hasArgument: () => hasArgument,
     hasNoTypeScriptSource: () => hasNoTypeScriptSource,
@@ -200589,13 +200589,13 @@ ${e.message}`;
     isBackgroundProject: () => isBackgroundProject,
     isConfigFile: () => isConfigFile,
     isConfiguredProject: () => isConfiguredProject,
-    isDynamicFile名称： () => isDynamicFileName,
+    isDynamicFile名称: () => isDynamicFileName,
     isExternalProject: () => isExternalProject,
     isInferredProject: () => isInferredProject,
-    isInferredProject名称： () => isInferredProjectName,
-    makeAutoImportProviderProject名称： () => makeAutoImportProviderProjectName,
-    makeAuxiliaryProject名称： () => makeAuxiliaryProjectName,
-    makeInferredProject名称： () => makeInferredProjectName,
+    isInferredProject名称: () => isInferredProjectName,
+    makeAutoImportProviderProject名称: () => makeAutoImportProviderProjectName,
+    makeAuxiliaryProject名称: () => makeAuxiliaryProjectName,
+    makeInferredProject名称: () => makeInferredProjectName,
     maxFileSize: () => maxFileSize,
     maxProgramSizeForNonTsFiles: () => maxProgramSizeForNonTsFiles,
     normalizedPathToPath: () => normalizedPathToPath,
@@ -200608,7 +200608,7 @@ ${e.message}`;
     stringifyIndented: () => stringifyIndented,
     toEvent: () => toEvent,
     toNormalizedPath: () => toNormalizedPath,
-    tryConvertScriptKind名称： () => tryConvertScriptKindName,
+    tryConvertScriptKind名称: () => tryConvertScriptKindName,
     typingsInstaller: () => ts_server_typingsInstaller_exports,
     updateProjectIfDirty: () => updateProjectIfDirty
   });
@@ -200684,7 +200684,7 @@ ${e.message}`;
     InlayHintKind: () => InlayHintKind,
     InlayHints: () => ts_InlayHints_exports,
     InternalEmitFlags: () => InternalEmitFlags,
-    InternalSymbol名称： () => InternalSymbolName,
+    InternalSymbol名称: () => InternalSymbolName,
     InvalidatedProjectKind: () => InvalidatedProjectKind,
     JSDocParsingMode: () => JSDocParsingMode,
     JsDoc: () => ts_JsDoc_exports,
@@ -200860,8 +200860,8 @@ ${e.message}`;
     childIsDecorated: () => childIsDecorated,
     classElementOrClassElementParameterIsDecorated: () => classElementOrClassElementParameterIsDecorated,
     classHasClassThisAssignment: () => classHasClassThisAssignment,
-    classHasDeclaredOrExplicitlyAssigned名称： () => classHasDeclaredOrExplicitlyAssignedName,
-    classHasExplicitlyAssigned名称： () => classHasExplicitlyAssignedName,
+    classHasDeclaredOrExplicitlyAssigned名称: () => classHasDeclaredOrExplicitlyAssignedName,
+    classHasExplicitlyAssigned名称: () => classHasExplicitlyAssignedName,
     classOrConstructorParameterIsDecorated: () => classOrConstructorParameterIsDecorated,
     classPrivateFieldGetHelper: () => classPrivateFieldGetHelper,
     classPrivateFieldInHelper: () => classPrivateFieldInHelper,
@@ -200990,16 +200990,16 @@ ${e.message}`;
     createExpressionForJsxElement: () => createExpressionForJsxElement,
     createExpressionForJsxFragment: () => createExpressionForJsxFragment,
     createExpressionForObjectLiteralElementLike: () => createExpressionForObjectLiteralElementLike,
-    createExpressionForProperty名称： () => createExpressionForPropertyName,
-    createExpressionFromEntity名称： () => createExpressionFromEntityName,
+    createExpressionForProperty名称: () => createExpressionForPropertyName,
+    createExpressionFromEntity名称: () => createExpressionFromEntityName,
     createExternalHelpersImportDeclarationIfNeeded: () => createExternalHelpersImportDeclarationIfNeeded,
     createFileDiagnostic: () => createFileDiagnostic,
     createFileDiagnosticFromMessageChain: () => createFileDiagnosticFromMessageChain,
     createForOfBindingStatement: () => createForOfBindingStatement,
-    createGetCanonicalFile名称： () => createGetCanonicalFileName,
+    createGetCanonicalFile名称: () => createGetCanonicalFileName,
     createGetSourceFile: () => createGetSourceFile,
     createGetSymbolAccessibilityDiagnosticForNode: () => createGetSymbolAccessibilityDiagnosticForNode,
-    createGetSymbolAccessibilityDiagnosticForNode名称： () => createGetSymbolAccessibilityDiagnosticForNodeName,
+    createGetSymbolAccessibilityDiagnosticForNode名称: () => createGetSymbolAccessibilityDiagnosticForNodeName,
     createGetSymbolWalker: () => createGetSymbolWalker,
     createIncrementalCompilerHost: () => createIncrementalCompilerHost,
     createIncrementalProgram: () => createIncrementalProgram,
@@ -201009,7 +201009,7 @@ ${e.message}`;
     createJsxFactoryExpression: () => createJsxFactoryExpression,
     createLanguageService: () => createLanguageService2,
     createLanguageServiceSourceFile: () => createLanguageServiceSourceFile,
-    createMemberAccessForProperty名称： () => createMemberAccessForPropertyName,
+    createMemberAccessForProperty名称: () => createMemberAccessForPropertyName,
     createModeAwareCache: () => createModeAwareCache,
     createModeAwareCacheKey: () => createModeAwareCacheKey,
     createModuleNotFoundChain: () => createModuleNotFoundChain,
@@ -201088,7 +201088,7 @@ ${e.message}`;
     defaultInitCompilerOptions: () => defaultInitCompilerOptions,
     defaultMaximumTruncationLength: () => defaultMaximumTruncationLength,
     detectSortCaseSensitivity: () => detectSortCaseSensitivity,
-    diagnosticCategory名称： () => diagnosticCategoryName,
+    diagnosticCategory名称: () => diagnosticCategoryName,
     diagnosticToString: () => diagnosticToString,
     directoryProbablyExists: () => directoryProbablyExists,
     directorySeparator: () => directorySeparator,
@@ -201117,7 +201117,7 @@ ${e.message}`;
     emptyOptions: () => emptyOptions,
     emptySet: () => emptySet,
     endsWith: () => endsWith,
-    ensurePathIsNonModule名称： () => ensurePathIsNonModuleName,
+    ensurePathIsNonModule名称: () => ensurePathIsNonModuleName,
     ensureScriptKind: () => ensureScriptKind,
     ensureTrailingDirectorySeparator: () => ensureTrailingDirectorySeparator,
     entityNameToString: () => entityNameToString,
@@ -201219,7 +201219,7 @@ ${e.message}`;
     formatDiagnostic: () => formatDiagnostic,
     formatDiagnostics: () => formatDiagnostics,
     formatDiagnosticsWithColorAndContext: () => formatDiagnosticsWithColorAndContext,
-    formatGenerated名称： () => formatGeneratedName,
+    formatGenerated名称: () => formatGeneratedName,
     formatGeneratedNamePart: () => formatGeneratedNamePart,
     formatLocation: () => formatLocation,
     formatMessage: () => formatMessage,
@@ -201232,7 +201232,7 @@ ${e.message}`;
     generatorHelper: () => generatorHelper,
     getAdjustedReferenceLocation: () => getAdjustedReferenceLocation,
     getAdjustedRenameLocation: () => getAdjustedRenameLocation,
-    getAliasDeclarationFrom名称： () => getAliasDeclarationFromName,
+    getAliasDeclarationFrom名称: () => getAliasDeclarationFromName,
     getAllAccessorDeclarations: () => getAllAccessorDeclarations,
     getAllDecoratorsOfClass: () => getAllDecoratorsOfClass,
     getAllDecoratorsOfClassElement: () => getAllDecoratorsOfClassElement,
@@ -201248,13 +201248,13 @@ ${e.message}`;
     getAnyExtensionFromPath: () => getAnyExtensionFromPath,
     getAreDeclarationMapsEnabled: () => getAreDeclarationMapsEnabled,
     getAssignedExpandoInitializer: () => getAssignedExpandoInitializer,
-    getAssigned名称： () => getAssignedName,
+    getAssigned名称: () => getAssignedName,
     getAssignedNameOfIdentifier: () => getAssignedNameOfIdentifier,
     getAssignmentDeclarationKind: () => getAssignmentDeclarationKind,
     getAssignmentDeclarationPropertyAccessKind: () => getAssignmentDeclarationPropertyAccessKind,
     getAssignmentTargetKind: () => getAssignmentTargetKind,
     getAutomaticTypeDirectiveNames: () => getAutomaticTypeDirectiveNames,
-    getBaseFile名称： () => getBaseFileName,
+    getBaseFile名称: () => getBaseFileName,
     getBinaryOperatorPrecedence: () => getBinaryOperatorPrecedence,
     getBuildInfo: () => getBuildInfo,
     getBuildInfoFileVersionMap: () => getBuildInfoFileVersionMap,
@@ -201295,7 +201295,7 @@ ${e.message}`;
     getDeclarationEmitOutputFilePath: () => getDeclarationEmitOutputFilePath,
     getDeclarationEmitOutputFilePathWorker: () => getDeclarationEmitOutputFilePathWorker,
     getDeclarationFileExtension: () => getDeclarationFileExtension,
-    getDeclarationFrom名称： () => getDeclarationFromName,
+    getDeclarationFrom名称: () => getDeclarationFromName,
     getDeclarationModifierFlagsFromSymbol: () => getDeclarationModifierFlagsFromSymbol,
     getDeclarationOfKind: () => getDeclarationOfKind,
     getDeclarationsOfKind: () => getDeclarationsOfKind,
@@ -201304,7 +201304,7 @@ ${e.message}`;
     getDefaultCompilerOptions: () => getDefaultCompilerOptions2,
     getDefaultExportInfoWorker: () => getDefaultExportInfoWorker,
     getDefaultFormatCodeSettings: () => getDefaultFormatCodeSettings,
-    getDefaultLibFile名称： () => getDefaultLibFileName,
+    getDefaultLibFile名称: () => getDefaultLibFileName,
     getDefaultLibFilePath: () => getDefaultLibFilePath,
     getDefaultLikeExportInfo: () => getDefaultLikeExportInfo,
     getDiagnosticText: () => getDiagnosticText,
@@ -201330,8 +201330,8 @@ ${e.message}`;
     getEffectiveTypeAnnotationNode: () => getEffectiveTypeAnnotationNode,
     getEffectiveTypeParameterDeclarations: () => getEffectiveTypeParameterDeclarations,
     getEffectiveTypeRoots: () => getEffectiveTypeRoots,
-    getElementOrPropertyAccessArgumentExpressionOr名称： () => getElementOrPropertyAccessArgumentExpressionOrName,
-    getElementOrPropertyAccess名称： () => getElementOrPropertyAccessName,
+    getElementOrPropertyAccessArgumentExpressionOr名称: () => getElementOrPropertyAccessArgumentExpressionOrName,
+    getElementOrPropertyAccess名称: () => getElementOrPropertyAccessName,
     getElementsOfBindingOrAssignmentPattern: () => getElementsOfBindingOrAssignmentPattern,
     getEmitDeclarations: () => getEmitDeclarations,
     getEmitFlags: () => getEmitFlags,
@@ -201352,17 +201352,17 @@ ${e.message}`;
     getErrorSpanForNode: () => getErrorSpanForNode,
     getErrorSummaryText: () => getErrorSummaryText,
     getEscapedTextOfIdentifierOrLiteral: () => getEscapedTextOfIdentifierOrLiteral,
-    getEscapedTextOfJsxAttribute名称： () => getEscapedTextOfJsxAttributeName,
-    getEscapedTextOfJsxNamespaced名称： () => getEscapedTextOfJsxNamespacedName,
+    getEscapedTextOfJsxAttribute名称: () => getEscapedTextOfJsxAttributeName,
+    getEscapedTextOfJsxNamespaced名称: () => getEscapedTextOfJsxNamespacedName,
     getExpandoInitializer: () => getExpandoInitializer,
     getExportAssignmentExpression: () => getExportAssignmentExpression,
     getExportInfoMap: () => getExportInfoMap,
     getExportNeedsImportStarHelper: () => getExportNeedsImportStarHelper,
     getExpressionAssociativity: () => getExpressionAssociativity,
     getExpressionPrecedence: () => getExpressionPrecedence,
-    getExternalHelpersModule名称： () => getExternalHelpersModuleName,
+    getExternalHelpersModule名称: () => getExternalHelpersModuleName,
     getExternalModuleImportEqualsDeclarationExpression: () => getExternalModuleImportEqualsDeclarationExpression,
-    getExternalModule名称： () => getExternalModuleName,
+    getExternalModule名称: () => getExternalModuleName,
     getExternalModuleNameFromDeclaration: () => getExternalModuleNameFromDeclaration,
     getExternalModuleNameFromPath: () => getExternalModuleNameFromPath,
     getExternalModuleNameLiteral: () => getExternalModuleNameLiteral,
@@ -201432,7 +201432,7 @@ ${e.message}`;
     getJSDocTemplateTag: () => getJSDocTemplateTag,
     getJSDocThisTag: () => getJSDocThisTag,
     getJSDocType: () => getJSDocType,
-    getJSDocTypeAlias名称： () => getJSDocTypeAliasName,
+    getJSDocTypeAlias名称: () => getJSDocTypeAliasName,
     getJSDocTypeAssertionType: () => getJSDocTypeAssertionType,
     getJSDocTypeParameterDeclarations: () => getJSDocTypeParameterDeclarations,
     getJSDocTypeParameterTags: () => getJSDocTypeParameterTags,
@@ -201448,7 +201448,7 @@ ${e.message}`;
     getLeadingCommentRangesOfNode: () => getLeadingCommentRangesOfNode,
     getLeftmostAccessExpression: () => getLeftmostAccessExpression,
     getLeftmostExpression: () => getLeftmostExpression,
-    getLibraryNameFromLibFile名称： () => getLibraryNameFromLibFileName,
+    getLibraryNameFromLibFile名称: () => getLibraryNameFromLibFileName,
     getLineAndCharacterOfPosition: () => getLineAndCharacterOfPosition,
     getLineInfo: () => getLineInfo,
     getLineOfLocalPosition: () => getLineOfLocalPosition,
@@ -201485,7 +201485,7 @@ ${e.message}`;
     getNameForExportedSymbol: () => getNameForExportedSymbol,
     getNameFromImportAttribute: () => getNameFromImportAttribute,
     getNameFromIndexInfo: () => getNameFromIndexInfo,
-    getNameFromProperty名称： () => getNameFromPropertyName,
+    getNameFromProperty名称: () => getNameFromPropertyName,
     getNameOfAccessExpression: () => getNameOfAccessExpression,
     getNameOfCompilerOptionValue: () => getNameOfCompilerOptionValue,
     getNameOfDeclaration: () => getNameOfDeclaration,
@@ -201500,7 +201500,7 @@ ${e.message}`;
     getNewLineOrDefaultFromHost: () => getNewLineOrDefaultFromHost,
     getNewTargetContainer: () => getNewTargetContainer,
     getNextJSDocCommentLocation: () => getNextJSDocCommentLocation,
-    getNodeForGenerated名称： () => getNodeForGeneratedName,
+    getNodeForGenerated名称: () => getNodeForGeneratedName,
     getNodeId: () => getNodeId,
     getNodeKind: () => getNodeKind,
     getNodeModifiers: () => getNodeModifiers,
@@ -201516,7 +201516,7 @@ ${e.message}`;
     getOperator: () => getOperator,
     getOperatorAssociativity: () => getOperatorAssociativity,
     getOperatorPrecedence: () => getOperatorPrecedence,
-    getOptionFrom名称： () => getOptionFromName,
+    getOptionFrom名称: () => getOptionFromName,
     getOptionsForLibraryResolution: () => getOptionsForLibraryResolution,
     getOptionsNameMap: () => getOptionsNameMap,
     getOrCreateEmitNode: () => getOrCreateEmitNode,
@@ -201525,7 +201525,7 @@ ${e.message}`;
     getOriginalNode: () => getOriginalNode,
     getOriginalNodeId: () => getOriginalNodeId,
     getOriginalSourceFile: () => getOriginalSourceFile,
-    getOutputDeclarationFile名称： () => getOutputDeclarationFileName,
+    getOutputDeclarationFile名称: () => getOutputDeclarationFileName,
     getOutputDeclarationFileNameWorker: () => getOutputDeclarationFileNameWorker,
     getOutputExtension: () => getOutputExtension,
     getOutputFileNames: () => getOutputFileNames,
@@ -201538,7 +201538,7 @@ ${e.message}`;
     getPackageJsonInfo: () => getPackageJsonInfo,
     getPackageJsonTypesVersionsPaths: () => getPackageJsonTypesVersionsPaths,
     getPackageJsonsVisibleToFile: () => getPackageJsonsVisibleToFile,
-    getPackageNameFromTypesPackage名称： () => getPackageNameFromTypesPackageName,
+    getPackageNameFromTypesPackage名称: () => getPackageNameFromTypesPackageName,
     getPackageScopeForPath: () => getPackageScopeForPath,
     getParameterSymbolFromJSDoc: () => getParameterSymbolFromJSDoc,
     getParameterTypeNode: () => getParameterTypeNode,
@@ -201587,7 +201587,7 @@ ${e.message}`;
     getResolveJsonModule: () => getResolveJsonModule,
     getResolvePackageJsonExports: () => getResolvePackageJsonExports,
     getResolvePackageJsonImports: () => getResolvePackageJsonImports,
-    getResolvedExternalModule名称： () => getResolvedExternalModuleName,
+    getResolvedExternalModule名称: () => getResolvedExternalModuleName,
     getRestIndicatorOfBindingOrAssignmentElement: () => getRestIndicatorOfBindingOrAssignmentElement,
     getRestParameterElementType: () => getRestParameterElementType,
     getRightMostAssignedExpression: () => getRightMostAssignedExpression,
@@ -201596,7 +201596,7 @@ ${e.message}`;
     getRootLength: () => getRootLength,
     getRootPathSplitLength: () => getRootPathSplitLength,
     getScriptKind: () => getScriptKind,
-    getScriptKindFromFile名称： () => getScriptKindFromFileName,
+    getScriptKindFromFile名称: () => getScriptKindFromFileName,
     getScriptTargetFeatures: () => getScriptTargetFeatures,
     getSelectedEffectiveModifierFlags: () => getSelectedEffectiveModifierFlags,
     getSelectedSyntacticModifierFlags: () => getSelectedSyntacticModifierFlags,
@@ -201652,17 +201652,17 @@ ${e.message}`;
     getTextOfConstantValue: () => getTextOfConstantValue,
     getTextOfIdentifierOrLiteral: () => getTextOfIdentifierOrLiteral,
     getTextOfJSDocComment: () => getTextOfJSDocComment,
-    getTextOfJsxAttribute名称： () => getTextOfJsxAttributeName,
-    getTextOfJsxNamespaced名称： () => getTextOfJsxNamespacedName,
+    getTextOfJsxAttribute名称: () => getTextOfJsxAttributeName,
+    getTextOfJsxNamespaced名称: () => getTextOfJsxNamespacedName,
     getTextOfNode: () => getTextOfNode,
     getTextOfNodeFromSourceText: () => getTextOfNodeFromSourceText,
-    getTextOfProperty名称： () => getTextOfPropertyName,
+    getTextOfProperty名称: () => getTextOfPropertyName,
     getThisContainer: () => getThisContainer,
     getThisParameter: () => getThisParameter,
     getTokenAtPosition: () => getTokenAtPosition,
     getTokenPosOfNode: () => getTokenPosOfNode,
     getTokenSourceMapRange: () => getTokenSourceMapRange,
-    getTouchingProperty名称： () => getTouchingPropertyName,
+    getTouchingProperty名称: () => getTouchingPropertyName,
     getTouchingToken: () => getTouchingToken,
     getTrailingCommentRanges: () => getTrailingCommentRanges,
     getTrailingSemicolonDeferringWriter: () => getTrailingSemicolonDeferringWriter,
@@ -201678,9 +201678,9 @@ ${e.message}`;
     getTypeNodeIfAccessible: () => getTypeNodeIfAccessible,
     getTypeParameterFromJsDoc: () => getTypeParameterFromJsDoc,
     getTypeParameterOwner: () => getTypeParameterOwner,
-    getTypesPackage名称： () => getTypesPackageName,
+    getTypesPackage名称: () => getTypesPackageName,
     getUILocale: () => getUILocale,
-    getUnique名称： () => getUniqueName,
+    getUnique名称: () => getUniqueName,
     getUniqueSymbolId: () => getUniqueSymbolId,
     getUseDefineForClassFields: () => getUseDefineForClassFields,
     getWatchErrorSummaryDiagnosticMessage: () => getWatchErrorSummaryDiagnosticMessage,
@@ -201697,7 +201697,7 @@ ${e.message}`;
     hasContextSensitiveParameters: () => hasContextSensitiveParameters,
     hasDecorators: () => hasDecorators,
     hasDocComment: () => hasDocComment,
-    hasDynamic名称： () => hasDynamicName,
+    hasDynamic名称: () => hasDynamicName,
     hasEffectiveModifier: () => hasEffectiveModifier,
     hasEffectiveModifiers: () => hasEffectiveModifiers,
     hasEffectiveReadonlyModifier: () => hasEffectiveReadonlyModifier,
@@ -201713,7 +201713,7 @@ ${e.message}`;
     hasOverrideModifier: () => hasOverrideModifier,
     hasPossibleExternalModuleReference: () => hasPossibleExternalModuleReference,
     hasProperty: () => hasProperty,
-    hasPropertyAccessExpressionWith名称： () => hasPropertyAccessExpressionWithName,
+    hasPropertyAccessExpressionWith名称: () => hasPropertyAccessExpressionWithName,
     hasQuestionToken: () => hasQuestionToken,
     hasRecordedExternalHelpers: () => hasRecordedExternalHelpers,
     hasResolutionModeOverride: () => hasResolutionModeOverride,
@@ -201729,7 +201729,7 @@ ${e.message}`;
     hasTypeArguments: () => hasTypeArguments,
     hasZeroOrOneAsteriskCharacter: () => hasZeroOrOneAsteriskCharacter,
     helperString: () => helperString,
-    hostGetCanonicalFile名称： () => hostGetCanonicalFileName,
+    hostGetCanonicalFile名称: () => hostGetCanonicalFileName,
     hostUsesCaseSensitiveFileNames: () => hostUsesCaseSensitiveFileNames,
     idText: () => idText,
     identifierIsThisKeyword: () => identifierIsThisKeyword,
@@ -201811,7 +201811,7 @@ ${e.message}`;
     isBindableStaticNameExpression: () => isBindableStaticNameExpression,
     isBindingElement: () => isBindingElement,
     isBindingElementOfBareOrAccessedRequire: () => isBindingElementOfBareOrAccessedRequire,
-    isBinding名称： () => isBindingName,
+    isBinding名称: () => isBindingName,
     isBindingOrAssignmentElement: () => isBindingOrAssignmentElement,
     isBindingOrAssignmentPattern: () => isBindingOrAssignmentPattern,
     isBindingPattern: () => isBindingPattern,
@@ -201865,8 +201865,8 @@ ${e.message}`;
     isCommonJsExportPropertyAssignment: () => isCommonJsExportPropertyAssignment,
     isCommonJsExportedExpression: () => isCommonJsExportedExpression,
     isCompoundAssignment: () => isCompoundAssignment,
-    isComputedNonLiteral名称： () => isComputedNonLiteralName,
-    isComputedProperty名称： () => isComputedPropertyName,
+    isComputedNonLiteral名称: () => isComputedNonLiteralName,
+    isComputedProperty名称: () => isComputedPropertyName,
     isConciseBody: () => isConciseBody,
     isConditionalExpression: () => isConditionalExpression,
     isConditionalTypeNode: () => isConditionalTypeNode,
@@ -201880,8 +201880,8 @@ ${e.message}`;
     isDebuggerStatement: () => isDebuggerStatement,
     isDeclaration: () => isDeclaration,
     isDeclarationBindingElement: () => isDeclarationBindingElement,
-    isDeclarationFile名称： () => isDeclarationFileName,
-    isDeclaration名称： () => isDeclarationName,
+    isDeclarationFile名称: () => isDeclarationFileName,
+    isDeclaration名称: () => isDeclarationName,
     isDeclarationNameOfEnumOrNamespace: () => isDeclarationNameOfEnumOrNamespace,
     isDeclarationReadonly: () => isDeclarationReadonly,
     isDeclarationStatement: () => isDeclarationStatement,
@@ -201902,8 +201902,8 @@ ${e.message}`;
     isDoStatement: () => isDoStatement,
     isDocumentRegistryEntry: () => isDocumentRegistryEntry,
     isDotDotDotToken: () => isDotDotDotToken,
-    isDotted名称： () => isDottedName,
-    isDynamic名称： () => isDynamicName,
+    isDotted名称: () => isDottedName,
+    isDynamic名称: () => isDynamicName,
     isESSymbolIdentifier: () => isESSymbolIdentifier,
     isEffectiveExternalModule: () => isEffectiveExternalModule,
     isEffectiveModuleDeclaration: () => isEffectiveModuleDeclaration,
@@ -201917,7 +201917,7 @@ ${e.message}`;
     isEmptyObjectLiteral: () => isEmptyObjectLiteral,
     isEmptyStatement: () => isEmptyStatement,
     isEmptyStringLiteral: () => isEmptyStringLiteral,
-    isEntity名称： () => isEntityName,
+    isEntity名称: () => isEntityName,
     isEntityNameExpression: () => isEntityNameExpression,
     isEnumConst: () => isEnumConst,
     isEnumDeclaration: () => isEnumDeclaration,
@@ -201931,7 +201931,7 @@ ${e.message}`;
     isExportAssignment: () => isExportAssignment,
     isExportDeclaration: () => isExportDeclaration,
     isExportModifier: () => isExportModifier,
-    isExport名称： () => isExportName,
+    isExport名称: () => isExportName,
     isExportNamespaceAsDefaultDeclaration: () => isExportNamespaceAsDefaultDeclaration,
     isExportOrDefaultModifier: () => isExportOrDefaultModifier,
     isExportSpecifier: () => isExportSpecifier,
@@ -201953,7 +201953,7 @@ ${e.message}`;
     isExternalModuleSymbol: () => isExternalModuleSymbol,
     isExternalOrCommonJsModule: () => isExternalOrCommonJsModule,
     isFileLevelReservedGeneratedIdentifier: () => isFileLevelReservedGeneratedIdentifier,
-    isFileLevelUnique名称： () => isFileLevelUniqueName,
+    isFileLevelUnique名称: () => isFileLevelUniqueName,
     isFileProbablyExternalModule: () => isFileProbablyExternalModule,
     isFirstDeclarationOfSymbolParameter: () => isFirstDeclarationOfSymbolParameter,
     isFixablePromiseHandler: () => isFixablePromiseHandler,
@@ -201989,7 +201989,7 @@ ${e.message}`;
     isHoistedVariableStatement: () => isHoistedVariableStatement,
     isIdentifier: () => isIdentifier,
     isIdentifierANonContextualKeyword: () => isIdentifierANonContextualKeyword,
-    isIdentifier名称： () => isIdentifierName,
+    isIdentifier名称: () => isIdentifierName,
     isIdentifierOrThisTypeNode: () => isIdentifierOrThisTypeNode,
     isIdentifierPart: () => isIdentifierPart,
     isIdentifierStart: () => isIdentifierStart,
@@ -202000,7 +202000,7 @@ ${e.message}`;
     isIgnoredFileFromWildCardWatching: () => isIgnoredFileFromWildCardWatching,
     isImplicitGlob: () => isImplicitGlob,
     isImportAttribute: () => isImportAttribute,
-    isImportAttribute名称： () => isImportAttributeName,
+    isImportAttribute名称: () => isImportAttributeName,
     isImportAttributes: () => isImportAttributes,
     isImportCall: () => isImportCall,
     isImportClause: () => isImportClause,
@@ -202009,7 +202009,7 @@ ${e.message}`;
     isImportKeyword: () => isImportKeyword,
     isImportMeta: () => isImportMeta,
     isImportOrExportSpecifier: () => isImportOrExportSpecifier,
-    isImportOrExportSpecifier名称： () => isImportOrExportSpecifierName,
+    isImportOrExportSpecifier名称: () => isImportOrExportSpecifierName,
     isImportSpecifier: () => isImportSpecifier,
     isImportTypeAssertionContainer: () => isImportTypeAssertionContainer,
     isImportTypeNode: () => isImportTypeNode,
@@ -202044,9 +202044,9 @@ ${e.message}`;
     isInterfaceDeclaration: () => isInterfaceDeclaration,
     isInternalDeclaration: () => isInternalDeclaration,
     isInternalModuleImportEqualsDeclaration: () => isInternalModuleImportEqualsDeclaration,
-    isInternal名称： () => isInternalName,
+    isInternal名称: () => isInternalName,
     isIntersectionTypeNode: () => isIntersectionTypeNode,
-    isIntrinsicJsx名称： () => isIntrinsicJsxName,
+    isIntrinsicJsx名称: () => isIntrinsicJsxName,
     isIterationStatement: () => isIterationStatement,
     isJSDoc: () => isJSDoc,
     isJSDocAllType: () => isJSDocAllType,
@@ -202066,7 +202066,7 @@ ${e.message}`;
     isJSDocLinkCode: () => isJSDocLinkCode,
     isJSDocLinkLike: () => isJSDocLinkLike,
     isJSDocLinkPlain: () => isJSDocLinkPlain,
-    isJSDocMember名称： () => isJSDocMemberName,
+    isJSDocMember名称: () => isJSDocMemberName,
     isJSDocNameReference: () => isJSDocNameReference,
     isJSDocNamepathType: () => isJSDocNamepathType,
     isJSDocNamespaceBody: () => isJSDocNamespaceBody,
@@ -202102,12 +202102,12 @@ ${e.message}`;
     isJSDocUnknownTag: () => isJSDocUnknownTag,
     isJSDocUnknownType: () => isJSDocUnknownType,
     isJSDocVariadicType: () => isJSDocVariadicType,
-    isJSXTag名称： () => isJSXTagName,
+    isJSXTag名称: () => isJSXTagName,
     isJsonEqual: () => isJsonEqual,
     isJsonSourceFile: () => isJsonSourceFile,
     isJsxAttribute: () => isJsxAttribute,
     isJsxAttributeLike: () => isJsxAttributeLike,
-    isJsxAttribute名称： () => isJsxAttributeName,
+    isJsxAttribute名称: () => isJsxAttributeName,
     isJsxAttributes: () => isJsxAttributes,
     isJsxChild: () => isJsxChild,
     isJsxClosingElement: () => isJsxClosingElement,
@@ -202115,11 +202115,11 @@ ${e.message}`;
     isJsxElement: () => isJsxElement,
     isJsxExpression: () => isJsxExpression,
     isJsxFragment: () => isJsxFragment,
-    isJsxNamespaced名称： () => isJsxNamespacedName,
+    isJsxNamespaced名称: () => isJsxNamespacedName,
     isJsxOpeningElement: () => isJsxOpeningElement,
     isJsxOpeningFragment: () => isJsxOpeningFragment,
     isJsxOpeningLikeElement: () => isJsxOpeningLikeElement,
-    isJsxOpeningLikeElementTag名称： () => isJsxOpeningLikeElementTagName,
+    isJsxOpeningLikeElementTag名称: () => isJsxOpeningLikeElementTagName,
     isJsxSelfClosingElement: () => isJsxSelfClosingElement,
     isJsxSpreadAttribute: () => isJsxSpreadAttribute,
     isJsxTagNameExpression: () => isJsxTagNameExpression,
@@ -202128,7 +202128,7 @@ ${e.message}`;
     isKeyword: () => isKeyword,
     isKeywordOrPunctuation: () => isKeywordOrPunctuation,
     isKnownSymbol: () => isKnownSymbol,
-    isLabel名称： () => isLabelName,
+    isLabel名称: () => isLabelName,
     isLabelOfLabeledStatement: () => isLabelOfLabeledStatement,
     isLabeledStatement: () => isLabeledStatement,
     isLateVisibilityPaintedStatement: () => isLateVisibilityPaintedStatement,
@@ -202136,7 +202136,7 @@ ${e.message}`;
     isLeftHandSideOfAssignment: () => isLeftHandSideOfAssignment,
     isLet: () => isLet,
     isLineBreak: () => isLineBreak,
-    isLiteralComputedPropertyDeclaration名称： () => isLiteralComputedPropertyDeclarationName,
+    isLiteralComputedPropertyDeclaration名称: () => isLiteralComputedPropertyDeclarationName,
     isLiteralExpression: () => isLiteralExpression,
     isLiteralExpressionOfObject: () => isLiteralExpressionOfObject,
     isLiteralImportTypeNode: () => isLiteralImportTypeNode,
@@ -202147,14 +202147,14 @@ ${e.message}`;
     isLiteralTypeLikeExpression: () => isLiteralTypeLikeExpression,
     isLiteralTypeLiteral: () => isLiteralTypeLiteral,
     isLiteralTypeNode: () => isLiteralTypeNode,
-    isLocal名称： () => isLocalName,
+    isLocal名称: () => isLocalName,
     isLogicalOperator: () => isLogicalOperator,
     isLogicalOrCoalescingAssignmentExpression: () => isLogicalOrCoalescingAssignmentExpression,
     isLogicalOrCoalescingAssignmentOperator: () => isLogicalOrCoalescingAssignmentOperator,
     isLogicalOrCoalescingBinaryExpression: () => isLogicalOrCoalescingBinaryExpression,
     isLogicalOrCoalescingBinaryOperator: () => isLogicalOrCoalescingBinaryOperator,
     isMappedTypeNode: () => isMappedTypeNode,
-    isMember名称： () => isMemberName,
+    isMember名称: () => isMemberName,
     isMetaProperty: () => isMetaProperty,
     isMethodDeclaration: () => isMethodDeclaration,
     isMethodOrAccessor: () => isMethodOrAccessor,
@@ -202171,11 +202171,11 @@ ${e.message}`;
     isModuleDeclaration: () => isModuleDeclaration,
     isModuleExportsAccessExpression: () => isModuleExportsAccessExpression,
     isModuleIdentifier: () => isModuleIdentifier,
-    isModule名称： () => isModuleName,
+    isModule名称: () => isModuleName,
     isModuleOrEnumDeclaration: () => isModuleOrEnumDeclaration,
     isModuleReference: () => isModuleReference,
     isModuleSpecifierLike: () => isModuleSpecifierLike,
-    isModuleWithStringLiteral名称： () => isModuleWithStringLiteralName,
+    isModuleWithStringLiteral名称: () => isModuleWithStringLiteralName,
     isNameOfFunctionDeclaration: () => isNameOfFunctionDeclaration,
     isNameOfModuleDeclaration: () => isNameOfModuleDeclaration,
     isNamedClassElement: () => isNamedClassElement,
@@ -202211,14 +202211,14 @@ ${e.message}`;
     isNonNullAccess: () => isNonNullAccess,
     isNonNullChain: () => isNonNullChain,
     isNonNullExpression: () => isNonNullExpression,
-    isNonStaticMethodOrAccessorWithPrivate名称： () => isNonStaticMethodOrAccessorWithPrivateName,
+    isNonStaticMethodOrAccessorWithPrivate名称: () => isNonStaticMethodOrAccessorWithPrivateName,
     isNotEmittedOrPartiallyEmittedNode: () => isNotEmittedOrPartiallyEmittedNode,
     isNotEmittedStatement: () => isNotEmittedStatement,
     isNullishCoalesce: () => isNullishCoalesce,
     isNumber: () => isNumber,
     isNumericLiteral: () => isNumericLiteral,
-    isNumericLiteral名称： () => isNumericLiteralName,
-    isObjectBindingElementWithoutProperty名称： () => isObjectBindingElementWithoutPropertyName,
+    isNumericLiteral名称: () => isNumericLiteralName,
+    isObjectBindingElementWithoutProperty名称: () => isObjectBindingElementWithoutPropertyName,
     isObjectBindingOrAssignmentElement: () => isObjectBindingOrAssignmentElement,
     isObjectBindingOrAssignmentPattern: () => isObjectBindingOrAssignmentPattern,
     isObjectBindingPattern: () => isObjectBindingPattern,
@@ -202267,11 +202267,11 @@ ${e.message}`;
     isPropertyAccessChain: () => isPropertyAccessChain,
     isPropertyAccessEntityNameExpression: () => isPropertyAccessEntityNameExpression,
     isPropertyAccessExpression: () => isPropertyAccessExpression,
-    isPropertyAccessOrQualified名称： () => isPropertyAccessOrQualifiedName,
+    isPropertyAccessOrQualified名称: () => isPropertyAccessOrQualifiedName,
     isPropertyAccessOrQualifiedNameOrImportTypeNode: () => isPropertyAccessOrQualifiedNameOrImportTypeNode,
     isPropertyAssignment: () => isPropertyAssignment,
     isPropertyDeclaration: () => isPropertyDeclaration,
-    isProperty名称： () => isPropertyName,
+    isProperty名称: () => isPropertyName,
     isPropertyNameLiteral: () => isPropertyNameLiteral,
     isPropertySignature: () => isPropertySignature,
     isProtoSetter: () => isProtoSetter,
@@ -202279,7 +202279,7 @@ ${e.message}`;
     isPrototypePropertyAssignment: () => isPrototypePropertyAssignment,
     isPunctuation: () => isPunctuation,
     isPushOrUnshiftIdentifier: () => isPushOrUnshiftIdentifier,
-    isQualified名称： () => isQualifiedName,
+    isQualified名称: () => isQualifiedName,
     isQuestionDotToken: () => isQuestionDotToken,
     isQuestionOrExclamationToken: () => isQuestionOrExclamationToken,
     isQuestionOrPlusOrMinusToken: () => isQuestionOrPlusOrMinusToken,
@@ -202300,11 +202300,11 @@ ${e.message}`;
     isRightSideOfAccessExpression: () => isRightSideOfAccessExpression,
     isRightSideOfInstanceofExpression: () => isRightSideOfInstanceofExpression,
     isRightSideOfPropertyAccess: () => isRightSideOfPropertyAccess,
-    isRightSideOfQualified名称： () => isRightSideOfQualifiedName,
+    isRightSideOfQualified名称: () => isRightSideOfQualifiedName,
     isRightSideOfQualifiedNameOrPropertyAccess: () => isRightSideOfQualifiedNameOrPropertyAccess,
-    isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMember名称： () => isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMemberName,
+    isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMember名称: () => isRightSideOfQualifiedNameOrPropertyAccessOrJSDocMemberName,
     isRootedDiskPath: () => isRootedDiskPath,
-    isSameEntity名称： () => isSameEntityName,
+    isSameEntity名称: () => isSameEntityName,
     isSatisfiesExpression: () => isSatisfiesExpression,
     isScopeMarker: () => isScopeMarker,
     isSemicolonClassElement: () => isSemicolonClassElement,
@@ -202351,12 +202351,12 @@ ${e.message}`;
     isSuperKeyword: () => isSuperKeyword,
     isSuperOrSuperProperty: () => isSuperOrSuperProperty,
     isSuperProperty: () => isSuperProperty,
-    isSupportedSourceFile名称： () => isSupportedSourceFileName,
+    isSupportedSourceFile名称: () => isSupportedSourceFileName,
     isSwitchStatement: () => isSwitchStatement,
     isSyntaxList: () => isSyntaxList,
     isSyntheticExpression: () => isSyntheticExpression,
     isSyntheticReference: () => isSyntheticReference,
-    isTag名称： () => isTagName,
+    isTag名称: () => isTagName,
     isTaggedTemplateExpression: () => isTaggedTemplateExpression,
     isTaggedTemplateTag: () => isTaggedTemplateTag,
     isTemplateExpression: () => isTemplateExpression,
@@ -202410,7 +202410,7 @@ ${e.message}`;
     isTypeQueryNode: () => isTypeQueryNode,
     isTypeReferenceNode: () => isTypeReferenceNode,
     isTypeReferenceType: () => isTypeReferenceType,
-    isTypeUsableAsProperty名称： () => isTypeUsableAsPropertyName,
+    isTypeUsableAsProperty名称: () => isTypeUsableAsPropertyName,
     isUMDExportSymbol: () => isUMDExportSymbol,
     isUnaryExpression: () => isUnaryExpression,
     isUnaryExpressionWithWrite: () => isUnaryExpressionWithWrite,
@@ -202459,11 +202459,11 @@ ${e.message}`;
     listFiles: () => listFiles,
     loadModuleFromGlobalCache: () => loadModuleFromGlobalCache,
     loadWithModeAwareCache: () => loadWithModeAwareCache,
-    makeIdentifierFromModule名称： () => makeIdentifierFromModuleName,
+    makeIdentifierFromModule名称: () => makeIdentifierFromModuleName,
     makeImport: () => makeImport,
     makeImportIfNecessary: () => makeImportIfNecessary,
     makeStringLiteral: () => makeStringLiteral,
-    mangleScopedPackage名称： () => mangleScopedPackageName,
+    mangleScopedPackage名称: () => mangleScopedPackageName,
     map: () => map,
     mapAllOrFail: () => mapAllOrFail,
     mapDefined: () => mapDefined,
@@ -202513,7 +202513,7 @@ ${e.message}`;
     noTransformers: () => noTransformers,
     noTruncationMaximumTruncationLength: () => noTruncationMaximumTruncationLength,
     nodeCanBeDecorated: () => nodeCanBeDecorated,
-    nodeHas名称： () => nodeHasName,
+    nodeHas名称: () => nodeHasName,
     nodeIsDecorated: () => nodeIsDecorated,
     nodeIsMissing: () => nodeIsMissing,
     nodeIsPresent: () => nodeIsPresent,
@@ -202550,7 +202550,7 @@ ${e.message}`;
     orderedRemoveItem: () => orderedRemoveItem,
     orderedRemoveItemAt: () => orderedRemoveItemAt,
     outFile: () => outFile,
-    packageIdToPackage名称： () => packageIdToPackageName,
+    packageIdToPackage名称: () => packageIdToPackageName,
     packageIdToString: () => packageIdToString,
     paramHelper: () => paramHelper,
     parameterIsThisKeyword: () => parameterIsThisKeyword,
@@ -202564,7 +202564,7 @@ ${e.message}`;
     parseConfigFileWithSystem: () => parseConfigFileWithSystem,
     parseConfigHostFromCompilerHostLike: () => parseConfigHostFromCompilerHostLike,
     parseCustomTypeOption: () => parseCustomTypeOption,
-    parseIsolatedEntity名称： () => parseIsolatedEntityName,
+    parseIsolatedEntity名称: () => parseIsolatedEntityName,
     parseIsolatedJSDocComment: () => parseIsolatedJSDocComment,
     parseJSDocTypeExpressionForTests: () => parseJSDocTypeExpressionForTests,
     parseJsonConfigFileContent: () => parseJsonConfigFileContent,
@@ -202573,7 +202573,7 @@ ${e.message}`;
     parseListTypeOption: () => parseListTypeOption,
     parseNodeFactory: () => parseNodeFactory,
     parseNodeModuleFromPath: () => parseNodeModuleFromPath,
-    parsePackage名称： () => parsePackageName,
+    parsePackage名称: () => parsePackageName,
     parsePseudoBigInt: () => parsePseudoBigInt,
     parseValidBigInt: () => parseValidBigInt,
     patchWriteFileEnsuringDirectory: () => patchWriteFileEnsuringDirectory,
@@ -202647,10 +202647,10 @@ ${e.message}`;
     replaceElement: () => replaceElement,
     replaceFirstStar: () => replaceFirstStar,
     resolutionExtensionIsTSOrJson: () => resolutionExtensionIsTSOrJson,
-    resolveConfigFileProject名称： () => resolveConfigFileProjectName,
+    resolveConfigFileProject名称: () => resolveConfigFileProjectName,
     resolveJSModule: () => resolveJSModule,
     resolveLibrary: () => resolveLibrary,
-    resolveModule名称： () => resolveModuleName,
+    resolveModule名称: () => resolveModuleName,
     resolveModuleNameFromCache: () => resolveModuleNameFromCache,
     resolvePackageNameToPackageJson: () => resolvePackageNameToPackageJson,
     resolvePath: () => resolvePath,
@@ -202769,7 +202769,7 @@ ${e.message}`;
     suppressLeadingTrivia: () => suppressLeadingTrivia,
     suppressTrailingTrivia: () => suppressTrailingTrivia,
     symbolEscapedNameNoDefault: () => symbolEscapedNameNoDefault,
-    symbol名称： () => symbolName,
+    symbol名称: () => symbolName,
     symbolNameNoDefault: () => symbolNameNoDefault,
     symbolPart: () => symbolPart,
     symbolToDisplayParts: () => symbolToDisplayParts,
@@ -202859,7 +202859,7 @@ ${e.message}`;
     tryGetPropertyAccessOrIdentifierToString: () => tryGetPropertyAccessOrIdentifierToString,
     tryGetPropertyNameOfBindingOrAssignmentElement: () => tryGetPropertyNameOfBindingOrAssignmentElement,
     tryGetSourceMappingURL: () => tryGetSourceMappingURL,
-    tryGetTextOfProperty名称： () => tryGetTextOfPropertyName,
+    tryGetTextOfProperty名称: () => tryGetTextOfPropertyName,
     tryIOAndConsumeErrors: () => tryIOAndConsumeErrors,
     tryParseJson: () => tryParseJson,
     tryParsePattern: () => tryParsePattern,
@@ -202880,7 +202880,7 @@ ${e.message}`;
     unchangedPollThresholds: () => unchangedPollThresholds,
     unchangedTextChangeRange: () => unchangedTextChangeRange,
     unescapeLeadingUnderscores: () => unescapeLeadingUnderscores,
-    unmangleScopedPackage名称： () => unmangleScopedPackageName,
+    unmangleScopedPackage名称: () => unmangleScopedPackageName,
     unorderedRemoveItem: () => unorderedRemoveItem,
     unorderedRemoveItemAt: () => unorderedRemoveItemAt,
     unreachableCodeIsError: () => unreachableCodeIsError,
@@ -204246,7 +204246,7 @@ interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
 }
 
 interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity {
-    display名称： string;
+    display名称: string;
     id: BufferSource;
 }
 
@@ -205198,7 +205198,7 @@ interface ARIAMixin {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaCurrent) */
     ariaCurrent: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaDescription) */
-    aria描述： string | null;
+    aria描述: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaDisabled) */
     ariaDisabled: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaExpanded) */
@@ -205235,7 +205235,7 @@ interface ARIAMixin {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaRequired) */
     ariaRequired: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaRoleDescription) */
-    ariaRole描述： string | null;
+    ariaRole描述: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaRowCount) */
     ariaRowCount: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/ariaRowIndex) */
@@ -205496,7 +205496,7 @@ declare var AnimationEffect: {
  */
 interface AnimationEvent extends Event {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationEvent/animationName) */
-    readonly animation名称： string;
+    readonly animation名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationEvent/elapsedTime) */
     readonly elapsedTime: number;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationEvent/pseudoElement) */
@@ -205546,7 +205546,7 @@ declare var AnimationTimeline: {
  */
 interface Attr extends Node {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Attr/localName) */
-    readonly local名称： string;
+    readonly local名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Attr/name) */
     readonly name: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Attr/namespaceURI) */
@@ -206214,7 +206214,7 @@ declare var CDATASection: {
 /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSAnimation) */
 interface CSSAnimation extends Animation {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSAnimation/animationName) */
-    readonly animation名称： string;
+    readonly animation名称: string;
     addEventListener<K extends keyof AnimationEventMap>(type: K, listener: (this: CSSAnimation, ev: AnimationEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
     removeEventListener<K extends keyof AnimationEventMap>(type: K, listener: (this: CSSAnimation, ev: AnimationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
@@ -206244,7 +206244,7 @@ declare var CSSConditionRule: {
 /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSContainerRule) */
 interface CSSContainerRule extends CSSConditionRule {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSContainerRule/containerName) */
-    readonly container名称： string;
+    readonly container名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSContainerRule/containerQuery) */
     readonly containerQuery: string;
 }
@@ -206357,7 +206357,7 @@ interface CSSImportRule extends CSSRule {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSImportRule/href) */
     readonly href: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSImportRule/layerName) */
-    readonly layer名称： string | null;
+    readonly layer名称: string | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSImportRule/media) */
     readonly media: MediaList;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSImportRule/styleSheet) */
@@ -206833,7 +206833,7 @@ interface CSSStyleDeclaration {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/animation-iteration-count) */
     animationIterationCount: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/animation-name) */
-    animation名称： string;
+    animation名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/animation-play-state) */
     animationPlayState: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/animation-timing-function) */
@@ -207065,7 +207065,7 @@ interface CSSStyleDeclaration {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/container) */
     container: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/container-name) */
-    container名称： string;
+    container名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/container-type) */
     containerType: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/content) */
@@ -207663,7 +207663,7 @@ interface CSSStyleDeclaration {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/CSS/animation-name)
      */
-    webkitAnimation名称： string;
+    webkitAnimation名称: string;
     /**
      * @deprecated This is a legacy alias of \`animationPlayState\`.
      *
@@ -208267,15 +208267,15 @@ declare var Cache: {
  */
 interface CacheStorage {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/delete) */
-    delete(cache名称： string): Promise<boolean>;
+    delete(cache名称: string): Promise<boolean>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/has) */
-    has(cache名称： string): Promise<boolean>;
+    has(cache名称: string): Promise<boolean>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/keys) */
     keys(): Promise<string[]>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/match) */
     match(request: RequestInfo | URL, options?: MultiCacheQueryOptions): Promise<Response | undefined>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/open) */
-    open(cache名称： string): Promise<Cache>;
+    open(cache名称: string): Promise<Cache>;
 }
 
 declare var CacheStorage: {
@@ -209028,9 +209028,9 @@ declare var DOMException: {
  */
 interface DOMImplementation {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/DOMImplementation/createDocument) */
-    createDocument(namespace: string | null, qualified名称： string | null, doctype?: DocumentType | null): XMLDocument;
+    createDocument(namespace: string | null, qualified名称: string | null, doctype?: DocumentType | null): XMLDocument;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/DOMImplementation/createDocumentType) */
-    createDocumentType(qualified名称： string, publicId: string, systemId: string): DocumentType;
+    createDocumentType(qualified名称: string, publicId: string, systemId: string): DocumentType;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/DOMImplementation/createHTMLDocument) */
     createHTMLDocument(title?: string): Document;
     /**
@@ -210071,9 +210071,9 @@ interface Document extends Node, DocumentOrShadowRoot, FontFaceSource, GlobalEve
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/createAttribute)
      */
-    createAttribute(local名称： string): Attr;
+    createAttribute(local名称: string): Attr;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/createAttributeNS) */
-    createAttributeNS(namespace: string | null, qualified名称： string): Attr;
+    createAttributeNS(namespace: string | null, qualified名称: string): Attr;
     /**
      * Returns a CDATASection node whose data is data.
      *
@@ -210099,10 +210099,10 @@ interface Document extends Node, DocumentOrShadowRoot, FontFaceSource, GlobalEve
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/createElement)
      */
-    createElement<K extends keyof HTMLElementTagNameMap>(tag名称： K, options?: ElementCreationOptions): HTMLElementTagNameMap[K];
+    createElement<K extends keyof HTMLElementTagNameMap>(tag名称: K, options?: ElementCreationOptions): HTMLElementTagNameMap[K];
     /** @deprecated */
-    createElement<K extends keyof HTMLElementDeprecatedTagNameMap>(tag名称： K, options?: ElementCreationOptions): HTMLElementDeprecatedTagNameMap[K];
-    createElement(tag名称： string, options?: ElementCreationOptions): HTMLElement;
+    createElement<K extends keyof HTMLElementDeprecatedTagNameMap>(tag名称: K, options?: ElementCreationOptions): HTMLElementDeprecatedTagNameMap[K];
+    createElement(tag名称: string, options?: ElementCreationOptions): HTMLElement;
     /**
      * Returns an element with namespace namespace. Its namespace prefix will be everything before ":" (U+003E) in qualifiedName or null. Its local name will be everything after ":" (U+003E) in qualifiedName or qualifiedName.
      *
@@ -210120,13 +210120,13 @@ interface Document extends Node, DocumentOrShadowRoot, FontFaceSource, GlobalEve
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/createElementNS)
      */
-    createElementNS(namespaceURI: "http://www.w3.org/1999/xhtml", qualified名称： string): HTMLElement;
-    createElementNS<K extends keyof SVGElementTagNameMap>(namespaceURI: "http://www.w3.org/2000/svg", qualified名称： K): SVGElementTagNameMap[K];
-    createElementNS(namespaceURI: "http://www.w3.org/2000/svg", qualified名称： string): SVGElement;
-    createElementNS<K extends keyof MathMLElementTagNameMap>(namespaceURI: "http://www.w3.org/1998/Math/MathML", qualified名称： K): MathMLElementTagNameMap[K];
-    createElementNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", qualified名称： string): MathMLElement;
-    createElementNS(namespaceURI: string | null, qualified名称： string, options?: ElementCreationOptions): Element;
-    createElementNS(namespace: string | null, qualified名称： string, options?: string | ElementCreationOptions): Element;
+    createElementNS(namespaceURI: "http://www.w3.org/1999/xhtml", qualified名称: string): HTMLElement;
+    createElementNS<K extends keyof SVGElementTagNameMap>(namespaceURI: "http://www.w3.org/2000/svg", qualified名称: K): SVGElementTagNameMap[K];
+    createElementNS(namespaceURI: "http://www.w3.org/2000/svg", qualified名称: string): SVGElement;
+    createElementNS<K extends keyof MathMLElementTagNameMap>(namespaceURI: "http://www.w3.org/1998/Math/MathML", qualified名称: K): MathMLElementTagNameMap[K];
+    createElementNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", qualified名称: string): MathMLElement;
+    createElementNS(namespaceURI: string | null, qualified名称: string, options?: ElementCreationOptions): Element;
+    createElementNS(namespace: string | null, qualified名称: string, options?: string | ElementCreationOptions): Element;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/createEvent) */
     createEvent(eventInterface: "AnimationEvent"): AnimationEvent;
     createEvent(eventInterface: "AnimationPlaybackEvent"): AnimationPlaybackEvent;
@@ -210265,19 +210265,19 @@ interface Document extends Node, DocumentOrShadowRoot, FontFaceSource, GlobalEve
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/getElementsByName)
      */
-    getElementsByName(element名称： string): NodeListOf<HTMLElement>;
+    getElementsByName(element名称: string): NodeListOf<HTMLElement>;
     /**
      * Retrieves a collection of objects based on the specified element name.
      * @param name Specifies the name of an element.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/getElementsByTagName)
      */
-    getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualified名称： K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
-    getElementsByTagName<K extends keyof SVGElementTagNameMap>(qualified名称： K): HTMLCollectionOf<SVGElementTagNameMap[K]>;
-    getElementsByTagName<K extends keyof MathMLElementTagNameMap>(qualified名称： K): HTMLCollectionOf<MathMLElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualified名称: K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof SVGElementTagNameMap>(qualified名称: K): HTMLCollectionOf<SVGElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof MathMLElementTagNameMap>(qualified名称: K): HTMLCollectionOf<MathMLElementTagNameMap[K]>;
     /** @deprecated */
-    getElementsByTagName<K extends keyof HTMLElementDeprecatedTagNameMap>(qualified名称： K): HTMLCollectionOf<HTMLElementDeprecatedTagNameMap[K]>;
-    getElementsByTagName(qualified名称： string): HTMLCollectionOf<Element>;
+    getElementsByTagName<K extends keyof HTMLElementDeprecatedTagNameMap>(qualified名称: K): HTMLCollectionOf<HTMLElementDeprecatedTagNameMap[K]>;
+    getElementsByTagName(qualified名称: string): HTMLCollectionOf<Element>;
     /**
      * If namespace and localName are "*" returns a HTMLCollection of all descendant elements.
      *
@@ -210289,10 +210289,10 @@ interface Document extends Node, DocumentOrShadowRoot, FontFaceSource, GlobalEve
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/getElementsByTagNameNS)
      */
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1999/xhtml", local名称： string): HTMLCollectionOf<HTMLElement>;
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", local名称： string): HTMLCollectionOf<SVGElement>;
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", local名称： string): HTMLCollectionOf<MathMLElement>;
-    getElementsByTagNameNS(namespace: string | null, local名称： string): HTMLCollectionOf<Element>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1999/xhtml", local名称: string): HTMLCollectionOf<HTMLElement>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", local名称: string): HTMLCollectionOf<SVGElement>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", local名称: string): HTMLCollectionOf<MathMLElement>;
+    getElementsByTagNameNS(namespace: string | null, local名称: string): HTMLCollectionOf<Element>;
     /**
      * Returns an object representing the current selection of the document that is loaded into the object displaying a webpage.
      *
@@ -210631,7 +210631,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/className)
      */
-    class名称： string;
+    class名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/clientHeight) */
     readonly clientHeight: number;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/clientLeft) */
@@ -210651,7 +210651,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/localName)
      */
-    readonly local名称： string;
+    readonly local名称: string;
     /**
      * Returns the namespace.
      *
@@ -210698,7 +210698,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/tagName)
      */
-    readonly tag名称： string;
+    readonly tag名称: string;
     /**
      * Creates a shadow root for element and returns it.
      *
@@ -210723,13 +210723,13 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getAttribute)
      */
-    getAttribute(qualified名称： string): string | null;
+    getAttribute(qualified名称: string): string | null;
     /**
      * Returns element's attribute whose namespace is namespace and local name is localName, and null if there is no such attribute otherwise.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getAttributeNS)
      */
-    getAttributeNS(namespace: string | null, local名称： string): string | null;
+    getAttributeNS(namespace: string | null, local名称: string): string | null;
     /**
      * Returns the qualified names of all element's attributes. Can contain duplicates.
      *
@@ -210737,9 +210737,9 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     getAttributeNames(): string[];
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getAttributeNode) */
-    getAttributeNode(qualified名称： string): Attr | null;
+    getAttributeNode(qualified名称: string): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getAttributeNodeNS) */
-    getAttributeNodeNS(namespace: string | null, local名称： string): Attr | null;
+    getAttributeNodeNS(namespace: string | null, local名称: string): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getBoundingClientRect) */
     getBoundingClientRect(): DOMRect;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getClientRects) */
@@ -210751,29 +210751,29 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     getElementsByClassName(classNames: string): HTMLCollectionOf<Element>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getElementsByTagName) */
-    getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualified名称： K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
-    getElementsByTagName<K extends keyof SVGElementTagNameMap>(qualified名称： K): HTMLCollectionOf<SVGElementTagNameMap[K]>;
-    getElementsByTagName<K extends keyof MathMLElementTagNameMap>(qualified名称： K): HTMLCollectionOf<MathMLElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualified名称: K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof SVGElementTagNameMap>(qualified名称: K): HTMLCollectionOf<SVGElementTagNameMap[K]>;
+    getElementsByTagName<K extends keyof MathMLElementTagNameMap>(qualified名称: K): HTMLCollectionOf<MathMLElementTagNameMap[K]>;
     /** @deprecated */
-    getElementsByTagName<K extends keyof HTMLElementDeprecatedTagNameMap>(qualified名称： K): HTMLCollectionOf<HTMLElementDeprecatedTagNameMap[K]>;
-    getElementsByTagName(qualified名称： string): HTMLCollectionOf<Element>;
+    getElementsByTagName<K extends keyof HTMLElementDeprecatedTagNameMap>(qualified名称: K): HTMLCollectionOf<HTMLElementDeprecatedTagNameMap[K]>;
+    getElementsByTagName(qualified名称: string): HTMLCollectionOf<Element>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/getElementsByTagNameNS) */
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1999/xhtml", local名称： string): HTMLCollectionOf<HTMLElement>;
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", local名称： string): HTMLCollectionOf<SVGElement>;
-    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", local名称： string): HTMLCollectionOf<MathMLElement>;
-    getElementsByTagNameNS(namespace: string | null, local名称： string): HTMLCollectionOf<Element>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1999/xhtml", local名称: string): HTMLCollectionOf<HTMLElement>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", local名称: string): HTMLCollectionOf<SVGElement>;
+    getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1998/Math/MathML", local名称: string): HTMLCollectionOf<MathMLElement>;
+    getElementsByTagNameNS(namespace: string | null, local名称: string): HTMLCollectionOf<Element>;
     /**
      * Returns true if element has an attribute whose qualified name is qualifiedName, and false otherwise.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/hasAttribute)
      */
-    hasAttribute(qualified名称： string): boolean;
+    hasAttribute(qualified名称: string): boolean;
     /**
      * Returns true if element has an attribute whose namespace is namespace and local name is localName.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/hasAttributeNS)
      */
-    hasAttributeNS(namespace: string | null, local名称： string): boolean;
+    hasAttributeNS(namespace: string | null, local名称: string): boolean;
     /**
      * Returns true if element has attributes, and false otherwise.
      *
@@ -210801,13 +210801,13 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/removeAttribute)
      */
-    removeAttribute(qualified名称： string): void;
+    removeAttribute(qualified名称: string): void;
     /**
      * Removes element's attribute whose namespace is namespace and local name is localName.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/removeAttributeNS)
      */
-    removeAttributeNS(namespace: string | null, local名称： string): void;
+    removeAttributeNS(namespace: string | null, local名称: string): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/removeAttributeNode) */
     removeAttributeNode(attr: Attr): Attr;
     /**
@@ -210836,13 +210836,13 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/setAttribute)
      */
-    setAttribute(qualified名称： string, value: string): void;
+    setAttribute(qualified名称: string, value: string): void;
     /**
      * Sets the value of element's attribute whose namespace is namespace and local name is localName to value.
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/setAttributeNS)
      */
-    setAttributeNS(namespace: string | null, qualified名称： string, value: string): void;
+    setAttributeNS(namespace: string | null, qualified名称: string, value: string): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/setAttributeNode) */
     setAttributeNode(attr: Attr): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/setAttributeNodeNS) */
@@ -210856,7 +210856,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/toggleAttribute)
      */
-    toggleAttribute(qualified名称： string, force?: boolean): boolean;
+    toggleAttribute(qualified名称: string, force?: boolean): boolean;
     /**
      * @deprecated This is a legacy alias of \`matches\`.
      *
@@ -211293,7 +211293,7 @@ interface File extends Blob {
 
 declare var File: {
     prototype: File;
-    new(fileBits: BlobPart[], file名称： string, options?: FilePropertyBag): File;
+    new(fileBits: BlobPart[], file名称: string, options?: FilePropertyBag): File;
 };
 
 /**
@@ -213992,7 +213992,7 @@ interface HTMLInputElement extends HTMLElement, PopoverInvokerElement {
     defaultChecked: boolean;
     /** Sets or retrieves the initial contents of the object. */
     defaultValue: string;
-    dir名称： string;
+    dir名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLInputElement/disabled) */
     disabled: boolean;
     /**
@@ -216198,7 +216198,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     cols: number;
     /** Sets or retrieves the initial contents of the object. */
     defaultValue: string;
-    dir名称： string;
+    dir名称: string;
     disabled: boolean;
     /** Retrieves a reference to the form that the object is embedded in. */
     readonly form: HTMLFormElement | null;
@@ -218744,7 +218744,7 @@ interface MutationEvent extends Event {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/MutationEvent/attrName)
      */
-    readonly attr名称： string;
+    readonly attr名称: string;
     /**
      * @deprecated
      *
@@ -218833,7 +218833,7 @@ interface MutationRecord {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/MutationRecord/attributeName)
      */
-    readonly attribute名称： string | null;
+    readonly attribute名称: string | null;
     /**
      * Returns the namespace of the changed attribute, and null otherwise.
      *
@@ -218892,15 +218892,15 @@ interface NamedNodeMap {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/length) */
     readonly length: number;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/getNamedItem) */
-    getNamedItem(qualified名称： string): Attr | null;
+    getNamedItem(qualified名称: string): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/getNamedItemNS) */
-    getNamedItemNS(namespace: string | null, local名称： string): Attr | null;
+    getNamedItemNS(namespace: string | null, local名称: string): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/item) */
     item(index: number): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/removeNamedItem) */
-    removeNamedItem(qualified名称： string): Attr;
+    removeNamedItem(qualified名称: string): Attr;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/removeNamedItemNS) */
-    removeNamedItemNS(namespace: string | null, local名称： string): Attr;
+    removeNamedItemNS(namespace: string | null, local名称: string): Attr;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/setNamedItem) */
     setNamedItem(attr: Attr): Attr | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/NamedNodeMap/setNamedItemNS) */
@@ -219054,13 +219054,13 @@ interface NavigatorID {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Navigator/appCodeName)
      */
-    readonly appCode名称： string;
+    readonly appCode名称: string;
     /**
      * @deprecated
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Navigator/appName)
      */
-    readonly app名称： string;
+    readonly app名称: string;
     /**
      * @deprecated
      *
@@ -219195,7 +219195,7 @@ interface Node extends EventTarget {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Node/nodeName)
      */
-    readonly node名称： string;
+    readonly node名称: string;
     /**
      * Returns the type of node.
      *
@@ -219947,7 +219947,7 @@ interface PaymentMethodChangeEvent extends PaymentRequestUpdateEvent {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentMethodChangeEvent/methodDetails) */
     readonly methodDetails: any;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentMethodChangeEvent/methodName) */
-    readonly method名称： string;
+    readonly method名称: string;
 }
 
 declare var PaymentMethodChangeEvent: {
@@ -220013,7 +220013,7 @@ interface PaymentResponse extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentResponse/details) */
     readonly details: any;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentResponse/methodName) */
-    readonly method名称： string;
+    readonly method名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentResponse/requestId) */
     readonly requestId: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PaymentResponse/complete) */
@@ -220070,9 +220070,9 @@ interface Performance extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/getEntriesByType) */
     getEntriesByType(type: string): PerformanceEntryList;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/mark) */
-    mark(mark名称： string, markOptions?: PerformanceMarkOptions): PerformanceMark;
+    mark(mark名称: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/measure) */
-    measure(measure名称： string, startOrMeasureOptions?: string | PerformanceMeasureOptions, endMark?: string): PerformanceMeasure;
+    measure(measure名称: string, startOrMeasureOptions?: string | PerformanceMeasureOptions, endMark?: string): PerformanceMeasure;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/now) */
     now(): DOMHighResTimeStamp;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/setResourceTimingBufferSize) */
@@ -220144,7 +220144,7 @@ interface PerformanceMark extends PerformanceEntry {
 
 declare var PerformanceMark: {
     prototype: PerformanceMark;
-    new(mark名称： string, markOptions?: PerformanceMarkOptions): PerformanceMark;
+    new(mark名称: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
 };
 
 /**
@@ -221192,15 +221192,15 @@ interface RTCPeerConnection extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/connectionState) */
     readonly connectionState: RTCPeerConnectionState;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/currentLocalDescription) */
-    readonly currentLocal描述： RTCSessionDescription | null;
+    readonly currentLocal描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/currentRemoteDescription) */
-    readonly currentRemote描述： RTCSessionDescription | null;
+    readonly currentRemote描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/iceConnectionState) */
     readonly iceConnectionState: RTCIceConnectionState;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/iceGatheringState) */
     readonly iceGatheringState: RTCIceGatheringState;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/localDescription) */
-    readonly local描述： RTCSessionDescription | null;
+    readonly local描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/connectionstatechange_event) */
     onconnectionstatechange: ((this: RTCPeerConnection, ev: Event) => any) | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/datachannel_event) */
@@ -221220,11 +221220,11 @@ interface RTCPeerConnection extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/track_event) */
     ontrack: ((this: RTCPeerConnection, ev: RTCTrackEvent) => any) | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/pendingLocalDescription) */
-    readonly pendingLocal描述： RTCSessionDescription | null;
+    readonly pendingLocal描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/pendingRemoteDescription) */
-    readonly pendingRemote描述： RTCSessionDescription | null;
+    readonly pendingRemote描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/remoteDescription) */
-    readonly remote描述： RTCSessionDescription | null;
+    readonly remote描述: RTCSessionDescription | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/sctp) */
     readonly sctp: RTCSctpTransport | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/signalingState) */
@@ -221453,7 +221453,7 @@ interface RTCSessionDescription {
     toJSON(): any;
 }
 
-declare var RTCSession描述： {
+declare var RTCSession描述: {
     prototype: RTCSessionDescription;
     new(descriptionInitDict: RTCSessionDescriptionInit): RTCSessionDescription;
 };
@@ -222361,7 +222361,7 @@ interface SVGElementEventMap extends ElementEventMap, GlobalEventHandlersEventMa
  */
 interface SVGElement extends Element, ElementCSSInlineStyle, GlobalEventHandlers, HTMLOrSVGElement {
     /** @deprecated */
-    readonly class名称： any;
+    readonly class名称: any;
     readonly ownerSVGElement: SVGSVGElement | null;
     readonly viewportElement: SVGElement | null;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -225599,7 +225599,7 @@ interface TransitionEvent extends Event {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransitionEvent/elapsedTime) */
     readonly elapsedTime: number;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransitionEvent/propertyName) */
-    readonly property名称： string;
+    readonly property名称: string;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransitionEvent/pseudoElement) */
     readonly pseudoElement: string;
 }
@@ -226970,7 +226970,7 @@ interface WebGL2RenderingContextBase {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getTransformFeedbackVarying) */
     getTransformFeedbackVarying(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getUniformBlockIndex) */
-    getUniformBlockIndex(program: WebGLProgram, uniformBlock名称： string): GLuint;
+    getUniformBlockIndex(program: WebGLProgram, uniformBlock名称: string): GLuint;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getUniformIndices) */
     getUniformIndices(program: WebGLProgram, uniformNames: string[]): GLuint[] | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/invalidateFramebuffer) */
@@ -227904,40 +227904,40 @@ interface WebGLRenderingContextBase {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getError) */
     getError(): GLenum;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getExtension) */
-    getExtension(extension名称： "ANGLE_instanced_arrays"): ANGLE_instanced_arrays | null;
-    getExtension(extension名称： "EXT_blend_minmax"): EXT_blend_minmax | null;
-    getExtension(extension名称： "EXT_color_buffer_float"): EXT_color_buffer_float | null;
-    getExtension(extension名称： "EXT_color_buffer_half_float"): EXT_color_buffer_half_float | null;
-    getExtension(extension名称： "EXT_float_blend"): EXT_float_blend | null;
-    getExtension(extension名称： "EXT_frag_depth"): EXT_frag_depth | null;
-    getExtension(extension名称： "EXT_sRGB"): EXT_sRGB | null;
-    getExtension(extension名称： "EXT_shader_texture_lod"): EXT_shader_texture_lod | null;
-    getExtension(extension名称： "EXT_texture_compression_bptc"): EXT_texture_compression_bptc | null;
-    getExtension(extension名称： "EXT_texture_compression_rgtc"): EXT_texture_compression_rgtc | null;
-    getExtension(extension名称： "EXT_texture_filter_anisotropic"): EXT_texture_filter_anisotropic | null;
-    getExtension(extension名称： "KHR_parallel_shader_compile"): KHR_parallel_shader_compile | null;
-    getExtension(extension名称： "OES_element_index_uint"): OES_element_index_uint | null;
-    getExtension(extension名称： "OES_fbo_render_mipmap"): OES_fbo_render_mipmap | null;
-    getExtension(extension名称： "OES_standard_derivatives"): OES_standard_derivatives | null;
-    getExtension(extension名称： "OES_texture_float"): OES_texture_float | null;
-    getExtension(extension名称： "OES_texture_float_linear"): OES_texture_float_linear | null;
-    getExtension(extension名称： "OES_texture_half_float"): OES_texture_half_float | null;
-    getExtension(extension名称： "OES_texture_half_float_linear"): OES_texture_half_float_linear | null;
-    getExtension(extension名称： "OES_vertex_array_object"): OES_vertex_array_object | null;
-    getExtension(extension名称： "OVR_multiview2"): OVR_multiview2 | null;
-    getExtension(extension名称： "WEBGL_color_buffer_float"): WEBGL_color_buffer_float | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_astc"): WEBGL_compressed_texture_astc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_etc"): WEBGL_compressed_texture_etc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_etc1"): WEBGL_compressed_texture_etc1 | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_pvrtc"): WEBGL_compressed_texture_pvrtc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_s3tc"): WEBGL_compressed_texture_s3tc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_s3tc_srgb"): WEBGL_compressed_texture_s3tc_srgb | null;
-    getExtension(extension名称： "WEBGL_debug_renderer_info"): WEBGL_debug_renderer_info | null;
-    getExtension(extension名称： "WEBGL_debug_shaders"): WEBGL_debug_shaders | null;
-    getExtension(extension名称： "WEBGL_depth_texture"): WEBGL_depth_texture | null;
-    getExtension(extension名称： "WEBGL_draw_buffers"): WEBGL_draw_buffers | null;
-    getExtension(extension名称： "WEBGL_lose_context"): WEBGL_lose_context | null;
-    getExtension(extension名称： "WEBGL_multi_draw"): WEBGL_multi_draw | null;
+    getExtension(extension名称: "ANGLE_instanced_arrays"): ANGLE_instanced_arrays | null;
+    getExtension(extension名称: "EXT_blend_minmax"): EXT_blend_minmax | null;
+    getExtension(extension名称: "EXT_color_buffer_float"): EXT_color_buffer_float | null;
+    getExtension(extension名称: "EXT_color_buffer_half_float"): EXT_color_buffer_half_float | null;
+    getExtension(extension名称: "EXT_float_blend"): EXT_float_blend | null;
+    getExtension(extension名称: "EXT_frag_depth"): EXT_frag_depth | null;
+    getExtension(extension名称: "EXT_sRGB"): EXT_sRGB | null;
+    getExtension(extension名称: "EXT_shader_texture_lod"): EXT_shader_texture_lod | null;
+    getExtension(extension名称: "EXT_texture_compression_bptc"): EXT_texture_compression_bptc | null;
+    getExtension(extension名称: "EXT_texture_compression_rgtc"): EXT_texture_compression_rgtc | null;
+    getExtension(extension名称: "EXT_texture_filter_anisotropic"): EXT_texture_filter_anisotropic | null;
+    getExtension(extension名称: "KHR_parallel_shader_compile"): KHR_parallel_shader_compile | null;
+    getExtension(extension名称: "OES_element_index_uint"): OES_element_index_uint | null;
+    getExtension(extension名称: "OES_fbo_render_mipmap"): OES_fbo_render_mipmap | null;
+    getExtension(extension名称: "OES_standard_derivatives"): OES_standard_derivatives | null;
+    getExtension(extension名称: "OES_texture_float"): OES_texture_float | null;
+    getExtension(extension名称: "OES_texture_float_linear"): OES_texture_float_linear | null;
+    getExtension(extension名称: "OES_texture_half_float"): OES_texture_half_float | null;
+    getExtension(extension名称: "OES_texture_half_float_linear"): OES_texture_half_float_linear | null;
+    getExtension(extension名称: "OES_vertex_array_object"): OES_vertex_array_object | null;
+    getExtension(extension名称: "OVR_multiview2"): OVR_multiview2 | null;
+    getExtension(extension名称: "WEBGL_color_buffer_float"): WEBGL_color_buffer_float | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_astc"): WEBGL_compressed_texture_astc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_etc"): WEBGL_compressed_texture_etc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_etc1"): WEBGL_compressed_texture_etc1 | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_pvrtc"): WEBGL_compressed_texture_pvrtc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_s3tc"): WEBGL_compressed_texture_s3tc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_s3tc_srgb"): WEBGL_compressed_texture_s3tc_srgb | null;
+    getExtension(extension名称: "WEBGL_debug_renderer_info"): WEBGL_debug_renderer_info | null;
+    getExtension(extension名称: "WEBGL_debug_shaders"): WEBGL_debug_shaders | null;
+    getExtension(extension名称: "WEBGL_depth_texture"): WEBGL_depth_texture | null;
+    getExtension(extension名称: "WEBGL_draw_buffers"): WEBGL_draw_buffers | null;
+    getExtension(extension名称: "WEBGL_lose_context"): WEBGL_lose_context | null;
+    getExtension(extension名称: "WEBGL_multi_draw"): WEBGL_multi_draw | null;
     getExtension(name: string): any;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter) */
     getFramebufferAttachmentParameter(target: GLenum, attachment: GLenum, pname: GLenum): any;
@@ -229566,15 +229566,15 @@ interface XSLTProcessor {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/clearParameters) */
     clearParameters(): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/getParameter) */
-    getParameter(namespaceURI: string | null, local名称： string): any;
+    getParameter(namespaceURI: string | null, local名称: string): any;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/importStylesheet) */
     importStylesheet(style: Node): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/removeParameter) */
-    removeParameter(namespaceURI: string | null, local名称： string): void;
+    removeParameter(namespaceURI: string | null, local名称: string): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/reset) */
     reset(): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/setParameter) */
-    setParameter(namespaceURI: string | null, local名称： string, value: any): void;
+    setParameter(namespaceURI: string | null, local名称: string, value: any): void;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/transformToDocument) */
     transformToDocument(source: Node): Document;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/XSLTProcessor/transformToFragment) */
@@ -229824,7 +229824,7 @@ declare namespace WebAssembly {
         prototype: Module;
         new(bytes: BufferSource): Module;
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/customSections_static) */
-        customSections(moduleObject: Module, section名称： string): ArrayBuffer[];
+        customSections(moduleObject: Module, section名称: string): ArrayBuffer[];
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/exports_static) */
         exports(moduleObject: Module): ModuleExportDescriptor[];
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/imports_static) */
@@ -232311,7 +232311,7 @@ libFileMap["lib.es2016.intl.d.ts"] = '/*! **************************************
 libFileMap["lib.es2017.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2016" />\n/// <reference lib="es2017.object" />\n/// <reference lib="es2017.sharedmemory" />\n/// <reference lib="es2017.string" />\n/// <reference lib="es2017.intl" />\n/// <reference lib="es2017.typedarrays" />\n/// <reference lib="es2017.date" />\n';
 libFileMap["lib.es2017.date.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ninterface DateConstructor {\n    /**\n     * Returns the number of milliseconds between midnight, January 1, 1970 Universal Coordinated Time (UTC) (or GMT) and the specified date.\n     * @param year The full year designation is required for cross-century date accuracy. If year is between 0 and 99 is used, then year is assumed to be 1900 + year.\n     * @param monthIndex The month as a number between 0 and 11 (January to December).\n     * @param date The date as a number between 1 and 31.\n     * @param hours Must be supplied if minutes is supplied. A number from 0 to 23 (midnight to 11pm) that specifies the hour.\n     * @param minutes Must be supplied if seconds is supplied. A number from 0 to 59 that specifies the minutes.\n     * @param seconds Must be supplied if milliseconds is supplied. A number from 0 to 59 that specifies the seconds.\n     * @param ms A number from 0 to 999 that specifies the milliseconds.\n     */\n    UTC(year: number, monthIndex?: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): number;\n}\n';
 libFileMap["lib.es2017.full.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2017" />\n/// <reference lib="dom" />\n/// <reference lib="webworker.importscripts" />\n/// <reference lib="scripthost" />\n/// <reference lib="dom.iterable" />\n';
-libFileMap["lib.es2017.intl.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ndeclare namespace Intl {\n    interface DateTimeFormatPartTypesRegistry {\n        day: any;\n        dayPeriod: any;\n        era: any;\n        hour: any;\n        literal: any;\n        minute: any;\n        month: any;\n        second: any;\n        timeZone名称： any;\n        weekday: any;\n        year: any;\n    }\n\n    type DateTimeFormatPartTypes = keyof DateTimeFormatPartTypesRegistry;\n\n    interface DateTimeFormatPart {\n        type: DateTimeFormatPartTypes;\n        value: string;\n    }\n\n    interface DateTimeFormat {\n        formatToParts(date?: Date | number): DateTimeFormatPart[];\n    }\n}\n';
+libFileMap["lib.es2017.intl.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ndeclare namespace Intl {\n    interface DateTimeFormatPartTypesRegistry {\n        day: any;\n        dayPeriod: any;\n        era: any;\n        hour: any;\n        literal: any;\n        minute: any;\n        month: any;\n        second: any;\n        timeZone名称: any;\n        weekday: any;\n        year: any;\n    }\n\n    type DateTimeFormatPartTypes = keyof DateTimeFormatPartTypesRegistry;\n\n    interface DateTimeFormatPart {\n        type: DateTimeFormatPartTypes;\n        value: string;\n    }\n\n    interface DateTimeFormat {\n        formatToParts(date?: Date | number): DateTimeFormatPart[];\n    }\n}\n';
 libFileMap["lib.es2017.object.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ninterface ObjectConstructor {\n    /**\n     * Returns an array of values of the enumerable properties of an object\n     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.\n     */\n    values<T>(o: { [s: string]: T; } | ArrayLike<T>): T[];\n\n    /**\n     * Returns an array of values of the enumerable properties of an object\n     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.\n     */\n    values(o: {}): any[];\n\n    /**\n     * Returns an array of key/values of the enumerable properties of an object\n     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.\n     */\n    entries<T>(o: { [s: string]: T; } | ArrayLike<T>): [string, T][];\n\n    /**\n     * Returns an array of key/values of the enumerable properties of an object\n     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.\n     */\n    entries(o: {}): [string, any][];\n\n    /**\n     * Returns an object containing all own property descriptors of an object\n     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.\n     */\n    getOwnPropertyDescriptors<T>(o: T): { [P in keyof T]: TypedPropertyDescriptor<T[P]>; } & { [x: string]: PropertyDescriptor; };\n}\n';
 libFileMap["lib.es2017.sharedmemory.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2015.symbol" />\n/// <reference lib="es2015.symbol.wellknown" />\n\ninterface SharedArrayBuffer {\n    /**\n     * Read-only. The length of the ArrayBuffer (in bytes).\n     */\n    readonly byteLength: number;\n\n    /**\n     * Returns a section of an SharedArrayBuffer.\n     */\n    slice(begin: number, end?: number): SharedArrayBuffer;\n    readonly [Symbol.species]: SharedArrayBuffer;\n    readonly [Symbol.toStringTag]: "SharedArrayBuffer";\n}\n\ninterface SharedArrayBufferConstructor {\n    readonly prototype: SharedArrayBuffer;\n    new (byteLength: number): SharedArrayBuffer;\n}\ndeclare var SharedArrayBuffer: SharedArrayBufferConstructor;\n\ninterface ArrayBufferTypes {\n    SharedArrayBuffer: SharedArrayBuffer;\n}\n\ninterface Atomics {\n    /**\n     * Adds a value to the value at the given position in the array, returning the original value.\n     * Until this atomic operation completes, any other read or write operation against the array\n     * will block.\n     */\n    add(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * Stores the bitwise AND of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or\n     * write operation against the array will block.\n     */\n    and(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * Replaces the value at the given position in the array if the original value equals the given\n     * expected value, returning the original value. Until this atomic operation completes, any\n     * other read or write operation against the array will block.\n     */\n    compareExchange(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, expectedValue: number, replacementValue: number): number;\n\n    /**\n     * Replaces the value at the given position in the array, returning the original value. Until\n     * this atomic operation completes, any other read or write operation against the array will\n     * block.\n     */\n    exchange(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * Returns a value indicating whether high-performance algorithms can use atomic operations\n     * (`true`) or must use locks (`false`) for the given number of bytes-per-element of a typed\n     * array.\n     */\n    isLockFree(size: number): boolean;\n\n    /**\n     * Returns the value at the given position in the array. Until this atomic operation completes,\n     * any other read or write operation against the array will block.\n     */\n    load(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number): number;\n\n    /**\n     * Stores the bitwise OR of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or write\n     * operation against the array will block.\n     */\n    or(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * Stores a value at the given position in the array, returning the new value. Until this\n     * atomic operation completes, any other read or write operation against the array will block.\n     */\n    store(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * Subtracts a value from the value at the given position in the array, returning the original\n     * value. Until this atomic operation completes, any other read or write operation against the\n     * array will block.\n     */\n    sub(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    /**\n     * If the value at the given position in the array is equal to the provided value, the current\n     * agent is put to sleep causing execution to suspend until the timeout expires (returning\n     * `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns\n     * `"not-equal"`.\n     */\n    wait(typedArray: Int32Array, index: number, value: number, timeout?: number): "ok" | "not-equal" | "timed-out";\n\n    /**\n     * Wakes up sleeping agents that are waiting on the given index of the array, returning the\n     * number of agents that were awoken.\n     * @param typedArray A shared Int32Array.\n     * @param index The position in the typedArray to wake up on.\n     * @param count The number of sleeping agents to notify. Defaults to +Infinity.\n     */\n    notify(typedArray: Int32Array, index: number, count?: number): number;\n\n    /**\n     * Stores the bitwise XOR of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or write\n     * operation against the array will block.\n     */\n    xor(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;\n\n    readonly [Symbol.toStringTag]: "Atomics";\n}\n\ndeclare var Atomics: Atomics;\n';
 libFileMap["lib.es2017.string.d.ts"] = `/*! *****************************************************************************
@@ -232570,7 +232570,7 @@ libFileMap["lib.es2020.bigint.d.ts"] = '/*! ************************************
 libFileMap["lib.es2020.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2019" />\n/// <reference lib="es2020.bigint" />\n/// <reference lib="es2020.date" />\n/// <reference lib="es2020.number" />\n/// <reference lib="es2020.promise" />\n/// <reference lib="es2020.sharedmemory" />\n/// <reference lib="es2020.string" />\n/// <reference lib="es2020.symbol.wellknown" />\n/// <reference lib="es2020.intl" />\n';
 libFileMap["lib.es2020.date.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2020.intl" />\n\ninterface Date {\n    /**\n     * Converts a date and time to a string by using the current or specified locale.\n     * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.\n     * @param options An object that contains one or more properties that specify comparison options.\n     */\n    toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string;\n\n    /**\n     * Converts a date to a string by using the current or specified locale.\n     * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.\n     * @param options An object that contains one or more properties that specify comparison options.\n     */\n    toLocaleDateString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string;\n\n    /**\n     * Converts a time to a string by using the current or specified locale.\n     * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.\n     * @param options An object that contains one or more properties that specify comparison options.\n     */\n    toLocaleTimeString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string;\n}\n';
 libFileMap["lib.es2020.full.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2020" />\n/// <reference lib="dom" />\n/// <reference lib="webworker.importscripts" />\n/// <reference lib="scripthost" />\n/// <reference lib="dom.iterable" />\n/// <reference lib="dom.asynciterable" />\n';
-libFileMap["lib.es2020.intl.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2018.intl" />\ndeclare namespace Intl {\n    /**\n     * A string that is a valid [Unicode BCP 47 Locale Identifier](https://unicode.org/reports/tr35/#Unicode_locale_identifier).\n     *\n     * For example: "fa", "es-MX", "zh-Hant-TW".\n     *\n     * See [MDN - Intl - locales argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).\n     */\n    type UnicodeBCP47LocaleIdentifier = string;\n\n    /**\n     * Unit to use in the relative time internationalized message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#Parameters).\n     */\n    type RelativeTimeFormatUnit =\n        | "year"\n        | "years"\n        | "quarter"\n        | "quarters"\n        | "month"\n        | "months"\n        | "week"\n        | "weeks"\n        | "day"\n        | "days"\n        | "hour"\n        | "hours"\n        | "minute"\n        | "minutes"\n        | "second"\n        | "seconds";\n\n    /**\n     * Value of the `unit` property in objects returned by\n     * `Intl.RelativeTimeFormat.prototype.formatToParts()`. `formatToParts` and\n     * `format` methods accept either singular or plural unit names as input,\n     * but `formatToParts` only outputs singular (e.g. "day") not plural (e.g.\n     * "days").\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).\n     */\n    type RelativeTimeFormatUnitSingular =\n        | "year"\n        | "quarter"\n        | "month"\n        | "week"\n        | "day"\n        | "hour"\n        | "minute"\n        | "second";\n\n    /**\n     * The locale matching algorithm to use.\n     *\n     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).\n     */\n    type RelativeTimeFormatLocaleMatcher = "lookup" | "best fit";\n\n    /**\n     * The format of output message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    type RelativeTimeFormatNumeric = "always" | "auto";\n\n    /**\n     * The length of the internationalized message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    type RelativeTimeFormatStyle = "long" | "short" | "narrow";\n\n    /**\n     * The locale or locales to use\n     *\n     * See [MDN - Intl - locales argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).\n     */\n    type LocalesArgument = UnicodeBCP47LocaleIdentifier | Locale | readonly (UnicodeBCP47LocaleIdentifier | Locale)[] | undefined;\n\n    /**\n     * An object with some or all of properties of `options` parameter\n     * of `Intl.RelativeTimeFormat` constructor.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    interface RelativeTimeFormatOptions {\n        /** The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation). */\n        localeMatcher?: RelativeTimeFormatLocaleMatcher;\n        /** The format of output message. */\n        numeric?: RelativeTimeFormatNumeric;\n        /** The length of the internationalized message. */\n        style?: RelativeTimeFormatStyle;\n    }\n\n    /**\n     * An object with properties reflecting the locale\n     * and formatting options computed during initialization\n     * of the `Intl.RelativeTimeFormat` object\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#Description).\n     */\n    interface ResolvedRelativeTimeFormatOptions {\n        locale: UnicodeBCP47LocaleIdentifier;\n        style: RelativeTimeFormatStyle;\n        numeric: RelativeTimeFormatNumeric;\n        numberingSystem: string;\n    }\n\n    /**\n     * An object representing the relative time format in parts\n     * that can be used for custom locale-aware formatting.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).\n     */\n    type RelativeTimeFormatPart =\n        | {\n            type: "literal";\n            value: string;\n        }\n        | {\n            type: Exclude<NumberFormatPartTypes, "literal">;\n            value: string;\n            unit: RelativeTimeFormatUnitSingular;\n        };\n\n    interface RelativeTimeFormat {\n        /**\n         * Formats a value and a unit according to the locale\n         * and formatting options of the given\n         * [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)\n         * object.\n         *\n         * While this method automatically provides the correct plural forms,\n         * the grammatical form is otherwise as neutral as possible.\n         *\n         * It is the caller\'s responsibility to handle cut-off logic\n         * such as deciding between displaying "in 7 days" or "in 1 week".\n         * This API does not support relative dates involving compound units.\n         * e.g "in 5 days and 4 hours".\n         *\n         * @param value -  Numeric value to use in the internationalized relative time message\n         *\n         * @param unit - [Unit](https://tc39.es/ecma402/#sec-singularrelativetimeunit) to use in the relative time internationalized message.\n         *\n         * @throws `RangeError` if `unit` was given something other than `unit` possible values\n         *\n         * @returns {string} Internationalized relative time message as string\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format).\n         */\n        format(value: number, unit: RelativeTimeFormatUnit): string;\n\n        /**\n         *  Returns an array of objects representing the relative time format in parts that can be used for custom locale-aware formatting.\n         *\n         *  @param value - Numeric value to use in the internationalized relative time message\n         *\n         *  @param unit - [Unit](https://tc39.es/ecma402/#sec-singularrelativetimeunit) to use in the relative time internationalized message.\n         *\n         *  @throws `RangeError` if `unit` was given something other than `unit` possible values\n         *\n         *  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts).\n         */\n        formatToParts(value: number, unit: RelativeTimeFormatUnit): RelativeTimeFormatPart[];\n\n        /**\n         * Provides access to the locale and options computed during initialization of this `Intl.RelativeTimeFormat` object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions).\n         */\n        resolvedOptions(): ResolvedRelativeTimeFormatOptions;\n    }\n\n    /**\n     * The [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)\n     * object is a constructor for objects that enable language-sensitive relative time formatting.\n     *\n     * [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat#Browser_compatibility).\n     */\n    const RelativeTimeFormat: {\n        /**\n         * Creates [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) objects\n         *\n         * @param locales - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646), or an array of such strings.\n         *  For the general form and interpretation of the locales argument,\n         *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n         *\n         * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters)\n         *  with some or all of options of `RelativeTimeFormatOptions`.\n         *\n         * @returns [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat).\n         */\n        new (\n            locales?: LocalesArgument,\n            options?: RelativeTimeFormatOptions,\n        ): RelativeTimeFormat;\n\n        /**\n         * Returns an array containing those of the provided locales\n         * that are supported in date and time formatting\n         * without having to fall back to the runtime\'s default locale.\n         *\n         * @param locales - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646), or an array of such strings.\n         *  For the general form and interpretation of the locales argument,\n         *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n         *\n         * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters)\n         *  with some or all of options of the formatting.\n         *\n         * @returns An array containing those of the provided locales\n         *  that are supported in date and time formatting\n         *  without having to fall back to the runtime\'s default locale.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).\n         */\n        supportedLocalesOf(\n            locales?: LocalesArgument,\n            options?: RelativeTimeFormatOptions,\n        ): UnicodeBCP47LocaleIdentifier[];\n    };\n\n    interface NumberFormatOptions {\n        compactDisplay?: "short" | "long" | undefined;\n        notation?: "standard" | "scientific" | "engineering" | "compact" | undefined;\n        signDisplay?: "auto" | "never" | "always" | "exceptZero" | undefined;\n        unit?: string | undefined;\n        unitDisplay?: "short" | "long" | "narrow" | undefined;\n        currencyDisplay?: string | undefined;\n        currencySign?: string | undefined;\n    }\n\n    interface ResolvedNumberFormatOptions {\n        compactDisplay?: "short" | "long";\n        notation?: "standard" | "scientific" | "engineering" | "compact";\n        signDisplay?: "auto" | "never" | "always" | "exceptZero";\n        unit?: string;\n        unitDisplay?: "short" | "long" | "narrow";\n        currencyDisplay?: string;\n        currencySign?: string;\n    }\n\n    interface DateTimeFormatOptions {\n        calendar?: string | undefined;\n        dayPeriod?: "narrow" | "short" | "long" | undefined;\n        numberingSystem?: string | undefined;\n\n        dateStyle?: "full" | "long" | "medium" | "short" | undefined;\n        timeStyle?: "full" | "long" | "medium" | "short" | undefined;\n        hourCycle?: "h11" | "h12" | "h23" | "h24" | undefined;\n    }\n\n    type LocaleHourCycleKey = "h12" | "h23" | "h11" | "h24";\n    type LocaleCollationCaseFirst = "upper" | "lower" | "false";\n\n    interface LocaleOptions {\n        /** A string containing the language, and the script and region if available. */\n        baseName?: string;\n        /** The part of the Locale that indicates the locale\'s calendar era. */\n        calendar?: string;\n        /** Flag that defines whether case is taken into account for the locale\'s collation rules. */\n        caseFirst?: LocaleCollationCaseFirst;\n        /** The collation type used for sorting */\n        collation?: string;\n        /** The time keeping format convention used by the locale. */\n        hourCycle?: LocaleHourCycleKey;\n        /** The primary language subtag associated with the locale. */\n        language?: string;\n        /** The numeral system used by the locale. */\n        numberingSystem?: string;\n        /** Flag that defines whether the locale has special collation handling for numeric characters. */\n        numeric?: boolean;\n        /** The region of the world (usually a country) associated with the locale. Possible values are region codes as defined by ISO 3166-1. */\n        region?: string;\n        /** The script used for writing the particular language used in the locale. Possible values are script codes as defined by ISO 15924. */\n        script?: string;\n    }\n\n    interface Locale extends LocaleOptions {\n        /** A string containing the language, and the script and region if available. */\n        base名称： string;\n        /** The primary language subtag associated with the locale. */\n        language: string;\n        /** Gets the most likely values for the language, script, and region of the locale based on existing values. */\n        maximize(): Locale;\n        /** Attempts to remove information about the locale that would be added by calling `Locale.maximize()`. */\n        minimize(): Locale;\n        /** Returns the locale\'s full locale identifier string. */\n        toString(): UnicodeBCP47LocaleIdentifier;\n    }\n\n    /**\n     * Constructor creates [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)\n     * objects\n     *\n     * @param tag - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646).\n     *  For the general form and interpretation of the locales argument,\n     *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n     *\n     * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#Parameters) with some or all of options of the locale.\n     *\n     * @returns [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) object.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale).\n     */\n    const Locale: {\n        new (tag: UnicodeBCP47LocaleIdentifier | Locale, options?: LocaleOptions): Locale;\n    };\n\n    type DisplayNamesFallback =\n        | "code"\n        | "none";\n\n    type DisplayNamesType =\n        | "language"\n        | "region"\n        | "script"\n        | "calendar"\n        | "dateTimeField"\n        | "currency";\n\n    type DisplayNamesLanguageDisplay =\n        | "dialect"\n        | "standard";\n\n    interface DisplayNamesOptions {\n        localeMatcher?: RelativeTimeFormatLocaleMatcher;\n        style?: RelativeTimeFormatStyle;\n        type: DisplayNamesType;\n        languageDisplay?: DisplayNamesLanguageDisplay;\n        fallback?: DisplayNamesFallback;\n    }\n\n    interface ResolvedDisplayNamesOptions {\n        locale: UnicodeBCP47LocaleIdentifier;\n        style: RelativeTimeFormatStyle;\n        type: DisplayNamesType;\n        fallback: DisplayNamesFallback;\n        languageDisplay?: DisplayNamesLanguageDisplay;\n    }\n\n    interface DisplayNames {\n        /**\n         * Receives a code and returns a string based on the locale and options provided when instantiating\n         * [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)\n         *\n         * @param code The `code` to provide depends on the `type` passed to display name during creation:\n         *  - If the type is `"region"`, code should be either an [ISO-3166 two letters region code](https://www.iso.org/iso-3166-country-codes.html),\n         *    or a [three digits UN M49 Geographic Regions](https://unstats.un.org/unsd/methodology/m49/).\n         *  - If the type is `"script"`, code should be an [ISO-15924 four letters script code](https://unicode.org/iso15924/iso15924-codes.html).\n         *  - If the type is `"language"`, code should be a `languageCode` ["-" `scriptCode`] ["-" `regionCode` ] *("-" `variant` )\n         *    subsequence of the unicode_language_id grammar in [UTS 35\'s Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier).\n         *    `languageCode` is either a two letters ISO 639-1 language code or a three letters ISO 639-2 language code.\n         *  - If the type is `"currency"`, code should be a [3-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html).\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of).\n         */\n        of(code: string): string | undefined;\n        /**\n         * Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current\n         * [`Intl/DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).\n         */\n        resolvedOptions(): ResolvedDisplayNamesOptions;\n    }\n\n    /**\n     * The [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)\n     * object enables the consistent translation of language, region and script display names.\n     *\n     * [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames#browser_compatibility).\n     */\n    const DisplayNames: {\n        prototype: DisplayNames;\n\n        /**\n         * @param locales A string with a BCP 47 language tag, or an array of such strings.\n         *   For the general form and interpretation of the `locales` argument, see the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)\n         *   page.\n         *\n         * @param options An object for setting up a display name.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames).\n         */\n        new (locales: LocalesArgument, options: DisplayNamesOptions): DisplayNames;\n\n        /**\n         * Returns an array containing those of the provided locales that are supported in display names without having to fall back to the runtime\'s default locale.\n         *\n         * @param locales A string with a BCP 47 language tag, or an array of such strings.\n         *   For the general form and interpretation of the `locales` argument, see the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)\n         *   page.\n         *\n         * @param options An object with a locale matcher.\n         *\n         * @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime\'s default locale.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).\n         */\n        supportedLocalesOf(locales?: LocalesArgument, options?: { localeMatcher?: RelativeTimeFormatLocaleMatcher; }): UnicodeBCP47LocaleIdentifier[];\n    };\n\n    interface CollatorConstructor {\n        new (locales?: LocalesArgument, options?: CollatorOptions): Collator;\n        (locales?: LocalesArgument, options?: CollatorOptions): Collator;\n        supportedLocalesOf(locales: LocalesArgument, options?: CollatorOptions): string[];\n    }\n\n    interface DateTimeFormatConstructor {\n        new (locales?: LocalesArgument, options?: DateTimeFormatOptions): DateTimeFormat;\n        (locales?: LocalesArgument, options?: DateTimeFormatOptions): DateTimeFormat;\n        supportedLocalesOf(locales: LocalesArgument, options?: DateTimeFormatOptions): string[];\n    }\n\n    interface NumberFormatConstructor {\n        new (locales?: LocalesArgument, options?: NumberFormatOptions): NumberFormat;\n        (locales?: LocalesArgument, options?: NumberFormatOptions): NumberFormat;\n        supportedLocalesOf(locales: LocalesArgument, options?: NumberFormatOptions): string[];\n    }\n\n    interface PluralRulesConstructor {\n        new (locales?: LocalesArgument, options?: PluralRulesOptions): PluralRules;\n        (locales?: LocalesArgument, options?: PluralRulesOptions): PluralRules;\n\n        supportedLocalesOf(locales: LocalesArgument, options?: { localeMatcher?: "lookup" | "best fit"; }): string[];\n    }\n}\n';
+libFileMap["lib.es2020.intl.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2018.intl" />\ndeclare namespace Intl {\n    /**\n     * A string that is a valid [Unicode BCP 47 Locale Identifier](https://unicode.org/reports/tr35/#Unicode_locale_identifier).\n     *\n     * For example: "fa", "es-MX", "zh-Hant-TW".\n     *\n     * See [MDN - Intl - locales argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).\n     */\n    type UnicodeBCP47LocaleIdentifier = string;\n\n    /**\n     * Unit to use in the relative time internationalized message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#Parameters).\n     */\n    type RelativeTimeFormatUnit =\n        | "year"\n        | "years"\n        | "quarter"\n        | "quarters"\n        | "month"\n        | "months"\n        | "week"\n        | "weeks"\n        | "day"\n        | "days"\n        | "hour"\n        | "hours"\n        | "minute"\n        | "minutes"\n        | "second"\n        | "seconds";\n\n    /**\n     * Value of the `unit` property in objects returned by\n     * `Intl.RelativeTimeFormat.prototype.formatToParts()`. `formatToParts` and\n     * `format` methods accept either singular or plural unit names as input,\n     * but `formatToParts` only outputs singular (e.g. "day") not plural (e.g.\n     * "days").\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).\n     */\n    type RelativeTimeFormatUnitSingular =\n        | "year"\n        | "quarter"\n        | "month"\n        | "week"\n        | "day"\n        | "hour"\n        | "minute"\n        | "second";\n\n    /**\n     * The locale matching algorithm to use.\n     *\n     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).\n     */\n    type RelativeTimeFormatLocaleMatcher = "lookup" | "best fit";\n\n    /**\n     * The format of output message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    type RelativeTimeFormatNumeric = "always" | "auto";\n\n    /**\n     * The length of the internationalized message.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    type RelativeTimeFormatStyle = "long" | "short" | "narrow";\n\n    /**\n     * The locale or locales to use\n     *\n     * See [MDN - Intl - locales argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).\n     */\n    type LocalesArgument = UnicodeBCP47LocaleIdentifier | Locale | readonly (UnicodeBCP47LocaleIdentifier | Locale)[] | undefined;\n\n    /**\n     * An object with some or all of properties of `options` parameter\n     * of `Intl.RelativeTimeFormat` constructor.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).\n     */\n    interface RelativeTimeFormatOptions {\n        /** The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation). */\n        localeMatcher?: RelativeTimeFormatLocaleMatcher;\n        /** The format of output message. */\n        numeric?: RelativeTimeFormatNumeric;\n        /** The length of the internationalized message. */\n        style?: RelativeTimeFormatStyle;\n    }\n\n    /**\n     * An object with properties reflecting the locale\n     * and formatting options computed during initialization\n     * of the `Intl.RelativeTimeFormat` object\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#Description).\n     */\n    interface ResolvedRelativeTimeFormatOptions {\n        locale: UnicodeBCP47LocaleIdentifier;\n        style: RelativeTimeFormatStyle;\n        numeric: RelativeTimeFormatNumeric;\n        numberingSystem: string;\n    }\n\n    /**\n     * An object representing the relative time format in parts\n     * that can be used for custom locale-aware formatting.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).\n     */\n    type RelativeTimeFormatPart =\n        | {\n            type: "literal";\n            value: string;\n        }\n        | {\n            type: Exclude<NumberFormatPartTypes, "literal">;\n            value: string;\n            unit: RelativeTimeFormatUnitSingular;\n        };\n\n    interface RelativeTimeFormat {\n        /**\n         * Formats a value and a unit according to the locale\n         * and formatting options of the given\n         * [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)\n         * object.\n         *\n         * While this method automatically provides the correct plural forms,\n         * the grammatical form is otherwise as neutral as possible.\n         *\n         * It is the caller\'s responsibility to handle cut-off logic\n         * such as deciding between displaying "in 7 days" or "in 1 week".\n         * This API does not support relative dates involving compound units.\n         * e.g "in 5 days and 4 hours".\n         *\n         * @param value -  Numeric value to use in the internationalized relative time message\n         *\n         * @param unit - [Unit](https://tc39.es/ecma402/#sec-singularrelativetimeunit) to use in the relative time internationalized message.\n         *\n         * @throws `RangeError` if `unit` was given something other than `unit` possible values\n         *\n         * @returns {string} Internationalized relative time message as string\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format).\n         */\n        format(value: number, unit: RelativeTimeFormatUnit): string;\n\n        /**\n         *  Returns an array of objects representing the relative time format in parts that can be used for custom locale-aware formatting.\n         *\n         *  @param value - Numeric value to use in the internationalized relative time message\n         *\n         *  @param unit - [Unit](https://tc39.es/ecma402/#sec-singularrelativetimeunit) to use in the relative time internationalized message.\n         *\n         *  @throws `RangeError` if `unit` was given something other than `unit` possible values\n         *\n         *  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts).\n         */\n        formatToParts(value: number, unit: RelativeTimeFormatUnit): RelativeTimeFormatPart[];\n\n        /**\n         * Provides access to the locale and options computed during initialization of this `Intl.RelativeTimeFormat` object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions).\n         */\n        resolvedOptions(): ResolvedRelativeTimeFormatOptions;\n    }\n\n    /**\n     * The [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)\n     * object is a constructor for objects that enable language-sensitive relative time formatting.\n     *\n     * [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat#Browser_compatibility).\n     */\n    const RelativeTimeFormat: {\n        /**\n         * Creates [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) objects\n         *\n         * @param locales - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646), or an array of such strings.\n         *  For the general form and interpretation of the locales argument,\n         *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n         *\n         * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters)\n         *  with some or all of options of `RelativeTimeFormatOptions`.\n         *\n         * @returns [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat).\n         */\n        new (\n            locales?: LocalesArgument,\n            options?: RelativeTimeFormatOptions,\n        ): RelativeTimeFormat;\n\n        /**\n         * Returns an array containing those of the provided locales\n         * that are supported in date and time formatting\n         * without having to fall back to the runtime\'s default locale.\n         *\n         * @param locales - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646), or an array of such strings.\n         *  For the general form and interpretation of the locales argument,\n         *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n         *\n         * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters)\n         *  with some or all of options of the formatting.\n         *\n         * @returns An array containing those of the provided locales\n         *  that are supported in date and time formatting\n         *  without having to fall back to the runtime\'s default locale.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).\n         */\n        supportedLocalesOf(\n            locales?: LocalesArgument,\n            options?: RelativeTimeFormatOptions,\n        ): UnicodeBCP47LocaleIdentifier[];\n    };\n\n    interface NumberFormatOptions {\n        compactDisplay?: "short" | "long" | undefined;\n        notation?: "standard" | "scientific" | "engineering" | "compact" | undefined;\n        signDisplay?: "auto" | "never" | "always" | "exceptZero" | undefined;\n        unit?: string | undefined;\n        unitDisplay?: "short" | "long" | "narrow" | undefined;\n        currencyDisplay?: string | undefined;\n        currencySign?: string | undefined;\n    }\n\n    interface ResolvedNumberFormatOptions {\n        compactDisplay?: "short" | "long";\n        notation?: "standard" | "scientific" | "engineering" | "compact";\n        signDisplay?: "auto" | "never" | "always" | "exceptZero";\n        unit?: string;\n        unitDisplay?: "short" | "long" | "narrow";\n        currencyDisplay?: string;\n        currencySign?: string;\n    }\n\n    interface DateTimeFormatOptions {\n        calendar?: string | undefined;\n        dayPeriod?: "narrow" | "short" | "long" | undefined;\n        numberingSystem?: string | undefined;\n\n        dateStyle?: "full" | "long" | "medium" | "short" | undefined;\n        timeStyle?: "full" | "long" | "medium" | "short" | undefined;\n        hourCycle?: "h11" | "h12" | "h23" | "h24" | undefined;\n    }\n\n    type LocaleHourCycleKey = "h12" | "h23" | "h11" | "h24";\n    type LocaleCollationCaseFirst = "upper" | "lower" | "false";\n\n    interface LocaleOptions {\n        /** A string containing the language, and the script and region if available. */\n        baseName?: string;\n        /** The part of the Locale that indicates the locale\'s calendar era. */\n        calendar?: string;\n        /** Flag that defines whether case is taken into account for the locale\'s collation rules. */\n        caseFirst?: LocaleCollationCaseFirst;\n        /** The collation type used for sorting */\n        collation?: string;\n        /** The time keeping format convention used by the locale. */\n        hourCycle?: LocaleHourCycleKey;\n        /** The primary language subtag associated with the locale. */\n        language?: string;\n        /** The numeral system used by the locale. */\n        numberingSystem?: string;\n        /** Flag that defines whether the locale has special collation handling for numeric characters. */\n        numeric?: boolean;\n        /** The region of the world (usually a country) associated with the locale. Possible values are region codes as defined by ISO 3166-1. */\n        region?: string;\n        /** The script used for writing the particular language used in the locale. Possible values are script codes as defined by ISO 15924. */\n        script?: string;\n    }\n\n    interface Locale extends LocaleOptions {\n        /** A string containing the language, and the script and region if available. */\n        base名称: string;\n        /** The primary language subtag associated with the locale. */\n        language: string;\n        /** Gets the most likely values for the language, script, and region of the locale based on existing values. */\n        maximize(): Locale;\n        /** Attempts to remove information about the locale that would be added by calling `Locale.maximize()`. */\n        minimize(): Locale;\n        /** Returns the locale\'s full locale identifier string. */\n        toString(): UnicodeBCP47LocaleIdentifier;\n    }\n\n    /**\n     * Constructor creates [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)\n     * objects\n     *\n     * @param tag - A string with a [BCP 47 language tag](http://tools.ietf.org/html/rfc5646).\n     *  For the general form and interpretation of the locales argument,\n     *  see the [`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).\n     *\n     * @param options - An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#Parameters) with some or all of options of the locale.\n     *\n     * @returns [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) object.\n     *\n     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale).\n     */\n    const Locale: {\n        new (tag: UnicodeBCP47LocaleIdentifier | Locale, options?: LocaleOptions): Locale;\n    };\n\n    type DisplayNamesFallback =\n        | "code"\n        | "none";\n\n    type DisplayNamesType =\n        | "language"\n        | "region"\n        | "script"\n        | "calendar"\n        | "dateTimeField"\n        | "currency";\n\n    type DisplayNamesLanguageDisplay =\n        | "dialect"\n        | "standard";\n\n    interface DisplayNamesOptions {\n        localeMatcher?: RelativeTimeFormatLocaleMatcher;\n        style?: RelativeTimeFormatStyle;\n        type: DisplayNamesType;\n        languageDisplay?: DisplayNamesLanguageDisplay;\n        fallback?: DisplayNamesFallback;\n    }\n\n    interface ResolvedDisplayNamesOptions {\n        locale: UnicodeBCP47LocaleIdentifier;\n        style: RelativeTimeFormatStyle;\n        type: DisplayNamesType;\n        fallback: DisplayNamesFallback;\n        languageDisplay?: DisplayNamesLanguageDisplay;\n    }\n\n    interface DisplayNames {\n        /**\n         * Receives a code and returns a string based on the locale and options provided when instantiating\n         * [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)\n         *\n         * @param code The `code` to provide depends on the `type` passed to display name during creation:\n         *  - If the type is `"region"`, code should be either an [ISO-3166 two letters region code](https://www.iso.org/iso-3166-country-codes.html),\n         *    or a [three digits UN M49 Geographic Regions](https://unstats.un.org/unsd/methodology/m49/).\n         *  - If the type is `"script"`, code should be an [ISO-15924 four letters script code](https://unicode.org/iso15924/iso15924-codes.html).\n         *  - If the type is `"language"`, code should be a `languageCode` ["-" `scriptCode`] ["-" `regionCode` ] *("-" `variant` )\n         *    subsequence of the unicode_language_id grammar in [UTS 35\'s Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier).\n         *    `languageCode` is either a two letters ISO 639-1 language code or a three letters ISO 639-2 language code.\n         *  - If the type is `"currency"`, code should be a [3-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html).\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of).\n         */\n        of(code: string): string | undefined;\n        /**\n         * Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current\n         * [`Intl/DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) object.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).\n         */\n        resolvedOptions(): ResolvedDisplayNamesOptions;\n    }\n\n    /**\n     * The [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)\n     * object enables the consistent translation of language, region and script display names.\n     *\n     * [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames#browser_compatibility).\n     */\n    const DisplayNames: {\n        prototype: DisplayNames;\n\n        /**\n         * @param locales A string with a BCP 47 language tag, or an array of such strings.\n         *   For the general form and interpretation of the `locales` argument, see the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)\n         *   page.\n         *\n         * @param options An object for setting up a display name.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames).\n         */\n        new (locales: LocalesArgument, options: DisplayNamesOptions): DisplayNames;\n\n        /**\n         * Returns an array containing those of the provided locales that are supported in display names without having to fall back to the runtime\'s default locale.\n         *\n         * @param locales A string with a BCP 47 language tag, or an array of such strings.\n         *   For the general form and interpretation of the `locales` argument, see the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)\n         *   page.\n         *\n         * @param options An object with a locale matcher.\n         *\n         * @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime\'s default locale.\n         *\n         * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).\n         */\n        supportedLocalesOf(locales?: LocalesArgument, options?: { localeMatcher?: RelativeTimeFormatLocaleMatcher; }): UnicodeBCP47LocaleIdentifier[];\n    };\n\n    interface CollatorConstructor {\n        new (locales?: LocalesArgument, options?: CollatorOptions): Collator;\n        (locales?: LocalesArgument, options?: CollatorOptions): Collator;\n        supportedLocalesOf(locales: LocalesArgument, options?: CollatorOptions): string[];\n    }\n\n    interface DateTimeFormatConstructor {\n        new (locales?: LocalesArgument, options?: DateTimeFormatOptions): DateTimeFormat;\n        (locales?: LocalesArgument, options?: DateTimeFormatOptions): DateTimeFormat;\n        supportedLocalesOf(locales: LocalesArgument, options?: DateTimeFormatOptions): string[];\n    }\n\n    interface NumberFormatConstructor {\n        new (locales?: LocalesArgument, options?: NumberFormatOptions): NumberFormat;\n        (locales?: LocalesArgument, options?: NumberFormatOptions): NumberFormat;\n        supportedLocalesOf(locales: LocalesArgument, options?: NumberFormatOptions): string[];\n    }\n\n    interface PluralRulesConstructor {\n        new (locales?: LocalesArgument, options?: PluralRulesOptions): PluralRules;\n        (locales?: LocalesArgument, options?: PluralRulesOptions): PluralRules;\n\n        supportedLocalesOf(locales: LocalesArgument, options?: { localeMatcher?: "lookup" | "best fit"; }): string[];\n    }\n}\n';
 libFileMap["lib.es2020.number.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\n/// <reference lib="es2020.intl" />\n\ninterface Number {\n    /**\n     * Converts a number to a string by using the current or specified locale.\n     * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.\n     * @param options An object that contains one or more properties that specify comparison options.\n     */\n    toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string;\n}\n';
 libFileMap["lib.es2020.promise.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ninterface PromiseFulfilledResult<T> {\n    status: "fulfilled";\n    value: T;\n}\n\ninterface PromiseRejectedResult {\n    status: "rejected";\n    reason: any;\n}\n\ntype PromiseSettledResult<T> = PromiseFulfilledResult<T> | PromiseRejectedResult;\n\ninterface PromiseConstructor {\n    /**\n     * Creates a Promise that is resolved with an array of results when all\n     * of the provided Promises resolve or reject.\n     * @param values An array of Promises.\n     * @returns A new Promise.\n     */\n    allSettled<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P in keyof T]: PromiseSettledResult<Awaited<T[P]>>; }>;\n\n    /**\n     * Creates a Promise that is resolved with an array of results when all\n     * of the provided Promises resolve or reject.\n     * @param values An array of Promises.\n     * @returns A new Promise.\n     */\n    allSettled<T>(values: Iterable<T | PromiseLike<T>>): Promise<PromiseSettledResult<Awaited<T>>[]>;\n}\n';
 libFileMap["lib.es2020.sharedmemory.d.ts"] = '/*! *****************************************************************************\nCopyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use\nthis file except in compliance with the License. You may obtain a copy of the\nLicense at http://www.apache.org/licenses/LICENSE-2.0\n\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\nMERCHANTABLITY OR NON-INFRINGEMENT.\n\nSee the Apache Version 2.0 License for specific language governing permissions\nand limitations under the License.\n***************************************************************************** */\n\n\n/// <reference no-default-lib="true"/>\n\ninterface Atomics {\n    /**\n     * Adds a value to the value at the given position in the array, returning the original value.\n     * Until this atomic operation completes, any other read or write operation against the array\n     * will block.\n     */\n    add(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * Stores the bitwise AND of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or\n     * write operation against the array will block.\n     */\n    and(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * Replaces the value at the given position in the array if the original value equals the given\n     * expected value, returning the original value. Until this atomic operation completes, any\n     * other read or write operation against the array will block.\n     */\n    compareExchange(typedArray: BigInt64Array | BigUint64Array, index: number, expectedValue: bigint, replacementValue: bigint): bigint;\n\n    /**\n     * Replaces the value at the given position in the array, returning the original value. Until\n     * this atomic operation completes, any other read or write operation against the array will\n     * block.\n     */\n    exchange(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * Returns the value at the given position in the array. Until this atomic operation completes,\n     * any other read or write operation against the array will block.\n     */\n    load(typedArray: BigInt64Array | BigUint64Array, index: number): bigint;\n\n    /**\n     * Stores the bitwise OR of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or write\n     * operation against the array will block.\n     */\n    or(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * Stores a value at the given position in the array, returning the new value. Until this\n     * atomic operation completes, any other read or write operation against the array will block.\n     */\n    store(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * Subtracts a value from the value at the given position in the array, returning the original\n     * value. Until this atomic operation completes, any other read or write operation against the\n     * array will block.\n     */\n    sub(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n\n    /**\n     * If the value at the given position in the array is equal to the provided value, the current\n     * agent is put to sleep causing execution to suspend until the timeout expires (returning\n     * `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns\n     * `"not-equal"`.\n     */\n    wait(typedArray: BigInt64Array, index: number, value: bigint, timeout?: number): "ok" | "not-equal" | "timed-out";\n\n    /**\n     * Wakes up sleeping agents that are waiting on the given index of the array, returning the\n     * number of agents that were awoken.\n     * @param typedArray A shared BigInt64Array.\n     * @param index The position in the typedArray to wake up on.\n     * @param count The number of sleeping agents to notify. Defaults to +Infinity.\n     */\n    notify(typedArray: BigInt64Array, index: number, count?: number): number;\n\n    /**\n     * Stores the bitwise XOR of a value with the value at the given position in the array,\n     * returning the original value. Until this atomic operation completes, any other read or write\n     * operation against the array will block.\n     */\n    xor(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint;\n}\n';
@@ -232860,7 +232860,7 @@ declare var WScript: {
     /**
      *  The full path of the currently running script.
      */
-    ScriptFull名称： string;
+    ScriptFull名称: string;
 
     /**
      * Forces the script to stop immediately, with an optional exit code.
@@ -232875,7 +232875,7 @@ declare var WScript: {
     /**
      * Fully qualified path of the host executable.
      */
-    Full名称： string;
+    Full名称: string;
 
     /**
      * Gets/sets the script mode - interactive(true) or batch(false).
@@ -232885,7 +232885,7 @@ declare var WScript: {
     /**
      * The name of the host executable (WScript.exe or CScript.exe).
      */
-    名称： string;
+    名称: string;
 
     /**
      * Path of the directory containing the host executable.
@@ -232895,7 +232895,7 @@ declare var WScript: {
     /**
      * The filename of the currently running script.
      */
-    Script名称： string;
+    Script名称: string;
 
     /**
      * Exposes the read-only input stream for the current script.
@@ -234514,15 +234514,15 @@ declare var Cache: {
  */
 interface CacheStorage {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/delete) */
-    delete(cache名称： string): Promise<boolean>;
+    delete(cache名称: string): Promise<boolean>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/has) */
-    has(cache名称： string): Promise<boolean>;
+    has(cache名称: string): Promise<boolean>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/keys) */
     keys(): Promise<string[]>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/match) */
     match(request: RequestInfo | URL, options?: MultiCacheQueryOptions): Promise<Response | undefined>;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CacheStorage/open) */
-    open(cache名称： string): Promise<Cache>;
+    open(cache名称: string): Promise<Cache>;
 }
 
 declare var CacheStorage: {
@@ -235783,7 +235783,7 @@ interface File extends Blob {
 
 declare var File: {
     prototype: File;
-    new(fileBits: BlobPart[], file名称： string, options?: FilePropertyBag): File;
+    new(fileBits: BlobPart[], file名称: string, options?: FilePropertyBag): File;
 };
 
 /**
@@ -237116,13 +237116,13 @@ interface NavigatorID {
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Navigator/appCodeName)
      */
-    readonly appCode名称： string;
+    readonly appCode名称: string;
     /**
      * @deprecated
      *
      * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Navigator/appName)
      */
-    readonly app名称： string;
+    readonly app名称: string;
     /**
      * @deprecated
      *
@@ -237459,9 +237459,9 @@ interface Performance extends EventTarget {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/getEntriesByType) */
     getEntriesByType(type: string): PerformanceEntryList;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/mark) */
-    mark(mark名称： string, markOptions?: PerformanceMarkOptions): PerformanceMark;
+    mark(mark名称: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/measure) */
-    measure(measure名称： string, startOrMeasureOptions?: string | PerformanceMeasureOptions, endMark?: string): PerformanceMeasure;
+    measure(measure名称: string, startOrMeasureOptions?: string | PerformanceMeasureOptions, endMark?: string): PerformanceMeasure;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/now) */
     now(): DOMHighResTimeStamp;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Performance/setResourceTimingBufferSize) */
@@ -237514,7 +237514,7 @@ interface PerformanceMark extends PerformanceEntry {
 
 declare var PerformanceMark: {
     prototype: PerformanceMark;
-    new(mark名称： string, markOptions?: PerformanceMarkOptions): PerformanceMark;
+    new(mark名称: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
 };
 
 /**
@@ -239754,7 +239754,7 @@ interface WebGL2RenderingContextBase {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getTransformFeedbackVarying) */
     getTransformFeedbackVarying(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getUniformBlockIndex) */
-    getUniformBlockIndex(program: WebGLProgram, uniformBlock名称： string): GLuint;
+    getUniformBlockIndex(program: WebGLProgram, uniformBlock名称: string): GLuint;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/getUniformIndices) */
     getUniformIndices(program: WebGLProgram, uniformNames: string[]): GLuint[] | null;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext/invalidateFramebuffer) */
@@ -240686,40 +240686,40 @@ interface WebGLRenderingContextBase {
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getError) */
     getError(): GLenum;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getExtension) */
-    getExtension(extension名称： "ANGLE_instanced_arrays"): ANGLE_instanced_arrays | null;
-    getExtension(extension名称： "EXT_blend_minmax"): EXT_blend_minmax | null;
-    getExtension(extension名称： "EXT_color_buffer_float"): EXT_color_buffer_float | null;
-    getExtension(extension名称： "EXT_color_buffer_half_float"): EXT_color_buffer_half_float | null;
-    getExtension(extension名称： "EXT_float_blend"): EXT_float_blend | null;
-    getExtension(extension名称： "EXT_frag_depth"): EXT_frag_depth | null;
-    getExtension(extension名称： "EXT_sRGB"): EXT_sRGB | null;
-    getExtension(extension名称： "EXT_shader_texture_lod"): EXT_shader_texture_lod | null;
-    getExtension(extension名称： "EXT_texture_compression_bptc"): EXT_texture_compression_bptc | null;
-    getExtension(extension名称： "EXT_texture_compression_rgtc"): EXT_texture_compression_rgtc | null;
-    getExtension(extension名称： "EXT_texture_filter_anisotropic"): EXT_texture_filter_anisotropic | null;
-    getExtension(extension名称： "KHR_parallel_shader_compile"): KHR_parallel_shader_compile | null;
-    getExtension(extension名称： "OES_element_index_uint"): OES_element_index_uint | null;
-    getExtension(extension名称： "OES_fbo_render_mipmap"): OES_fbo_render_mipmap | null;
-    getExtension(extension名称： "OES_standard_derivatives"): OES_standard_derivatives | null;
-    getExtension(extension名称： "OES_texture_float"): OES_texture_float | null;
-    getExtension(extension名称： "OES_texture_float_linear"): OES_texture_float_linear | null;
-    getExtension(extension名称： "OES_texture_half_float"): OES_texture_half_float | null;
-    getExtension(extension名称： "OES_texture_half_float_linear"): OES_texture_half_float_linear | null;
-    getExtension(extension名称： "OES_vertex_array_object"): OES_vertex_array_object | null;
-    getExtension(extension名称： "OVR_multiview2"): OVR_multiview2 | null;
-    getExtension(extension名称： "WEBGL_color_buffer_float"): WEBGL_color_buffer_float | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_astc"): WEBGL_compressed_texture_astc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_etc"): WEBGL_compressed_texture_etc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_etc1"): WEBGL_compressed_texture_etc1 | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_pvrtc"): WEBGL_compressed_texture_pvrtc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_s3tc"): WEBGL_compressed_texture_s3tc | null;
-    getExtension(extension名称： "WEBGL_compressed_texture_s3tc_srgb"): WEBGL_compressed_texture_s3tc_srgb | null;
-    getExtension(extension名称： "WEBGL_debug_renderer_info"): WEBGL_debug_renderer_info | null;
-    getExtension(extension名称： "WEBGL_debug_shaders"): WEBGL_debug_shaders | null;
-    getExtension(extension名称： "WEBGL_depth_texture"): WEBGL_depth_texture | null;
-    getExtension(extension名称： "WEBGL_draw_buffers"): WEBGL_draw_buffers | null;
-    getExtension(extension名称： "WEBGL_lose_context"): WEBGL_lose_context | null;
-    getExtension(extension名称： "WEBGL_multi_draw"): WEBGL_multi_draw | null;
+    getExtension(extension名称: "ANGLE_instanced_arrays"): ANGLE_instanced_arrays | null;
+    getExtension(extension名称: "EXT_blend_minmax"): EXT_blend_minmax | null;
+    getExtension(extension名称: "EXT_color_buffer_float"): EXT_color_buffer_float | null;
+    getExtension(extension名称: "EXT_color_buffer_half_float"): EXT_color_buffer_half_float | null;
+    getExtension(extension名称: "EXT_float_blend"): EXT_float_blend | null;
+    getExtension(extension名称: "EXT_frag_depth"): EXT_frag_depth | null;
+    getExtension(extension名称: "EXT_sRGB"): EXT_sRGB | null;
+    getExtension(extension名称: "EXT_shader_texture_lod"): EXT_shader_texture_lod | null;
+    getExtension(extension名称: "EXT_texture_compression_bptc"): EXT_texture_compression_bptc | null;
+    getExtension(extension名称: "EXT_texture_compression_rgtc"): EXT_texture_compression_rgtc | null;
+    getExtension(extension名称: "EXT_texture_filter_anisotropic"): EXT_texture_filter_anisotropic | null;
+    getExtension(extension名称: "KHR_parallel_shader_compile"): KHR_parallel_shader_compile | null;
+    getExtension(extension名称: "OES_element_index_uint"): OES_element_index_uint | null;
+    getExtension(extension名称: "OES_fbo_render_mipmap"): OES_fbo_render_mipmap | null;
+    getExtension(extension名称: "OES_standard_derivatives"): OES_standard_derivatives | null;
+    getExtension(extension名称: "OES_texture_float"): OES_texture_float | null;
+    getExtension(extension名称: "OES_texture_float_linear"): OES_texture_float_linear | null;
+    getExtension(extension名称: "OES_texture_half_float"): OES_texture_half_float | null;
+    getExtension(extension名称: "OES_texture_half_float_linear"): OES_texture_half_float_linear | null;
+    getExtension(extension名称: "OES_vertex_array_object"): OES_vertex_array_object | null;
+    getExtension(extension名称: "OVR_multiview2"): OVR_multiview2 | null;
+    getExtension(extension名称: "WEBGL_color_buffer_float"): WEBGL_color_buffer_float | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_astc"): WEBGL_compressed_texture_astc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_etc"): WEBGL_compressed_texture_etc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_etc1"): WEBGL_compressed_texture_etc1 | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_pvrtc"): WEBGL_compressed_texture_pvrtc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_s3tc"): WEBGL_compressed_texture_s3tc | null;
+    getExtension(extension名称: "WEBGL_compressed_texture_s3tc_srgb"): WEBGL_compressed_texture_s3tc_srgb | null;
+    getExtension(extension名称: "WEBGL_debug_renderer_info"): WEBGL_debug_renderer_info | null;
+    getExtension(extension名称: "WEBGL_debug_shaders"): WEBGL_debug_shaders | null;
+    getExtension(extension名称: "WEBGL_depth_texture"): WEBGL_depth_texture | null;
+    getExtension(extension名称: "WEBGL_draw_buffers"): WEBGL_draw_buffers | null;
+    getExtension(extension名称: "WEBGL_lose_context"): WEBGL_lose_context | null;
+    getExtension(extension名称: "WEBGL_multi_draw"): WEBGL_multi_draw | null;
     getExtension(name: string): any;
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter) */
     getFramebufferAttachmentParameter(target: GLenum, attachment: GLenum, pname: GLenum): any;
@@ -242035,7 +242035,7 @@ declare namespace WebAssembly {
         prototype: Module;
         new(bytes: BufferSource): Module;
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/customSections_static) */
-        customSections(moduleObject: Module, section名称： string): ArrayBuffer[];
+        customSections(moduleObject: Module, section名称: string): ArrayBuffer[];
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/exports_static) */
         exports(moduleObject: Module): ModuleExportDescriptor[];
         /** [MDN Reference](https://developer.mozilla.org/docs/WebAssembly/JavaScript_interface/Module/imports_static) */

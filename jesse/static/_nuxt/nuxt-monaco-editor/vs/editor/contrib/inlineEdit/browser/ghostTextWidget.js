@@ -129,7 +129,7 @@ let GhostTextWidget = class GhostTextWidget extends Disposable {
             if (uiState.hiddenRange) {
                 decorations.push({
                     range: uiState.hiddenRange.toRange(uiState.lineNumber),
-                    options: { inlineClass名称： 'inline-edit-hidden', description: 'inline-edit-hidden', }
+                    options: { inlineClass名称: 'inline-edit-hidden', description: 'inline-edit-hidden', }
                 });
             }
             if (uiState.range) {
@@ -161,7 +161,7 @@ let GhostTextWidget = class GhostTextWidget extends Disposable {
                 for (const range of ranges) {
                     decorations.push({
                         range,
-                        options: { inlineClass名称： className, description: 'inline-edit-remove', }
+                        options: { inlineClass名称: className, description: 'inline-edit-remove', }
                     });
                 }
             }
@@ -170,7 +170,7 @@ let GhostTextWidget = class GhostTextWidget extends Disposable {
                     range: Range.fromPositions(new Position(uiState.lineNumber, p.column)),
                     options: {
                         description: INLINE_EDIT_DESCRIPTION,
-                        after: { content: p.text, inlineClass名称： p.preview ? 'inline-edit-decoration-preview' : 'inline-edit-decoration', cursorStops: InjectedTextCursorStops.Left },
+                        after: { content: p.text, inlineClass名称: p.preview ? 'inline-edit-decoration-preview' : 'inline-edit-decoration', cursorStops: InjectedTextCursorStops.Left },
                         showIfCollapsed: true,
                     }
                 });

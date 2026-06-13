@@ -7168,7 +7168,7 @@ var CSSCompletion = class {
     this.completionParticipants.forEach((participant) => {
       if (participant.onCssProperty) {
         participant.onCssProperty({
-          property名称： this.currentWord,
+          property名称: this.currentWord,
           range: this.defaultReplaceRange
         });
       }
@@ -7751,7 +7751,7 @@ var CSSCompletion = class {
     this.completionParticipants.forEach((participant) => {
       if (participant.onCssMixinReference) {
         participant.onCssMixinReference({
-          mixin名称： this.currentWord,
+          mixin名称: this.currentWord,
           range: this.getCompletionRange(identifierNode)
         });
       }
