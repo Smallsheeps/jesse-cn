@@ -66,7 +66,33 @@ aplu001/jesse-cn:latest
 http://localhost:9000
 ```
 
-如果部署在服务器上，把 `localhost` 替换成服务器 IP 或域名。
+如果部署在服务器上，推荐使用 Nginx/Caddy 等 Web 服务器反向代理到 `http://127.0.0.1:9000`，再通过你的域名访问。`docker/docker-compose.yml` 默认只把 Jesse 端口绑定到服务器本机的 `127.0.0.1`，不会把 `9000` 端口直接暴露到公网。
+
+Nginx 反向代理示例:
+
+```nginx
+location / {
+    proxy_pass http://127.0.0.1:9000;
+    proxy_http_version 1.1;
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+
+    proxy_read_timeout 300s;
+    proxy_send_timeout 300s;
+}
+```
+
+如果日志中出现 `HEAD / HTTP/1.1" 404 Not Found`，通常只是健康检查或 `curl -I` 请求，不影响浏览器访问。验证首页请使用:
+
+```bash
+curl -L http://127.0.0.1:9000/ | head
+```
 
 ## 常用命令
 
